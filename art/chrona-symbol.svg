@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-labelledby="t d">
+<title id="t">Chrona symbol</title>
+<desc id="d">Meridian Offset: two half-discs stepped across a meridian gap. Full colour for dark backgrounds.</desc>
+<g id="chrona-symbol" data-name="Chrona symbol"><path id="chrona-symbol-day-half" d="M44 13.43V70.57A5 5 0 0 1 38.14 75.49A34 34 0 0 1 38.14 8.51A5 5 0 0 1 44 13.43Z" fill="#B8C7F2"/><path id="chrona-symbol-night-half" d="M52 25.43V82.57A5 5 0 0 0 57.86 87.49A34 34 0 0 0 57.86 20.51A5 5 0 0 0 52 25.43Z" fill="#93A8C7"/></g>
+</svg>

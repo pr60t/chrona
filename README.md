@@ -1,8 +1,16 @@
 <div align="center">
 
-# ⏱️ Chrona
+<br/>
 
-### The Precision World Clock & Cross-Timezone Alarm Engine
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="art/chrona-horizontal.svg">
+  <source media="(prefers-color-scheme: light)" srcset="art/chrona-horizontal-light.svg">
+  <img alt="Chrona" src="art/chrona-horizontal.svg" width="380">
+</picture>
+
+<br/><br/>
+
+### Precision World Clock & Cross-Timezone Alarm Engine
 
 [![Platform](https://img.shields.io/badge/Platform-Android%2012%2B%20(API%2031--37)-3DDC84?style=flat-square&logo=android&logoColor=white)](https://developer.android.com)
 [![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20%26%20Material%203-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
@@ -50,6 +58,7 @@
 ### 🎨 Pixel Material 3 & AMOLED Black
 * **Pixel Aesthetic:** Tabular numeric typography (`tnum`), quiet fluid navigation bubble indicators, and rounded container cards (18–24dp).
 * **Palette Options:** Pure AMOLED Black, Material Light, and System Default, paired with Periwinkle, Mint Teal, Soft Coral, Lavender, Soft Gold, and Pale Blue accents.
+* **Adaptive App Icon:** The *Meridian Offset* symbol — two interlocking day/night crescents stepped across a meridian gap — fully supported with dynamic Monet themed icon colouring on Android 13+.
 
 ---
 
