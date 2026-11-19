@@ -1,0 +1,15 @@
+package com.example.chrona.core.alarm
+
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.util.Log
+import com.example.chrona.core.data.AlarmRepository
+
+class BootReceiver : BroadcastReceiver() {
+    override fun onReceive(context: Context, intent: Intent) {
+        val action = intent.action
+        Log.d("BootReceiver", "Received broadcast: $action, rescheduling Chrona alarms")
+        AlarmRepository.rescheduleAll(context)
+    }
+}
