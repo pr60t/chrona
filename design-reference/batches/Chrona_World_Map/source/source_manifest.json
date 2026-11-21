@@ -1,0 +1,35 @@
+{
+  "datasetName": "ne_110m_admin_0_countries",
+  "provider": "Natural Earth",
+  "scale": "1:110,000,000 (1:110m)",
+  "version": "5.1.1",
+  "format": "ESRI Shapefile",
+  "companionFilesVerified": [
+    "ne_110m_admin_0_countries.shp",
+    "ne_110m_admin_0_countries.shx",
+    "ne_110m_admin_0_countries.dbf",
+    "ne_110m_admin_0_countries.prj",
+    "ne_110m_admin_0_countries.cpg",
+    "ne_110m_admin_0_countries.VERSION.txt",
+    "ne_110m_admin_0_countries.README.html"
+  ],
+  "sourceCrs": "EPSG:4326 (GCS_WGS_1984)",
+  "geometryType": "Polygon / MultiPolygon",
+  "featureCount": 177,
+  "attributeFieldCount": 168,
+  "fullBoundingBoxLonLat": [
+    -180.0,
+    -90.0,
+    180.0,
+    83.64513
+  ],
+  "inhabitedBoundingBoxLonLat": [
+    -180.0,
+    -55.61183,
+    180.0,
+    83.64513
+  ],
+  "multiPolygonCount": 29,
+  "interiorHoleCount": 1,
+  "invalidGeometries": 0
+}

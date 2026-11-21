@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 915" width="412" height="915">
+  <title>Chrona Light — Alarm Ringing</title>
+  <desc>Full-screen alarm ringing screen adapted to calm Light mode with clear Dismiss and Snooze buttons.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <linearGradient id="sky-warsaw-al7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/><stop offset="55%" stop-color="#8C7A7B"/><stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london-al7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/><stop offset="60%" stop-color="#9EB1C7"/><stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston-al7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/><stop offset="60%" stop-color="#7D6B7D"/><stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth-al7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/><stop offset="55%" stop-color="#939BA8"/><stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <linearGradient id="sky-kathmandu-al7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D4363"/><stop offset="55%" stop-color="#758BA8"/><stop offset="100%" stop-color="#E5C896"/>
+    </linearGradient>
+    <clipPath id="clip-city-80x64-al7">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-screen-412x915-al7">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-screen-412x915-al7)">
+    <rect x="0" y="0" width="412" height="915" fill="#F7F8FA"/>
+  <circle cx="206" cy="306" r="144" fill="#5EC2AA" fill-opacity="0.14"/>
+  <text x="206" y="146" text-anchor="middle" class="font-mono" font-size="11.5" font-weight="600" fill="#5A7399">WARSAW · EUROPE/WARSAW</text>
+  <text x="206" y="176" text-anchor="middle" class="font-sans" font-size="22" font-weight="600" fill="#0F172A">Warsaw Standup</text>
+  <text x="206" y="294" text-anchor="middle" class="font-sans tnum" font-size="84" font-weight="400" fill="#0F172A">09:00</text>
+  <rect x="76" y="336" width="260" height="54" rx="18" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="206" y="369" text-anchor="middle" class="font-sans tnum" font-size="15" font-weight="500" fill="#475569">Local time · 13:45 Kathmandu</text>
+  <rect x="24" y="600" width="364" height="66" rx="33" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="206" y="639" text-anchor="middle" class="font-sans" font-size="17" font-weight="600" fill="#0F172A">Snooze · 10 min</text>
+  <rect x="24" y="688" width="364" height="82" rx="41" fill="#5A7399"/>
+  <text x="206" y="736" text-anchor="middle" class="font-sans" font-size="20" font-weight="700" fill="#FFFFFF">Dismiss alarm</text>
+  </g>
+</svg>

@@ -100,6 +100,7 @@ object TimerManager {
         _timers.value = current
         persist()
         startTicker()
+        appContext?.let { TimerNotificationManager.updateNotification(it, timer) }
     }
 
     fun togglePlayPause(timerId: String) {
@@ -126,9 +127,11 @@ object TimerManager {
                     isFinished = false
                 )
             }
+            val updated = current[index]
             _timers.value = current
             persist()
             startTicker()
+            appContext?.let { TimerNotificationManager.updateNotification(it, updated) }
         }
     }
 
@@ -148,8 +151,10 @@ object TimerManager {
                 deadlineElapsedMillis = newDeadline,
                 isFinished = false
             )
+            val updated = current[index]
             _timers.value = current
             persist()
+            appContext?.let { TimerNotificationManager.updateNotification(it, updated) }
         }
     }
 
@@ -166,6 +171,7 @@ object TimerManager {
             )
             _timers.value = current
             persist()
+            appContext?.let { TimerNotificationManager.cancelNotification(it, timerId) }
         }
     }
 
@@ -174,6 +180,7 @@ object TimerManager {
         current.removeAll { it.id == timerId }
         _timers.value = current
         persist()
+        appContext?.let { TimerNotificationManager.cancelNotification(it, timerId) }
     }
 
     private fun persist() {
@@ -197,6 +204,7 @@ object TimerManager {
             .setAutoCancel(true)
             .build()
 
+        TimerNotificationManager.cancelNotification(context, timer.id)
         notificationManager.notify(timer.id.hashCode(), notification)
     }
 

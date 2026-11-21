@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Alarm
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -141,13 +142,13 @@ fun ScreensaverScreen(
                     Icon(
                         imageVector = Icons.Outlined.Alarm,
                         contentDescription = null,
-                        tint = Color(0xFF93A8C7).copy(alpha = 0.75f),
+                        tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.75f),
                         modifier = Modifier.size(16.dp)
                     )
                     Text(
                         text = "${nextAlarm.first.formattedTargetTime(preferences.is24HourFormat)} (${nextAlarm.first.targetCityName})",
                         fontSize = 13.sp,
-                        color = Color(0xFF93A8C7).copy(alpha = 0.75f),
+                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.75f),
                         fontWeight = FontWeight.Medium
                     )
                 }

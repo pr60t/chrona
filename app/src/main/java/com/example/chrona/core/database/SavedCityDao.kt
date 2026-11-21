@@ -41,4 +41,23 @@ class SavedCityDao(context: Context) {
         val db = dbHelper.writableDatabase
         db.delete("saved_cities", "city_id = ?", arrayOf(cityId.toString()))
     }
+
+    fun replaceAll(ids: List<Long>) {
+        val db = dbHelper.writableDatabase
+        db.beginTransaction()
+        try {
+            db.delete("saved_cities", null, null)
+            val baseTime = System.currentTimeMillis()
+            ids.forEachIndexed { index, cityId ->
+                val cv = ContentValues().apply {
+                    put("city_id", cityId)
+                    put("saved_at", baseTime + index * 1000L)
+                }
+                db.insertWithOnConflict("saved_cities", null, cv, SQLiteDatabase.CONFLICT_REPLACE)
+            }
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+    }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <path
+        android:name="day_half"
+        android:fillColor="#B8C7F2"
+        android:pathData="M44 13.43V70.57A5 5 0 0 1 38.14 75.49A34 34 0 0 1 38.14 8.51A5 5 0 0 1 44 13.43Z" />
+    <path
+        android:name="night_half"
+        android:fillColor="#DCE2FA"
+        android:pathData="M52 25.43V82.57A5 5 0 0 0 57.86 87.49A34 34 0 0 0 57.86 20.51A5 5 0 0 0 52 25.43Z" />
+</vector>

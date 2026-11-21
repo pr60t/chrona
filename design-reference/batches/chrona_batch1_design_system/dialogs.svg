@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" width="1440" height="960">
+  <title>CHRONA — Bottom Sheets, Dialogs, Time Picker &amp; Confirmation Messages</title>
+  <desc>Modal overlays, bottom sheets, radial/drum time pickers, and snackbar confirmations.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <!-- Procedural City Skyline Gradients &amp; Silhouettes for Replaceable City Tiles -->
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/>
+      <stop offset="55%" stop-color="#8C7A7B"/>
+      <stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/>
+      <stop offset="60%" stop-color="#9EB1C7"/>
+      <stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/>
+      <stop offset="60%" stop-color="#7D6B7D"/>
+      <stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/>
+      <stop offset="55%" stop-color="#939BA8"/>
+      <stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <clipPath id="clip-city-tile">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-tile-sm">
+      <rect x="0" y="0" width="68" height="54" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+  <g id="layer-background">
+    <rect x="0" y="0" width="1440" height="960" fill="#000000"/>
+    <rect x="24" y="24" width="1392" height="912" rx="28" fill="#080B10" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="layer-header">
+    <rect x="48" y="48" width="168" height="28" rx="14" fill="#2A384D"/>
+    <text x="132" y="66" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" letter-spacing="1.2" fill="#DCE6F7">10 · OVERLAYS &amp; PICKERS</text>
+    <text x="48" y="112" class="font-sans" font-size="30" font-weight="600" fill="#F1F5F9">Bottom Sheets, Dialogs &amp; Time Picker</text>
+    <text x="48" y="138" class="font-sans" font-size="14" fill="#94A3B8">Elevated surfaceContainerHighest (#2B3547) · 28dp rounded corners · 72% AMOLED scrim</text>
+    <text x="1392" y="72" text-anchor="end" class="font-mono" font-size="12" fill="#64748B">CHRONA DESIGN SYSTEM · v1.0</text>
+    <text x="1392" y="92" text-anchor="end" class="font-mono" font-size="11" fill="#93A8C7">360dp Component Grid · 412×915dp Screen Standard</text>
+    <line x1="48" y1="158" x2="1392" y2="158" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="component-bottom-sheet" transform="translate(48, 184)">
+    <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">A. Bottom Sheet (360dp / 412dp Responsive · 28dp Top Radius)</text>
+    <g transform="translate(0, 36)">
+      <rect x="0" y="0" width="412" height="420" rx="28" fill="#2B3547" stroke="#334155" stroke-width="1"/>
+      <!-- Drag Handle -->
+      <rect x="186" y="12" width="40" height="4" rx="2" fill="#64748B"/>
+      <text x="24" y="48" class="font-sans" font-size="20" font-weight="600" fill="#F1F5F9">Add World City</text>
+      <text x="24" y="70" class="font-sans" font-size="13" fill="#94A3B8">Select a city to assign a persistent timezone marker</text>
+      <!-- Search Inside Sheet -->
+      <rect x="20" y="88" width="372" height="48" rx="24" fill="#1A202C" stroke="#93A8C7"/>
+      <g id="icon-search" transform="translate(36,101) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></g>
+      <text x="68" y="117" class="font-sans" font-size="14" fill="#F1F5F9">Tokyo</text>
+      <!-- Result Rows -->
+      <g transform="translate(20, 152)">
+        <rect x="0" y="0" width="372" height="64" rx="16" fill="#1A202C"/>
+        <rect x="12" y="10" width="4" height="44" rx="2" fill="#F2DF9B"/>
+        <text x="28" y="28" class="font-sans" font-size="15" font-weight="600" fill="#F1F5F9">Tokyo, Japan</text>
+        <text x="28" y="48" class="font-sans" font-size="12" fill="#94A3B8">Japan Standard Time (GMT +9)</text>
+        <text x="354" y="38" text-anchor="end" class="font-sans tnum" font-size="18" font-weight="500" fill="#F1F5F9">06:06</text>
+      </g>
+      <g transform="translate(20, 226)">
+        <rect x="0" y="0" width="372" height="64" rx="16" fill="#1A202C"/>
+        <rect x="12" y="10" width="4" height="44" rx="2" fill="#A3D5F7"/>
+        <text x="28" y="28" class="font-sans" font-size="15" font-weight="600" fill="#F1F5F9">Sydney, Australia</text>
+        <text x="28" y="48" class="font-sans" font-size="12" fill="#94A3B8">Australian Eastern Time (GMT +10)</text>
+        <text x="354" y="38" text-anchor="end" class="font-sans tnum" font-size="18" font-weight="500" fill="#F1F5F9">07:06</text>
+      </g>
+      <!-- Sheet CTA -->
+      <rect x="20" y="344" width="372" height="52" rx="26" fill="#93A8C7"/>
+      <text x="206" y="375" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Save Selected City</text>
+    </g>
+  </g>
+
+  <g id="component-time-picker" transform="translate(500, 184)">
+    <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">B. Material 3 Time Picker (28dp Radius)</text>
+    <g transform="translate(0, 36)">
+      <rect x="0" y="0" width="360" height="420" rx="28" fill="#2B3547" stroke="#334155"/>
+      <text x="24" y="34" class="font-mono" font-size="11" font-weight="600" fill="#94A3B8">SELECT ALARM TIME</text>
+      <!-- Digital Readout Boxes -->
+      <g transform="translate(24, 52)">
+        <rect x="0" y="0" width="108" height="76" rx="16" fill="#2A384D" stroke="#93A8C7" stroke-width="1.5"/>
+        <text x="54" y="54" text-anchor="middle" class="font-sans tnum" font-size="44" font-weight="500" fill="#DCE6F7">07</text>
+        <text x="122" y="52" text-anchor="middle" class="font-sans" font-size="36" fill="#94A3B8">:</text>
+        <rect x="136" y="0" width="108" height="76" rx="16" fill="#1A202C"/>
+        <text x="190" y="54" text-anchor="middle" class="font-sans tnum" font-size="44" font-weight="500" fill="#F1F5F9">30</text>
+        <!-- AM/PM Stack -->
+        <rect x="256" y="0" width="56" height="36" rx="10" fill="#93A8C7"/>
+        <text x="284" y="23" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#0B1320">AM</text>
+        <rect x="256" y="40" width="56" height="36" rx="10" fill="#1A202C"/>
+        <text x="284" y="63" text-anchor="middle" class="font-sans" font-size="13" fill="#94A3B8">PM</text>
+      </g>
+      <!-- Analog Clock Dial -->
+      <g transform="translate(180, 244)">
+        <circle cx="0" cy="0" r="92" fill="#1A202C"/>
+        <line x1="0" y1="0" x2="-46" y2="54" stroke="#93A8C7" stroke-width="2.5"/>
+        <circle cx="0" cy="0" r="4" fill="#93A8C7"/>
+        <circle cx="-46" cy="54" r="18" fill="#93A8C7"/>
+        <text x="0" y="-66" text-anchor="middle" class="font-sans tnum" font-size="13" fill="#F1F5F9">12</text>
+        <text x="68" y="5" text-anchor="middle" class="font-sans tnum" font-size="13" fill="#F1F5F9">3</text>
+        <text x="0" y="74" text-anchor="middle" class="font-sans tnum" font-size="13" fill="#F1F5F9">6</text>
+        <text x="-46" y="59" text-anchor="middle" class="font-sans tnum" font-size="13" font-weight="700" fill="#0B1320">7</text>
+        <text x="-68" y="5" text-anchor="middle" class="font-sans tnum" font-size="13" fill="#F1F5F9">9</text>
+      </g>
+      <!-- Actions -->
+      <text x="236" y="388" text-anchor="middle" class="font-sans" font-size="14" font-weight="600" fill="#93A8C7">Cancel</text>
+      <text x="312" y="388" text-anchor="middle" class="font-sans" font-size="14" font-weight="600" fill="#93A8C7">OK</text>
+    </g>
+  </g>
+
+  <g id="component-dialog-confirmation" transform="translate(900, 184)">
+    <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">C. Alert Dialog &amp; Confirmation Messages</text>
+    <!-- Dialog -->
+    <g transform="translate(0, 36)">
+      <rect x="0" y="0" width="492" height="220" rx="28" fill="#2B3547" stroke="#334155"/>
+      <rect x="24" y="24" width="44" height="44" rx="22" fill="#2A384D"/>
+      <g id="icon-delete" transform="translate(35,35) scale(0.917)" fill="none" stroke="#FCA5A5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></g>
+      <text x="82" y="44" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">Remove Warsaw from World Clock?</text>
+      <text x="82" y="66" class="font-sans" font-size="13" fill="#94A3B8">Linked timezone alarms will remain active in local time.</text>
+      <text x="24" y="114" class="font-sans" font-size="13" fill="#94A3B8">You can restore any city and its pastel identity marker anytime from the Add place drawer.</text>
+      <rect x="268" y="156" width="94" height="40" rx="20" fill="#1A202C"/>
+      <text x="315" y="181" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#F1F5F9">Cancel</text>
+      <rect x="374" y="156" width="94" height="40" rx="20" fill="#FCA5A5"/>
+      <text x="421" y="181" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#450A0A">Remove</text>
+    </g>
+
+    <!-- Confirmation Snackbar / Toast Messages -->
+    <g transform="translate(0, 286)">
+      <text x="0" y="14" class="font-mono" font-size="11" fill="#94A3B8">Confirmation Banner / Floating Snackbar</text>
+      <rect x="0" y="24" width="492" height="54" rx="16" fill="#222A38" stroke="#6EE7B7" stroke-width="1"/>
+      <g id="icon-check" transform="translate(16,40) scale(0.833)" fill="none" stroke="#6EE7B7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+      <text x="48" y="56" class="font-sans" font-size="13" font-weight="500" fill="#F1F5F9">Alarm set for 7 hours 24 minutes from now</text>
+      <text x="468" y="56" text-anchor="end" class="font-sans" font-size="13" font-weight="600" fill="#93A8C7">Undo</text>
+
+      <rect x="0" y="92" width="492" height="54" rx="16" fill="#222A38" stroke="#334155" stroke-width="1"/>
+      <g id="icon-location_on" transform="translate(16,108) scale(0.833)" fill="none" stroke="#F2DF9B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/><circle cx="12" cy="11" r="2.5"/></g>
+      <text x="48" y="124" class="font-sans" font-size="13" font-weight="500" fill="#F1F5F9">Added Tokyo (GMT +9) to World Clock</text>
+      <text x="468" y="124" text-anchor="end" class="font-sans" font-size="13" font-weight="600" fill="#93A8C7">View</text>
+    </g>
+  </g>
+
+  <g transform="translate(48, 680)">
+    <rect x="0" y="0" width="1344" height="200" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="24" y="38" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">Overlay &amp; Map Pin Component Specifications</text>
+    <text x="24" y="68" class="font-sans" font-size="13" fill="#94A3B8">• Map Pins: 9dp solid pastel circle (#A7E8D8, #B8C7F2, #F4C2A1, #D4B8F0) with 22dp translucent halo ring at 22% opacity on active selection.</text>
+    <text x="24" y="94" class="font-sans" font-size="13" fill="#94A3B8">• Bottom Sheets: Anchored to viewport bottom with 28dp top-left and top-right corners, 40×4dp drag handle, and keyboard-aware inset padding.</text>
+    <text x="24" y="120" class="font-sans" font-size="13" fill="#94A3B8">• Confirmation Snackbars: Float 16dp above the 80dp bottom navigation bar with 20dp horizontal screen margins (372dp width on 412dp screens).</text>
+    <!-- Live Map Pin Variants -->
+    <g transform="translate(24, 142)">
+      <circle cx="16" cy="18" r="5" fill="#A7E8D8"/>
+      <text x="30" y="22" class="font-mono" font-size="11" fill="#94A3B8">Map Pin · Default (9dp)</text>
+      <circle cx="220" cy="18" r="13" fill="#B8C7F2" fill-opacity="0.24"/>
+      <circle cx="220" cy="18" r="6" fill="#B8C7F2" stroke="#F1F5F9" stroke-width="1.5"/>
+      <text x="242" y="22" class="font-mono" font-size="11" fill="#F1F5F9">Map Pin · Selected Halo (26dp)</text>
+    </g>
+  </g>
+</svg>

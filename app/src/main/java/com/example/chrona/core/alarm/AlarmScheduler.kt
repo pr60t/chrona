@@ -15,6 +15,9 @@ object AlarmScheduler {
     const val ACTION_ALARM_TRIGGER = "com.example.chrona.ACTION_ALARM_TRIGGER"
     const val EXTRA_ALARM_ID = "extra_alarm_id"
 
+    fun getSnoozeId(alarmId: String): String = if (alarmId.startsWith("snooze_")) alarmId else "snooze_$alarmId"
+    fun getOriginalAlarmId(alarmId: String): String = if (alarmId.startsWith("snooze_")) alarmId.removePrefix("snooze_") else alarmId
+
     fun canScheduleExactAlarms(context: Context): Boolean {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager ?: return false
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -37,7 +40,28 @@ object AlarmScheduler {
 
     fun scheduleSnooze(context: Context, snoozeAlarm: Alarm, snoozeMinutes: Int) {
         val triggerEpochMillis = System.currentTimeMillis() + (snoozeMinutes * 60 * 1000L)
-        scheduleExactAlarm(context, snoozeAlarm.id, snoozeAlarm.label, triggerEpochMillis)
+        val snoozeId = getSnoozeId(snoozeAlarm.id)
+        scheduleExactAlarm(context, snoozeId, snoozeAlarm.label, triggerEpochMillis)
+    }
+
+    fun cancelSnooze(context: Context, alarmId: String) {
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager ?: return
+        val snoozeId = getSnoozeId(alarmId)
+        val intent = Intent(context, AlarmReceiver::class.java).apply {
+            action = ACTION_ALARM_TRIGGER
+            putExtra(EXTRA_ALARM_ID, snoozeId)
+        }
+        val pendingIntent = PendingIntent.getBroadcast(
+            context,
+            snoozeId.hashCode(),
+            intent,
+            PendingIntent.FLAG_NO_CREATE or PendingIntent.FLAG_IMMUTABLE
+        )
+        if (pendingIntent != null) {
+            alarmManager.cancel(pendingIntent)
+            pendingIntent.cancel()
+            Log.d(TAG, "Cancelled pending snooze for alarm $alarmId")
+        }
     }
 
     private fun scheduleExactAlarm(

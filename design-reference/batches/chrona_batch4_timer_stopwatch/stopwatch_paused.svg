@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 915" width="412" height="915">
+  <title>CHRONA — Stopwatch Paused State</title>
+  <desc>Frozen elapsed time with Reset enabled, Resume primary pill CTA, and recorded lap list.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="timer-done-glow" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#93A8C7" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#A7E8D8" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-screen-412x915">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-screen-412x915)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">13:25</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    
+    <text x="20" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Stopwatch</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+<g id="stopwatch-chronograph-dial">
+  <circle cx="206" cy="232" r="126" fill="#080B10" stroke="#1E293B" stroke-width="1.5"/>
+  <line x1="206.0" y1="120.0" x2="206.0" y2="109.0" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="218.3" y1="114.6" x2="218.9" y2="109.7" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="230.5" y1="116.6" x2="231.6" y2="111.7" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="242.5" y1="119.8" x2="244.0" y2="115.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="254.0" y1="124.2" x2="256.0" y2="119.6" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="262.0" y1="135.0" x2="267.5" y2="125.5" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="275.4" y1="136.5" x2="278.3" y2="132.5" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="285.0" y1="144.3" x2="288.3" y2="140.6" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="293.7" y1="153.0" x2="297.4" y2="149.7" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="301.5" y1="162.6" x2="305.5" y2="159.7" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="303.0" y1="176.0" x2="312.5" y2="170.5" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="313.8" y1="184.0" x2="318.4" y2="182.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="318.2" y1="195.5" x2="323.0" y2="194.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="321.4" y1="207.5" x2="326.3" y2="206.4" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="323.4" y1="219.7" x2="328.3" y2="219.1" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="318.0" y1="232.0" x2="329.0" y2="232.0" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="323.4" y1="244.3" x2="328.3" y2="244.9" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="321.4" y1="256.5" x2="326.3" y2="257.6" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="318.2" y1="268.5" x2="323.0" y2="270.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="313.8" y1="280.0" x2="318.4" y2="282.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="303.0" y1="288.0" x2="312.5" y2="293.5" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="301.5" y1="301.4" x2="305.5" y2="304.3" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="293.7" y1="311.0" x2="297.4" y2="314.3" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="285.0" y1="319.7" x2="288.3" y2="323.4" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="275.4" y1="327.5" x2="278.3" y2="331.5" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="262.0" y1="329.0" x2="267.5" y2="338.5" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="254.0" y1="339.8" x2="256.0" y2="344.4" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="242.5" y1="344.2" x2="244.0" y2="349.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="230.5" y1="347.4" x2="231.6" y2="352.3" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="218.3" y1="349.4" x2="218.9" y2="354.3" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="206.0" y1="344.0" x2="206.0" y2="355.0" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="193.7" y1="349.4" x2="193.1" y2="354.3" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="181.5" y1="347.4" x2="180.4" y2="352.3" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="169.5" y1="344.2" x2="168.0" y2="349.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="158.0" y1="339.8" x2="156.0" y2="344.4" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="150.0" y1="329.0" x2="144.5" y2="338.5" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="136.6" y1="327.5" x2="133.7" y2="331.5" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="127.0" y1="319.7" x2="123.7" y2="323.4" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="118.3" y1="311.0" x2="114.6" y2="314.3" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="110.5" y1="301.4" x2="106.5" y2="304.3" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="109.0" y1="288.0" x2="99.5" y2="293.5" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="98.2" y1="280.0" x2="93.6" y2="282.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="93.8" y1="268.5" x2="89.0" y2="270.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="90.6" y1="256.5" x2="85.7" y2="257.6" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="88.6" y1="244.3" x2="83.7" y2="244.9" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="94.0" y1="232.0" x2="83.0" y2="232.0" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="88.6" y1="219.7" x2="83.7" y2="219.1" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="90.6" y1="207.5" x2="85.7" y2="206.4" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="93.8" y1="195.5" x2="89.0" y2="194.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="98.2" y1="184.0" x2="93.6" y2="182.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="109.0" y1="176.0" x2="99.5" y2="170.5" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="110.5" y1="162.6" x2="106.5" y2="159.7" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="118.3" y1="153.0" x2="114.6" y2="149.7" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="127.0" y1="144.3" x2="123.7" y2="140.6" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="136.6" y1="136.5" x2="133.7" y2="132.5" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="150.0" y1="135.0" x2="144.5" y2="125.5" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="158.0" y1="124.2" x2="156.0" y2="119.6" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="169.5" y1="119.8" x2="168.0" y2="115.0" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="181.5" y1="116.6" x2="180.4" y2="111.7" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="193.7" y1="114.6" x2="193.1" y2="109.7" stroke="#334155" stroke-width="1.0" stroke-linecap="round"/>
+  <text x="206" y="188" text-anchor="middle" class="font-mono" font-size="10.5" font-weight="600" letter-spacing="1.2" fill="#64748B">CHRONOGRAPH</text>
+  <text x="206" y="244" text-anchor="middle" class="font-sans tnum" font-size="54" font-weight="400" letter-spacing="-1" fill="#F1F5F9">02:48</text>
+  <text x="206" y="280" text-anchor="middle" class="font-mono tnum" font-size="24" font-weight="500" fill="#94A3B8">.64</text>
+</g>
+  <g id="stopwatch-paused-laps" transform="translate(20, 382)">
+    <rect x="0" y="0" width="372" height="254" rx="22" fill="#1A202C" stroke="#1E293B"/>
+    <text x="18" y="28" class="font-mono" font-size="10.5" font-weight="600" fill="#93A8C7">PAUSED · 4 LAPS RECORDED</text>
+    <text x="354" y="28" text-anchor="end" class="font-mono" font-size="10.5" fill="#94A3B8">AVG 00:42.16</text>
+    <line x1="18" y1="38" x2="354" y2="38" stroke="#1E293B"/>
+    <g transform="translate(18, 64)">
+      <text x="0" y="0" class="font-mono tnum" font-size="13" font-weight="600" fill="#F1F5F9">Lap 04</text>
+      <rect x="58" y="-12" width="66" height="18" rx="9" fill="#222A38"/><text x="91" y="1" text-anchor="middle" class="font-mono" font-size="9" font-weight="600" fill="#93A8C7">PAUSED</text>
+      <text x="192" y="0" text-anchor="end" class="font-mono tnum" font-size="14" font-weight="600" fill="#93A8C7">00:39.18</text>
+      <text x="336" y="0" text-anchor="end" class="font-mono tnum" font-size="13" fill="#94A3B8">02:48.64</text>
+      <line x1="0" y1="16" x2="336" y2="16" stroke="#1E293B"/>
+    </g>
+    <g transform="translate(18, 116)">
+      <text x="0" y="0" class="font-mono tnum" font-size="13" font-weight="600" fill="#F1F5F9">Lap 03</text>
+      <rect x="58" y="-12" width="66" height="18" rx="9" fill="#222A38"/><text x="91" y="1" text-anchor="middle" class="font-mono" font-size="9" font-weight="600" fill="#A7E8D8">FASTEST</text>
+      <text x="192" y="0" text-anchor="end" class="font-mono tnum" font-size="14" font-weight="600" fill="#A7E8D8">00:41.02</text>
+      <text x="336" y="0" text-anchor="end" class="font-mono tnum" font-size="13" fill="#94A3B8">02:09.46</text>
+      <line x1="0" y1="16" x2="336" y2="16" stroke="#1E293B"/>
+    </g>
+    <g transform="translate(18, 168)">
+      <text x="0" y="0" class="font-mono tnum" font-size="13" font-weight="600" fill="#F1F5F9">Lap 02</text>
+      <rect x="58" y="-12" width="66" height="18" rx="9" fill="#222A38"/><text x="91" y="1" text-anchor="middle" class="font-mono" font-size="9" font-weight="600" fill="#F4C2A1">SLOWEST</text>
+      <text x="192" y="0" text-anchor="end" class="font-mono tnum" font-size="14" font-weight="600" fill="#F4C2A1">00:44.85</text>
+      <text x="336" y="0" text-anchor="end" class="font-mono tnum" font-size="13" fill="#94A3B8">01:28.44</text>
+      <line x1="0" y1="16" x2="336" y2="16" stroke="#1E293B"/>
+    </g>
+    <g transform="translate(18, 220)">
+      <text x="0" y="0" class="font-mono tnum" font-size="13" font-weight="600" fill="#F1F5F9">Lap 01</text>
+      
+      <text x="192" y="0" text-anchor="end" class="font-mono tnum" font-size="14" font-weight="600" fill="#F1F5F9">00:43.59</text>
+      <text x="336" y="0" text-anchor="end" class="font-mono tnum" font-size="13" fill="#94A3B8">00:43.59</text>
+      
+    </g>
+  </g>
+  <g id="stopwatch-paused-controls" transform="translate(20, 666)">
+    <rect x="0" y="0" width="178" height="64" rx="32" fill="#222A38" stroke="#334155"/>
+    <g transform="translate(42,20) scale(0.917)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36L21 8M21 3v5h-5"/></g>
+    <text x="104" y="38" text-anchor="middle" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">Reset</text>
+
+    <rect x="194" y="0" width="178" height="64" rx="32" fill="#93A8C7"/>
+    <g transform="translate(232,21) scale(0.917)" fill="none" stroke="#0B1320" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="7 5 19 12 7 19 7 5" fill="currentColor"/></g>
+    <text x="300" y="38" text-anchor="middle" class="font-sans" font-size="16" font-weight="700" fill="#0B1320">Resume</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      <rect x="260.4" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Bedtime</text>
+    </g>
+  </g>
+  </g>
+</svg>

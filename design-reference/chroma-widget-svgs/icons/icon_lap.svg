@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <title>Chrona Icon — Lap / Split</title>
+  <desc>Minimal outline stopwatch lap split icon.</desc>
+  <g id="icon-lap" fill="none" stroke="#1B1B1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="9.5" y1="2" x2="14.5" y2="2"/>
+    <line x1="12" y1="2" x2="12" y2="4.8"/>
+    <line x1="18.2" y1="6.8" x2="19.8" y2="5.2"/>
+    <circle cx="12" cy="14" r="8"/>
+    <polyline points="12 9.5 12 14 15.5 14"/>
+  </g>
+</svg>

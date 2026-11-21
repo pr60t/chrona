@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1040" width="960" height="1040">
+  <title>CHRONA — Dark vs. Light Comparison: Bedtime &amp; Settings</title>
+  <desc>Side-by-side comparison of Bedtime schedule and grouped Settings rows across Dark and Light themes.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <clipPath id="clip-dark-c3"><rect x="0" y="0" width="412" height="860" rx="34"/></clipPath>
+    <clipPath id="clip-light-c3"><rect x="0" y="0" width="412" height="860" rx="34"/></clipPath>
+  </defs>
+  <rect x="0" y="0" width="960" height="1040" fill="#080B10"/>
+  <text x="36" y="54" class="font-sans" font-size="24" font-weight="600" fill="#F1F5F9">CHRONA — Dark vs. Light Comparison: Bedtime &amp; Settings</text>
+  <text x="36" y="80" class="font-sans" font-size="13" fill="#94A3B8">Side-by-side comparison of Bedtime schedule and grouped Settings rows across Dark and Light themes.</text>
+  <line x1="36" y1="98" x2="924" y2="98" stroke="#1E293B"/>
+  <g transform="translate(36, 128)">
+      <text x="206" y="-12" text-anchor="middle" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">DARK THEME · AMOLED #000000</text>
+      <g transform="scale(1.0)">
+        <rect x="0" y="0" width="412" height="860" rx="34" fill="#000000" stroke="#334155" stroke-width="2"/>
+        <g clip-path="url(#clip-dark-c3)"><text x="20" y="64" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Bedtime &amp; Settings</text>
+<rect x="20" y="102" width="372" height="152" rx="22" fill="#1A202C" stroke="#1E293B"/><text x="38" y="136" class="font-mono" font-size="10.5" fill="#D4B8F0">SLEEP SCHEDULE · ACTIVE</text><text x="38" y="182" class="font-sans tnum" font-size="34" fill="#F1F5F9">22:30 → 06:30</text><text x="38" y="218" class="font-sans" font-size="12.5" fill="#94A3B8">Target: 8 hrs 00 min · Mon–Fri</text>
+<rect x="20" y="276" width="372" height="224" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="38" y="316" class="font-sans" font-size="14" fill="#F1F5F9">Theme · AMOLED Black</text><line x1="38" y1="336" x2="374" y2="336" stroke="#1E293B"/><text x="38" y="368" class="font-sans" font-size="14" fill="#F1F5F9">Accent color · Periwinkle</text><line x1="38" y1="388" x2="374" y2="388" stroke="#1E293B"/><text x="38" y="420" class="font-sans" font-size="14" fill="#F1F5F9">City images · Enabled</text><line x1="38" y1="440" x2="374" y2="440" stroke="#1E293B"/><text x="38" y="472" class="font-sans" font-size="14" fill="#F1F5F9">24-hour time</text></g>
+      </g>
+    </g>
+  <g transform="translate(512, 128)">
+      <text x="206" y="-12" text-anchor="middle" class="font-mono" font-size="12" font-weight="600" fill="#5A7399">LIGHT THEME · WARM OFF-WHITE #F7F8FA</text>
+      <g transform="scale(1.0)">
+        <rect x="0" y="0" width="412" height="860" rx="34" fill="#F7F8FA" stroke="#CBD5E1" stroke-width="2"/>
+        <g clip-path="url(#clip-light-c3)"><text x="20" y="64" class="font-sans" font-size="22" font-weight="500" fill="#0F172A">Bedtime &amp; Settings</text>
+<rect x="20" y="102" width="372" height="152" rx="22" fill="#FFFFFF" stroke="#E2E8F0"/><text x="38" y="136" class="font-mono" font-size="10.5" font-weight="600" fill="#5A7399">SLEEP SCHEDULE · ACTIVE</text><text x="38" y="182" class="font-sans tnum" font-size="34" fill="#0F172A">22:30 → 06:30</text><text x="38" y="218" class="font-sans" font-size="12.5" fill="#475569">Target: 8 hrs 00 min · Mon–Fri</text>
+<rect x="20" y="276" width="372" height="224" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/><text x="38" y="316" class="font-sans" font-size="14" fill="#0F172A">Theme · Light</text><line x1="38" y1="336" x2="374" y2="336" stroke="#E2E8F0"/><text x="38" y="368" class="font-sans" font-size="14" fill="#0F172A">Accent color · Periwinkle</text><line x1="38" y1="388" x2="374" y2="388" stroke="#E2E8F0"/><text x="38" y="420" class="font-sans" font-size="14" fill="#0F172A">City images · Enabled</text><line x1="38" y1="440" x2="374" y2="440" stroke="#E2E8F0"/><text x="38" y="472" class="font-sans" font-size="14" fill="#0F172A">24-hour time</text></g>
+      </g>
+    </g>
+</svg>

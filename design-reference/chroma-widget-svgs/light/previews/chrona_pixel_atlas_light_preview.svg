@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 480 540" width="480" height="540">
+  <title>CHRONA Light Widget Preview — Pixel Atlas (2 × 2)</title>
+  <desc>Light-theme widget-picker preview card for Pixel Atlas (2 × 2) on neutral cool-grey picker surface.</desc>
+
+  <rect id="picker-preview-bg-light" x="0" y="0" width="480" height="540" rx="28" fill="#F5F6FA" stroke="#E0E2E9" stroke-width="1"/>
+  <g id="preview-widget-stage-light" transform="translate(40, 32)">
+<g id="widget-pixel-atlas-light">
+    <!-- Outer Hardware Enclosure -->
+    <rect id="atlas-enclosure" x="14" y="14" width="372" height="372" rx="44" ry="44" fill="#FFFFFF"/>
+    <rect id="atlas-inner-bezel" x="14.5" y="14.5" width="371" height="371" rx="43.5" ry="43.5" fill="none" stroke="#E0E2E9" stroke-width="1"/>
+
+    <!-- Top Header Bar -->
+    <g id="atlas-header">
+      <text id="atlas-title" x="42" y="56" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="2.2">WORLD CLOCK</text>
+      <!-- Signature 4-pixel micro-matrix on top-right mirroring the 4 cells -->
+      <g id="atlas-header-pixels" transform="translate(338, 43)">
+        <rect x="0" y="0" width="5" height="5" rx="1" fill="#888B98"/>
+        <rect x="8" y="0" width="5" height="5" rx="1" fill="#6B7FD4"/>
+        <rect x="0" y="8" width="5" height="5" rx="1" fill="#D99B3C"/>
+        <rect x="8" y="8" width="5" height="5" rx="1" fill="#D99B3C"/>
+      </g>
+    </g>
+
+    <!-- Subtle Hairline Separators -->
+    <g id="atlas-separators" stroke="#E0E2E9" stroke-width="1" stroke-linecap="round">
+      <line x1="42" y1="74" x2="358" y2="74"/>
+      <line x1="200" y1="90" x2="200" y2="354"/>
+      <line x1="42" y1="222" x2="358" y2="222"/>
+    </g>
+
+    <!-- Cell 1 (Top-Left): UTC (Etc/UTC) — Neutral Grey Pixel -->
+    <g id="cell-utc" transform="translate(42, 96)">
+      <rect id="pixel-utc" x="0" y="3" width="8" height="8" rx="1.5" fill="#888B98"/>
+      <text id="city-utc" x="16" y="11" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">UTC</text>
+      <text id="time-utc" x="0" y="64" fill="#202127" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">14:18</text>
+      <text id="day-utc" x="0" y="90" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +0H</text>
+    </g>
+
+    <!-- Cell 2 (Top-Right): TOKYO (Asia/Tokyo) — Night Periwinkle Pixel -->
+    <g id="cell-tokyo" transform="translate(218, 96)">
+      <rect id="pixel-tokyo" x="0" y="3" width="8" height="8" rx="1.5" fill="#6B7FD4"/>
+      <text id="city-tokyo" x="16" y="11" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">TOKYO</text>
+      <text id="time-tokyo" x="0" y="64" fill="#202127" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">23:18</text>
+      <text id="day-tokyo" x="0" y="90" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +9H</text>
+    </g>
+
+    <!-- Cell 3 (Bottom-Left): PARIS (Europe/Paris) — Day Warm Amber Pixel -->
+    <g id="cell-paris" transform="translate(42, 244)">
+      <rect id="pixel-paris" x="0" y="3" width="8" height="8" rx="1.5" fill="#D99B3C"/>
+      <text id="city-paris" x="16" y="11" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">PARIS</text>
+      <text id="time-paris" x="0" y="64" fill="#202127" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">15:18</text>
+      <text id="day-paris" x="0" y="90" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +1H</text>
+    </g>
+
+    <!-- Cell 4 (Bottom-Right): MUNICH (Europe/Berlin) — Day Warm Amber Pixel -->
+    <g id="cell-munich" transform="translate(218, 244)">
+      <rect id="pixel-munich" x="0" y="3" width="8" height="8" rx="1.5" fill="#D99B3C"/>
+      <text id="city-munich" x="16" y="11" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">MUNICH</text>
+      <text id="time-munich" x="0" y="64" fill="#202127" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">15:18</text>
+      <text id="day-munich" x="0" y="90" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +1H</text>
+    </g>
+  </g>
+  </g>
+  <text id="preview-widget-name-light" x="240" y="472" text-anchor="middle" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="18" font-weight="500">Pixel Atlas</text>
+  <text id="preview-widget-size-light" x="240" y="498" text-anchor="middle" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="14" font-weight="400">2 × 2</text>
+</svg>

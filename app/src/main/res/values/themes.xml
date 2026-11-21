@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base application theme in Day/Light mode -->
+    <style name="Theme.Chrona" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">#F7F8FA</item>
+        <item name="android:windowSplashScreenBackground">#F7F8FA</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_chrona_symbol_light</item>
+    </style>
 
-    <style name="Theme.Chrona" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Base starting splash theme in Day/Light mode -->
+    <style name="Theme.Chrona.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#F7F8FA</item>
+        <item name="android:windowSplashScreenBackground">#F7F8FA</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_chrona_symbol_light</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_chrona_symbol_light</item>
+        <item name="postSplashScreenTheme">@style/Theme.Chrona.Light</item>
+    </style>
+
+    <!-- Explicit AMOLED Dark starting splash theme -->
+    <style name="Theme.Chrona.Starting.Dark" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#000000</item>
+        <item name="android:windowSplashScreenBackground">#000000</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_chrona_symbol</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_chrona_symbol</item>
+        <item name="postSplashScreenTheme">@style/Theme.Chrona</item>
+    </style>
+
+    <!-- Explicit Light starting splash theme -->
+    <style name="Theme.Chrona.Starting.Light" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#F7F8FA</item>
+        <item name="android:windowSplashScreenBackground">#F7F8FA</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_chrona_symbol_light</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_chrona_symbol_light</item>
+        <item name="postSplashScreenTheme">@style/Theme.Chrona.Light</item>
+    </style>
+
+    <style name="Theme.Chrona.Light" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">#F7F8FA</item>
+        <item name="android:windowSplashScreenBackground">#F7F8FA</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_chrona_symbol_light</item>
+    </style>
 </resources>

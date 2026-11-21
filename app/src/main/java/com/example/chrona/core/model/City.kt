@@ -22,11 +22,14 @@ data class City(
     val isSaved: Boolean = false,
     val population: Long = 0
 ) {
+    val isUtc: Boolean
+        get() = geonameId == 1L || zoneIdString == "Etc/UTC" || zoneIdString == "UTC" || cityName.equals("UTC", ignoreCase = true)
+
     val zoneId: ZoneId
         get() = try {
-            if (zoneIdString == "UTC") ZoneId.of("UTC") else ZoneId.of(zoneIdString)
+            if (isUtc) ZoneId.of("Etc/UTC") else ZoneId.of(zoneIdString)
         } catch (e: Exception) {
-            ZoneId.systemDefault()
+            ZoneId.of("Etc/UTC")
         }
 
     val identityColor: Color
@@ -41,9 +44,21 @@ data class City(
         return now.atZone(zoneId)
     }
 
-    fun isDaytime(now: Instant = Instant.now()): Boolean {
-        val hour = currentZonedDateTime(now).hour
-        return hour in 6..18
+    fun isDaytime(now: Instant = Instant.now()): Boolean? {
+        if (isUtc) return null
+        return com.example.chrona.core.timezone.SolarCalculator.isDaytime(now, latitude, longitude)
+    }
+
+    fun localDate(now: Instant = Instant.now()): java.time.LocalDate {
+        return currentZonedDateTime(now).toLocalDate()
+    }
+
+    fun formattedWeekday(now: Instant = Instant.now()): String {
+        return currentZonedDateTime(now).dayOfWeek.getDisplayName(java.time.format.TextStyle.SHORT, Locale.getDefault())
+    }
+
+    fun formattedFullDate(now: Instant = Instant.now()): String {
+        return currentZonedDateTime(now).format(DateTimeFormatter.ofPattern("EEE, MMM d", Locale.getDefault()))
     }
 
     fun formattedTime(is24Hour: Boolean = false, now: Instant = Instant.now()): String {

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_frost_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_frost_bg"
+    android:orientation="vertical"
+    android:paddingStart="14dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="12dp">
+
+    <!-- Header with Pixel Accent Glow -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.15"
+            android:text="WORLD CLOCK"
+            android:textColor="#B0BAC8"
+            android:textSize="10.5sp" />
+
+        <!-- Signature Frosted Pixel Accent Matrix -->
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <ImageView
+            android:contentDescription="@null"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_margin="1.5dp"
+                android:background="#DCE2FA" />
+
+            <ImageView
+            android:contentDescription="@null"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_margin="1.5dp"
+                android:background="#96A8E8" />
+
+            <ImageView
+            android:contentDescription="@null"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_margin="1.5dp"
+                android:background="#96A8E8" />
+
+            <ImageView
+            android:contentDescription="@null"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_margin="1.5dp"
+                android:background="#DCE2FA" />
+        </GridLayout>
+    </RelativeLayout>
+
+    <!-- Frosted Hairline Divider -->
+    <ImageView
+            android:contentDescription="@null"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="#384050" />
+
+    <!-- 2x2 Grid Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Top Row (Cells 1 & 2) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- Cell 1 (Top-Left) -->
+            <LinearLayout
+                android:id="@+id/frost_cell1_root"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingEnd="6dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/frost_cell1_pixel"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_widget_pixel_indicator" />
+
+                    <TextView
+                        android:id="@+id/frost_cell1_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.08"
+                        android:maxLines="1"
+                        android:text="UTC"
+                        android:textColor="#C0CAD8"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextClock
+                    android:id="@+id/frost_cell1_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:format12Hour="h:mm"
+                    android:format24Hour="HH:mm"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:textColor="#FFFFFF"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/frost_cell1_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.05"
+                    android:text="FRI · +0H"
+                    android:textColor="#A0B0C0"
+                    android:textSize="9.5sp" />
+            </LinearLayout>
+
+            <!-- Vertical Hairline Divider -->
+            <ImageView
+            android:contentDescription="@null"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#384050" />
+
+            <!-- Cell 2 (Top-Right) -->
+            <LinearLayout
+                android:id="@+id/frost_cell2_root"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingStart="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/frost_cell2_pixel"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_widget_pixel_indicator" />
+
+                    <TextView
+                        android:id="@+id/frost_cell2_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.08"
+                        android:maxLines="1"
+                        android:text="TOKYO"
+                        android:textColor="#C0CAD8"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextClock
+                    android:id="@+id/frost_cell2_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:format12Hour="h:mm"
+                    android:format24Hour="HH:mm"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:textColor="#FFFFFF"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/frost_cell2_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.05"
+                    android:text="FRI · +9H"
+                    android:textColor="#A0B0C0"
+                    android:textSize="9.5sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Horizontal Middle Divider -->
+        <ImageView
+            android:contentDescription="@null"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#384050" />
+
+        <!-- Bottom Row (Cells 3 & 4) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- Cell 3 (Bottom-Left) -->
+            <LinearLayout
+                android:id="@+id/frost_cell3_root"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingEnd="6dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/frost_cell3_pixel"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_widget_pixel_indicator" />
+
+                    <TextView
+                        android:id="@+id/frost_cell3_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.08"
+                        android:maxLines="1"
+                        android:text="PARIS"
+                        android:textColor="#C0CAD8"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextClock
+                    android:id="@+id/frost_cell3_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:format12Hour="h:mm"
+                    android:format24Hour="HH:mm"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:textColor="#FFFFFF"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/frost_cell3_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.05"
+                    android:text="FRI · +1H"
+                    android:textColor="#A0B0C0"
+                    android:textSize="9.5sp" />
+            </LinearLayout>
+
+            <!-- Vertical Hairline Divider -->
+            <ImageView
+            android:contentDescription="@null"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#384050" />
+
+            <!-- Cell 4 (Bottom-Right) -->
+            <LinearLayout
+                android:id="@+id/frost_cell4_root"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingStart="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/frost_cell4_pixel"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_widget_pixel_indicator" />
+
+                    <TextView
+                        android:id="@+id/frost_cell4_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.08"
+                        android:maxLines="1"
+                        android:text="MUNICH"
+                        android:textColor="#C0CAD8"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextClock
+                    android:id="@+id/frost_cell4_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:format12Hour="h:mm"
+                    android:format24Hour="HH:mm"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:textColor="#FFFFFF"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/frost_cell4_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.05"
+                    android:text="FRI · +1H"
+                    android:textColor="#A0B0C0"
+                    android:textSize="9.5sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

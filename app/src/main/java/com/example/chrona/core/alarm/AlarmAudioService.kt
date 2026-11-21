@@ -124,14 +124,42 @@ class AlarmAudioService : Service() {
             "Time to wake up"
         }
 
-        val notification = buildOngoingAlarmNotification(alarmId, alarmTitle, subtitle, alarm?.snoozeDurationMinutes ?: 10)
+        // Check full-screen intent permission state (API 34+)
+        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val canFullScreen = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            notificationManager.canUseFullScreenIntent()
+        } else {
+            true
+        }
+
+        val notification = buildOngoingAlarmNotification(
+            alarmId = alarmId,
+            title = alarmTitle,
+            subtitle = subtitle,
+            snoozeMinutes = alarm?.snoozeDurationMinutes ?: 10,
+            canFullScreen = canFullScreen
+        )
         startForeground(NOTIFICATION_ID, notification)
 
-        // Broadcast or set in repository for UI visibility
+        // Set in repository for UI visibility
         AlarmRepository.setRingingAlarm(alarm)
 
+        if (canFullScreen) {
+            try {
+                val ringActivityIntent = Intent(this, AlarmRingingActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                    putExtra(EXTRA_ALARM_ID, alarmId)
+                }
+                startActivity(ringActivityIntent)
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to launch AlarmRingingActivity directly", e)
+            }
+        } else {
+            Log.d(TAG, "Full-screen access is denied; presenting high-priority heads-up notification fallback")
+        }
+
         // Initialize single authoritative audio player
-        val rampSeconds = if (alarm?.gradualVolumeRamp == true) 30 else 0
+        val rampSeconds = if (alarm?.gradualVolumeRamp == true) 20 else 0
         startLoopingAudio(alarm?.soundUri, rampSeconds)
 
         // Initialize vibration if enabled
@@ -143,6 +171,7 @@ class AlarmAudioService : Service() {
 
     private fun handleDismissAlarm(alarmId: String) {
         Log.d(TAG, "Dismissing alarm $alarmId")
+        SnoozeNotificationManager.cancelSnoozeNotification(this, alarmId)
         stopAudioAndVibration()
         AlarmRepository.setRingingAlarm(null)
         stopForeground(STOP_FOREGROUND_REMOVE)
@@ -181,7 +210,7 @@ class AlarmAudioService : Service() {
                 setAudioAttributes(
                     AudioAttributes.Builder()
                         .setUsage(AudioAttributes.USAGE_ALARM)
-                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                         .build()
                 )
                 isLooping = true
@@ -189,13 +218,15 @@ class AlarmAudioService : Service() {
 
             player.prepare()
 
-            val initialVolume = if (gradualRampSeconds > 0) 0.05f else 1.0f
+            val userMaxVolume = (PreferencesRepository.preferences.value.alarmVolumePercent / 100f).coerceIn(0f, 1f)
+            // If gradual ramp is enabled, start at gentle audible floor (0.25f of maxVolume) instead of near-silent 0.05f
+            val initialVolume = if (gradualRampSeconds > 0) 0.25f * userMaxVolume else userMaxVolume
             player.setVolume(initialVolume, initialVolume)
             player.start()
             mediaPlayer = player
 
             if (gradualRampSeconds > 0) {
-                startGradualVolumeRamp(gradualRampSeconds)
+                startGradualVolumeRamp(gradualRampSeconds, userMaxVolume)
             }
         } catch (e: Exception) {
             Log.e(TAG, "Failed to start MediaPlayer for alarm sound, falling back to default", e)
@@ -206,18 +237,19 @@ class AlarmAudioService : Service() {
     private fun tryFallbackDefaultPlayer() {
         try {
             val fallbackUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
+            val userMaxVolume = (PreferencesRepository.preferences.value.alarmVolumePercent / 100f).coerceIn(0f, 1f)
             val player = MediaPlayer().apply {
                 setDataSource(applicationContext, fallbackUri)
                 setAudioAttributes(
                     AudioAttributes.Builder()
                         .setUsage(AudioAttributes.USAGE_ALARM)
-                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                         .build()
                 )
                 isLooping = true
             }
             player.prepare()
-            player.setVolume(1.0f, 1.0f)
+            player.setVolume(userMaxVolume, userMaxVolume)
             player.start()
             mediaPlayer = player
         } catch (e: Exception) {
@@ -225,20 +257,28 @@ class AlarmAudioService : Service() {
         }
     }
 
-    private fun startGradualVolumeRamp(rampSeconds: Int) {
+    private fun startGradualVolumeRamp(rampSeconds: Int, maxVolume: Float) {
         volumeRampJob?.cancel()
         volumeRampJob = serviceScope.launch {
-            val steps = 30
+            val steps = 20
             val intervalMs = (rampSeconds * 1000L) / steps
+            val minFactor = 0.25f
             for (step in 1..steps) {
                 delay(intervalMs)
-                val targetVol = (step.toFloat() / steps).coerceIn(0.05f, 1.0f)
+                // Smooth perceptual curve: reaches ~70% perceived loudness in first half
+                val progress = step.toFloat() / steps
+                val rampFactor = minFactor + (1.0f - minFactor) * kotlin.math.sqrt(progress)
+                val targetVol = (rampFactor * maxVolume).coerceIn(0f, 1f)
                 try {
                     mediaPlayer?.setVolume(targetVol, targetVol)
                 } catch (e: Exception) {
                     break
                 }
             }
+            // Ensure target maxVolume is guaranteed at completion
+            try {
+                mediaPlayer?.setVolume(maxVolume, maxVolume)
+            } catch (_: Exception) {}
         }
     }
 
@@ -274,7 +314,7 @@ class AlarmAudioService : Service() {
                 .setAudioAttributes(
                     AudioAttributes.Builder()
                         .setUsage(AudioAttributes.USAGE_ALARM)
-                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                         .build()
                 )
                 .setOnAudioFocusChangeListener { /* maintain alarm priority */ }
@@ -355,7 +395,8 @@ class AlarmAudioService : Service() {
         alarmId: String,
         title: String,
         subtitle: String,
-        snoozeMinutes: Int
+        snoozeMinutes: Int,
+        canFullScreen: Boolean
     ): Notification {
         // Dedicated standalone ringing activity
         val fullScreenIntent = Intent(this, AlarmRingingActivity::class.java).apply {
@@ -391,7 +432,7 @@ class AlarmAudioService : Service() {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        return NotificationCompat.Builder(this, SILENT_RINGING_CHANNEL_ID)
+        val builder = NotificationCompat.Builder(this, SILENT_RINGING_CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
             .setContentTitle(title)
             .setContentText(subtitle)
@@ -401,12 +442,16 @@ class AlarmAudioService : Service() {
             .setOngoing(true)
             .setSound(null) // STRICTLY SILENT NOTIFICATION: AlarmAudioService MediaPlayer is the sole owner
             .setVibrate(null)
-            .setFullScreenIntent(fullScreenPendingIntent, true)
             .setContentIntent(fullScreenPendingIntent)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .addAction(android.R.drawable.ic_menu_close_clear_cancel, "Dismiss", dismissPendingIntent)
             .addAction(android.R.drawable.ic_popup_reminder, "Snooze · ${snoozeMinutes}m", snoozePendingIntent)
-            .build()
+
+        if (canFullScreen) {
+            builder.setFullScreenIntent(fullScreenPendingIntent, true)
+        }
+
+        return builder.build()
     }
 
     private fun createSilentNotificationChannel() {
@@ -422,6 +467,7 @@ class AlarmAudioService : Service() {
                 setSound(null, null)
                 enableVibration(false)
                 lockscreenVisibility = Notification.VISIBILITY_PUBLIC
+                setBypassDnd(true)
             }
             notificationManager.createNotificationChannel(channel)
         }

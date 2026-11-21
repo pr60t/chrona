@@ -10,6 +10,7 @@ import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.outlined.DarkMode
 import androidx.compose.material.icons.outlined.LightMode
+import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -160,6 +161,15 @@ fun CityDetailSheet(
                         }
                     }
 
+                    Spacer(modifier = Modifier.height(4.dp))
+
+                    Text(
+                        text = city.formattedFullDate(now),
+                        color = extendedColors.textSecondary,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Medium
+                    )
+
                     Spacer(modifier = Modifier.height(12.dp))
 
                     Row(
@@ -175,18 +185,33 @@ fun CityDetailSheet(
                                 verticalAlignment = Alignment.CenterVertically,
                                 horizontalArrangement = Arrangement.spacedBy(4.dp)
                             ) {
-                                Icon(
-                                    imageVector = if (isDay) Icons.Outlined.LightMode else Icons.Outlined.DarkMode,
-                                    contentDescription = null,
-                                    tint = if (isDay) Color(0xFFFCD34D) else Color(0xFF93A8C7),
-                                    modifier = Modifier.size(14.dp)
-                                )
-                                Text(
-                                    text = if (isDay) "Daytime" else "Night",
-                                    color = extendedColors.textSecondary,
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Medium
-                                )
+                                if (isDay != null) {
+                                    Icon(
+                                        imageVector = if (isDay) Icons.Outlined.LightMode else Icons.Outlined.DarkMode,
+                                        contentDescription = null,
+                                        tint = if (isDay) Color(0xFFFCD34D) else Color(0xFF96A8E8),
+                                        modifier = Modifier.size(14.dp)
+                                    )
+                                    Text(
+                                        text = if (isDay) "Daytime" else "Night",
+                                        color = extendedColors.textSecondary,
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.Medium
+                                    )
+                                } else {
+                                    Icon(
+                                        imageVector = Icons.Outlined.Public,
+                                        contentDescription = null,
+                                        tint = extendedColors.textSecondary,
+                                        modifier = Modifier.size(14.dp)
+                                    )
+                                    Text(
+                                        text = "Standard Time",
+                                        color = extendedColors.textSecondary,
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.Medium
+                                    )
+                                }
                             }
                         }
 

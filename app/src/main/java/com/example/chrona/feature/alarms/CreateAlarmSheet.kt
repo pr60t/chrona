@@ -7,9 +7,13 @@ import android.net.Uri
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -30,7 +34,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
+import androidx.compose.ui.input.nestedscroll.NestedScrollSource
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -45,6 +54,7 @@ import com.example.chrona.core.timezone.TimezoneEngine
 import com.example.chrona.feature.worldclock.TimezoneSearchSheet
 import com.example.chrona.ui.theme.ChronaThemeTokens
 import com.example.chrona.ui.theme.TABULAR_NUMS
+import kotlinx.coroutines.launch
 import java.time.Duration
 import java.time.Instant
 import java.time.LocalDate
@@ -56,16 +66,31 @@ import java.util.Locale
 @Composable
 fun CreateAlarmSheet(
     modifier: Modifier = Modifier,
+    isFullScreen: Boolean = false,
     initialCity: City? = null,
     editingAlarm: Alarm? = null,
     onDismiss: () -> Unit,
     onAlarmSaved: (Alarm) -> Unit
 ) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val coroutineScope = rememberCoroutineScope()
     val context = LocalContext.current
     val extendedColors = ChronaThemeTokens.extended
     val isDark = ChronaThemeTokens.isDark
     val preferences by PreferencesRepository.preferences.collectAsState()
     val is24Hour = preferences.is24HourFormat
+
+    val configuration = androidx.compose.ui.platform.LocalConfiguration.current
+    val screenHeight = configuration.screenHeightDp.dp
+    val initialHeight = screenHeight * 0.70f
+
+    var isExpanded by remember { mutableStateOf(isFullScreen) }
+    val targetHeight = if (isExpanded) screenHeight else initialHeight
+    val animatedHeight by animateDpAsState(
+        targetValue = targetHeight,
+        animationSpec = spring(stiffness = Spring.StiffnessMediumLow),
+        label = "sheetHeight"
+    )
 
     val editCity = editingAlarm?.let { alarm ->
         CityRepository.getAllCities().find { it.zoneIdString == alarm.targetZoneIdString }
@@ -84,7 +109,7 @@ fun CreateAlarmSheet(
     var label by remember { mutableStateOf(editingAlarm?.label ?: if (initialCity != null) "${selectedCity.cityName} Sync" else "Morning Wake-Up") }
     var daysOfWeek by remember { mutableStateOf(editingAlarm?.daysOfWeek ?: setOf(1, 2, 3, 4, 5)) } // Mon-Fri
     var vibrate by remember { mutableStateOf(editingAlarm?.vibrate ?: true) }
-    var snoozeMinutes by remember { mutableIntStateOf(editingAlarm?.snoozeDurationMinutes ?: 10) }
+    var snoozeMinutes by remember { mutableIntStateOf(editingAlarm?.snoozeDurationMinutes ?: preferences.defaultSnoozeDurationMinutes) }
     var gradualVolumeRamp by remember { mutableStateOf(editingAlarm?.gradualVolumeRamp ?: true) }
     var soundUri by remember { mutableStateOf(editingAlarm?.soundUri) }
     var soundTitle by remember {
@@ -105,6 +130,17 @@ fun CreateAlarmSheet(
     var dstPolicy by remember { mutableStateOf(editingAlarm?.dstPolicy ?: DstPolicy.NEXT_VALID_TIME) }
     var showTimePickerDialog by remember { mutableStateOf(false) }
     var showLabelDialog by remember { mutableStateOf(false) }
+
+    // Intercept Back: collapse if full screen, dismiss if at initial 70%
+    androidx.activity.compose.BackHandler(enabled = true) {
+        when {
+            showCitySearch -> showCitySearch = false
+            showTimePickerDialog -> showTimePickerDialog = false
+            showLabelDialog -> showLabelDialog = false
+            isExpanded -> isExpanded = false
+            else -> onDismiss()
+        }
+    }
 
     val ringtonePickerLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.StartActivityForResult()
@@ -141,7 +177,7 @@ fun CreateAlarmSheet(
             targetZoneIdString = if (isWorldAlarm) selectedCity.zoneIdString else "SYSTEM",
             targetCityName = if (isWorldAlarm) selectedCity.cityName else "Local Time",
             targetCountryName = if (isWorldAlarm) selectedCity.countryName else "",
-            identityColorHex = if (isWorldAlarm) selectedCity.identityColorHex else "#93A8C7",
+            identityColorHex = if (isWorldAlarm) selectedCity.identityColorHex else "#DCE2FA",
             daysOfWeek = daysOfWeek,
             dstPolicy = dstPolicy
         )
@@ -175,7 +211,7 @@ fun CreateAlarmSheet(
             targetZoneIdString = if (isWorldAlarm) selectedCity.zoneIdString else "SYSTEM",
             targetCityName = if (isWorldAlarm) selectedCity.cityName else "Local Time",
             targetCountryName = if (isWorldAlarm) selectedCity.countryName else "",
-            identityColorHex = if (isWorldAlarm) selectedCity.identityColorHex else "#93A8C7",
+            identityColorHex = if (isWorldAlarm) selectedCity.identityColorHex else "#DCE2FA",
             daysOfWeek = daysOfWeek,
             isEnabled = true,
             vibrate = vibrate,
@@ -189,32 +225,68 @@ fun CreateAlarmSheet(
         onAlarmSaved(alarmToSave)
     }
 
-    Surface(
-        modifier = modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
-    ) {
+    val scrollState = rememberScrollState()
+    val nestedScrollConnection = remember(isExpanded) {
+        object : NestedScrollConnection {
+            override fun onPreScroll(available: Offset, source: NestedScrollSource): Offset {
+                val delta = available.y
+                if (delta < -15f && !isExpanded) {
+                    isExpanded = true
+                    return Offset(0f, delta)
+                }
+                return Offset.Zero
+            }
+
+            override fun onPostScroll(consumed: Offset, available: Offset, source: NestedScrollSource): Offset {
+                val delta = available.y
+                if (delta > 15f && isExpanded && scrollState.value == 0) {
+                    isExpanded = false
+                    return Offset(0f, delta)
+                }
+                return Offset.Zero
+            }
+        }
+    }
+
+    val dragModifier = Modifier.pointerInput(isExpanded) {
+        detectVerticalDragGestures { _, dragAmount ->
+            if (dragAmount < -15f && !isExpanded) {
+                isExpanded = true
+            } else if (dragAmount > 15f && isExpanded) {
+                isExpanded = false
+            }
+        }
+    }
+
+    val editorContent: @Composable () -> Unit = {
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .statusBarsPadding()
+                .fillMaxWidth()
+                .height(animatedHeight)
+                .nestedScroll(nestedScrollConnection)
+                .navigationBarsPadding()
         ) {
-            // TOP APP BAR
+            // Header
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 12.dp),
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    IconButton(onClick = onDismiss) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back",
-                            tint = extendedColors.textPrimary
-                        )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    if (isExpanded) {
+                        IconButton(onClick = { isExpanded = false }) {
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                                contentDescription = "Collapse",
+                                tint = extendedColors.textPrimary
+                            )
+                        }
                     }
-                    Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = if (editingAlarm != null) {
                             if (isWorldAlarm) "Edit world alarm" else "Edit alarm"
@@ -222,16 +294,20 @@ fun CreateAlarmSheet(
                             if (isWorldAlarm) "World alarm" else "New local alarm"
                         },
                         fontSize = 20.sp,
-                        fontWeight = FontWeight.Medium,
+                        fontWeight = FontWeight.SemiBold,
                         color = extendedColors.textPrimary
                     )
                 }
 
-                TextButton(onClick = { saveAlarmAndDismiss() }) {
+                TextButton(onClick = {
+                    coroutineScope.launch {
+                        saveAlarmAndDismiss()
+                    }
+                }) {
                     Text(
                         text = "Save",
                         fontSize = 15.sp,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary
                     )
                 }
@@ -241,7 +317,7 @@ fun CreateAlarmSheet(
                 modifier = Modifier
                     .fillMaxSize()
                     .weight(1f)
-                    .verticalScroll(rememberScrollState())
+                    .verticalScroll(scrollState)
                     .padding(horizontal = 20.dp, vertical = 8.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
@@ -937,6 +1013,28 @@ fun CreateAlarmSheet(
                 Spacer(modifier = Modifier.height(24.dp))
             }
         }
+    }
+
+    ModalBottomSheet(
+        onDismissRequest = {
+            if (isExpanded) {
+                isExpanded = false
+            } else {
+                onDismiss()
+            }
+        },
+        sheetState = sheetState,
+        shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
+        containerColor = MaterialTheme.colorScheme.background,
+        dragHandle = {
+            BottomSheetDefaults.DragHandle(
+                color = extendedColors.textMuted,
+                modifier = dragModifier
+            )
+        },
+        modifier = modifier
+    ) {
+        editorContent()
     }
 
     // RADIAL TIME PICKER DIALOG (Matching batch 3 & 8)

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <title>Chrona Pixel Indicator — Night</title>
+  <desc>Soft periwinkle square pixel indicator for local nighttime.</desc>
+  <g id="icon-pixel-night">
+    <rect x="6" y="6" width="12" height="12" rx="2.5" fill="#96A8E8"/>
+  </g>
+</svg>

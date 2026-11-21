@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400" width="400" height="400">
+  <title>CHRONA — Stacked Clock Widget (2×2)</title>
+  <desc>Tall vertical capsule charcoal-black digital clock with stacked two-line hours and minutes, top date, and bottom alarm row.</desc>
+  <defs>
+    <symbol id="sym-alarm" viewBox="0 0 24 24">
+      <circle cx="12" cy="13" r="7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="12 9.5 12 13 14.5 14.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5.2 4.2 L2.8 6.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M18.8 4.2 L21.2 6.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+  <g id="widget-stacked">
+    <rect id="stacked-capsule-surface" x="86" y="12" width="228" height="376" rx="114" ry="114" fill="#202022"/>
+    <text id="stacked-date" x="200" y="68" text-anchor="middle" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="15.5" font-weight="500" letter-spacing="0.3">Fri, Nov 20</text>
+    <g id="stacked-time-group">
+      <text id="stacked-hours" x="200" y="182" text-anchor="middle" fill="#DFE2F3" font-family="Inter, Roboto, Arial, sans-serif" font-size="112" font-weight="300" letter-spacing="-2">10</text>
+      <text id="stacked-minutes" x="200" y="284" text-anchor="middle" fill="#DFE2F3" font-family="Inter, Roboto, Arial, sans-serif" font-size="112" font-weight="300" letter-spacing="-2">10</text>
+    </g>
+    <g id="stacked-alarm-row" transform="translate(163, 326)" color="#9295A6">
+      <use href="#sym-alarm" xlink:href="#sym-alarm" x="0" y="0" width="17" height="17"/>
+      <text id="stacked-alarm-time" x="23" y="14" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="15" font-weight="500">07:30</text>
+    </g>
+  </g>
+</svg>

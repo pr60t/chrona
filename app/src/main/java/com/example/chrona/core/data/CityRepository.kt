@@ -1,6 +1,7 @@
 package com.example.chrona.core.data
 
 import android.content.Context
+import com.example.chrona.core.database.CityCatalogueDatabase
 import com.example.chrona.core.database.SavedCityDao
 import com.example.chrona.core.map.WorldMapProjection
 import com.example.chrona.core.model.City
@@ -10,22 +11,23 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 object CityRepository {
 
-    // Initial default city IDs from the design spec
-    private val defaultCityIds = setOf(1L, 756135L, 2643743L, 4930956L, 2063523L, 1283240L, 1850147L)
+    // Initial default city IDs from the design spec (UTC, Tokyo, Paris, Munich)
+    val defaultCityIds = listOf(1L, 1850147L, 2988507L, 2867714L)
 
-    private val allCities: List<City> = listOf(
+    private val fallbackCities: List<City> = listOf(
         createCity(
             geonameId = 1L,
             cityName = "UTC",
             countryName = "Universal Time Coordinated",
             countryCode = "UN",
             admin1Name = "Global",
-            latitude = 51.4778,
+            latitude = 0.0,
             longitude = 0.0,
-            zoneId = "UTC",
+            zoneId = "Etc/UTC",
             identityColorHex = "#B8C7F2",
             isSaved = true
         ),
@@ -82,19 +84,6 @@ object CityRepository {
             population = 2384371
         ),
         createCity(
-            geonameId = 1283240L,
-            cityName = "Kathmandu",
-            countryName = "Nepal",
-            countryCode = "NP",
-            admin1Name = "Bagmati Province",
-            latitude = 27.70169,
-            longitude = 85.3206,
-            zoneId = "Asia/Kathmandu",
-            identityColorHex = "#F2DF9B",
-            isSaved = true,
-            population = 1442271
-        ),
-        createCity(
             geonameId = 1850147L,
             cityName = "Tokyo",
             countryName = "Japan",
@@ -130,8 +119,21 @@ object CityRepository {
             longitude = 2.3488,
             zoneId = "Europe/Paris",
             identityColorHex = "#C39BE2",
-            isSaved = false,
+            isSaved = true,
             population = 2138551
+        ),
+        createCity(
+            geonameId = 2867714L,
+            cityName = "Munich",
+            countryName = "Germany",
+            countryCode = "DE",
+            admin1Name = "Bavaria",
+            latitude = 48.13743,
+            longitude = 11.57549,
+            zoneId = "Europe/Berlin",
+            identityColorHex = "#A7E8D8",
+            isSaved = true,
+            population = 1505005
         ),
         createCity(
             geonameId = 2147714L,
@@ -356,48 +358,92 @@ object CityRepository {
         )
     )
 
-    private val savedCityIds = MutableStateFlow<Set<Long>>(defaultCityIds)
-    private val _savedCities = MutableStateFlow<List<City>>(emptyList())
+    private val savedCityIds = MutableStateFlow<List<Long>>(defaultCityIds)
+    private val _savedCities = MutableStateFlow<List<City>>(
+        fallbackCities.filter { defaultCityIds.contains(it.geonameId) }
+    )
     val savedCities: StateFlow<List<City>> = _savedCities.asStateFlow()
 
+    @Volatile
+    private var catalogueDb: CityCatalogueDatabase? = null
     private var savedCityDao: SavedCityDao? = null
+    private var appContext: Context? = null
     private val scope = CoroutineScope(Dispatchers.IO)
 
-    init {
-        updateSavedCities()
-    }
-
     fun init(context: Context) {
+        val appCtx = context.applicationContext
+        appContext = appCtx
         if (savedCityDao == null) {
-            val dao = SavedCityDao(context)
+            catalogueDb = CityCatalogueDatabase.getInstance(appCtx)
+            val dao = SavedCityDao(appCtx)
             savedCityDao = dao
             scope.launch {
-                val persisted = dao.getSavedCityIds()
-                if (persisted.isNotEmpty()) {
-                    savedCityIds.value = persisted
-                } else {
-                    // Seed initial defaults into database
-                    defaultCityIds.forEach { dao.add(it) }
+                val oldSystemDefaults = setOf(756135L, 2643743L, 4930956L, 2063523L, 1283240L, 2950159L)
+                val persisted = dao.getSavedCityIds().toList()
+                if (persisted.isEmpty()) {
+                    dao.replaceAll(defaultCityIds)
                     savedCityIds.value = defaultCityIds
+                } else if (persisted.any { it in oldSystemDefaults }) {
+                    // One-time migration: replace old system defaults with new defaults while keeping user-added cities
+                    val userAdded = persisted.filter { it !in oldSystemDefaults && it !in defaultCityIds }
+                    val migrated = (defaultCityIds + userAdded).distinct()
+                    dao.replaceAll(migrated)
+                    savedCityIds.value = migrated
+                } else {
+                    savedCityIds.value = persisted
                 }
                 updateSavedCities()
             }
         }
     }
 
-    private fun updateSavedCities() {
+    private fun updateSavedCitiesSync() {
         val currentIds = savedCityIds.value
-        _savedCities.value = allCities.filter { currentIds.contains(it.geonameId) }
-            .map { it.copy(isSaved = true) }
+        val db = catalogueDb
+        val dbCities = db?.getCitiesByIds(currentIds.toSet()) ?: emptyList()
+        val fallbackMap = fallbackCities.associateBy { it.geonameId }
+        val dbMap = dbCities.associateBy { it.geonameId }
+
+        val ordered = currentIds.mapNotNull { id ->
+            (dbMap[id] ?: fallbackMap[id])?.copy(isSaved = true)
+        }
+        _savedCities.value = ordered
+
+        appContext?.let { ctx ->
+            try {
+                com.example.chrona.widget.WidgetUpdateHelper.updateWorldClockAtlasWidgets(ctx)
+                com.example.chrona.widget.WidgetUpdateHelper.updateWorldClockMinimalWidgets(ctx)
+                com.example.chrona.widget.WidgetUpdateHelper.updateWorldClockFrostWidgets(ctx)
+            } catch (_: Exception) {}
+        }
     }
 
-    fun getAllCities(): List<City> = allCities
+    private suspend fun updateSavedCities() = withContext(Dispatchers.IO) {
+        updateSavedCitiesSync()
+    }
 
-    fun searchCities(query: String): List<City> {
+    fun getAllCities(): List<City> = fallbackCities
+
+    suspend fun searchCities(query: String, limit: Int = 60): List<City> = withContext(Dispatchers.IO) {
         val trimmed = query.trim()
-        if (trimmed.isEmpty()) return allCities
-        val lower = trimmed.lowercase()
-        return allCities.filter {
+        if (trimmed.isEmpty()) return@withContext emptyList()
+
+        val db = catalogueDb
+        val results = if (db != null) {
+            db.searchCities(trimmed, limit)
+        } else {
+            fallbackSearch(trimmed)
+        }
+
+        val savedSet = savedCityIds.value.toSet()
+        results.map { city ->
+            if (savedSet.contains(city.geonameId)) city.copy(isSaved = true) else city
+        }
+    }
+
+    private fun fallbackSearch(query: String): List<City> {
+        val lower = query.lowercase()
+        return fallbackCities.filter {
             it.cityName.lowercase().contains(lower) ||
             it.countryName.lowercase().contains(lower) ||
             it.admin1Name.lowercase().contains(lower) ||
@@ -405,24 +451,67 @@ object CityRepository {
         }
     }
 
-    fun toggleSaveCity(cityId: Long) {
-        val current = savedCityIds.value.toMutableSet()
-        val dao = savedCityDao
-        if (current.contains(cityId)) {
-            if (current.size > 1) { // Keep at least one city
-                current.remove(cityId)
-                scope.launch { dao?.remove(cityId) }
+    fun deleteSavedCity(cityId: Long): Int {
+        val current = savedCityIds.value.toMutableList()
+        val index = current.indexOf(cityId)
+        if (index != -1) {
+            current.removeAt(index)
+            savedCityIds.value = current
+            updateSavedCitiesSync()
+            val dao = savedCityDao
+            scope.launch {
+                dao?.replaceAll(current)
             }
+        }
+        return index
+    }
+
+    fun restoreSavedCity(cityId: Long, originalIndex: Int) {
+        val current = savedCityIds.value.toMutableList()
+        if (!current.contains(cityId)) {
+            val targetIndex = originalIndex.coerceIn(0, current.size)
+            current.add(targetIndex, cityId)
+            savedCityIds.value = current
+            updateSavedCitiesSync()
+            val dao = savedCityDao
+            scope.launch {
+                dao?.replaceAll(current)
+            }
+        }
+    }
+
+    fun toggleSaveCity(cityId: Long) {
+        val current = savedCityIds.value.toMutableList()
+        if (current.contains(cityId)) {
+            current.remove(cityId)
         } else {
             current.add(cityId)
-            scope.launch { dao?.add(cityId) }
         }
         savedCityIds.value = current
-        updateSavedCities()
+        updateSavedCitiesSync()
+        val dao = savedCityDao
+        scope.launch {
+            dao?.replaceAll(current)
+        }
     }
 
     fun getCityById(cityId: Long): City? {
-        return allCities.find { it.geonameId == cityId }
+        val inSaved = _savedCities.value.find { it.geonameId == cityId }
+        if (inSaved != null) return inSaved
+
+        val fromDb = catalogueDb?.getCityById(cityId)
+        if (fromDb != null) {
+            val isSaved = savedCityIds.value.contains(cityId)
+            return if (isSaved) fromDb.copy(isSaved = true) else fromDb
+        }
+        return fallbackCities.find { it.geonameId == cityId }
+    }
+
+    fun findCityByZoneId(zoneId: String): City? {
+        val inSaved = _savedCities.value.find { it.zoneIdString == zoneId }
+        if (inSaved != null) return inSaved
+
+        return fallbackCities.find { it.zoneIdString == zoneId }
     }
 
     private fun createCity(

@@ -1,158 +1,144 @@
-<div align="center">
+# Chrona
 
-<br/>
+<p align="center">
+  <img src="art/chrona-horizontal.svg" alt="Chrona Header" width="360" />
+</p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="art/chrona-horizontal.svg">
-  <source media="(prefers-color-scheme: light)" srcset="art/chrona-horizontal-light.svg">
-  <img alt="Chrona" src="art/chrona-horizontal.svg" width="380">
-</picture>
+<p align="center">
+  <strong>Pixel-inspired world clock and cross-timezone alarm engine for Android.</strong>
+</p>
 
-<br/><br/>
-
-### Precision World Clock & Cross-Timezone Alarm Engine
-
-[![Platform](https://img.shields.io/badge/Platform-Android%2012%2B%20(API%2031--37)-3DDC84?style=flat-square&logo=android&logoColor=white)](https://developer.android.com)
-[![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20%26%20Material%203-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
-[![Kotlin](https://img.shields.io/badge/Language-Kotlin%202.0-7F52FF?style=flat-square&logo=kotlin&logoColor=white)](https://kotlinlang.org)
-[![Architecture](https://img.shields.io/badge/Architecture-Clean%20%2F%20Unidirectional%20Data%20Flow-00B0FF?style=flat-square)](https://developer.android.com/topic/architecture)
-[![License](https://img.shields.io/badge/License-Apache%202.0-6C757D?style=flat-square)](LICENSE)
-
-<br/>
-
-**Chrona** is a refined, production-grade Android clock application built with Jetpack Compose and Material 3. Inspired by the calm simplicity and visual precision of Google Pixel Clock, Chrona introduces true **cross-timezone alarm scheduling** — allowing users to schedule alarms based on target local times in global cities with automated daylight-saving transition resolution.
-
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android%2012%2B%20(API%2031%E2%80%9337)-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Platform" />
+  <img src="https://img.shields.io/badge/Language-Kotlin%202.0-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/UI-Jetpack%20Compose%20%26%20M3-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Compose" />
+  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License" />
+</p>
 
 ---
 
-## ✦ Key Features
+## ✦ Overview
 
-### 🌐 Cross-Timezone Alarms *(Signature Feature)*
-* **Target-Timezone Scheduling:** Schedule an alarm for 09:00 in Tokyo while physically situated in Kathmandu or London without manual mental math.
-* **DST Transition Engine:** Resolves daylight-saving gaps and overlaps dynamically using real-time IANA `ZoneRules` and `ZonedDateTime`.
-* **Instant Conversion Display:** Real-time dual-card previews showing destination time, local device ring time, and day-offset indicators (`Tomorrow`, `Yesterday`, `+1d`).
-* **Radial M3 Dial:** Authentic dual-ring 24-hour / single-ring 12-hour tactile radial dial for rapid, precise time selection.
-
-### 🗺️ Natural Earth World Map
-* **True Cartographic Projection:** Rendered using Natural Earth geometry mathematically projected into a responsive 1200×600 coordinate space.
-* **Theme-Aware Continents:**
-  * **AMOLED Dark:** Deep obsidian oceans (`#0B1320`) with cool slate landmasses (`#1E293B`).
-  * **Material Light:** Soft polar blue water (`#EFF3F8`) with neutral slate continents (`#C8D3E3`).
-* **Interactive City Tooltips:** Tappable pins with instant UTC offset badges, localized current times, and quick-alarm creation.
-
-### 🔔 Bulletproof Alarm Execution
-* **Single-Owner Audio Service:** `AlarmAudioService` runs as a high-priority foreground service (`mediaPlayback`) with continuous, looping `MediaPlayer` audio and a silent notification channel (`setSound(null, null)`), preventing OS notification audio collisions.
-* **Smooth Volume Ramp:** Gradual acoustic volume ramp over 30 seconds for gentle waking.
-* **Dedicated Lock-Screen Activity:** `AlarmRingingActivity` wakes the display (`turnScreenOn`, `showWhenLocked`), keeps the screen awake (`FLAG_KEEP_SCREEN_ON`), and dismisses cleanly back to the system lock screen without leaking user data.
-
-### ⏱️ Monotonic Timers & Chronograph Stopwatch
-* **Stopwatch:** 60fps chronograph dial with 60 precision tick markers, sweep hand, lap tracking, and split-differential calculations.
-* **Multi-Timer Manager:** Keypad and preset inputs (+1m, +5m, +10m, +15m) with simultaneous running timers, circular progress indicators, and +1:00 extensions.
-* **State Preservation:** Monotonic clock baselines (`SystemClock.elapsedRealtime()`) ensure timing continuity across device rotation, process suspension, and app restarts.
-
-### 🌙 Bedtime & Sleep Regularity
-* **Circadian Routine:** Bedtime schedule with planned sleep duration targets and custom active-day toggles.
-* **Gentle Reminders:** Non-disruptive notifications prior to scheduled wind-down.
-
-### 🎨 Pixel Material 3 & AMOLED Black
-* **Pixel Aesthetic:** Tabular numeric typography (`tnum`), quiet fluid navigation bubble indicators, and rounded container cards (18–24dp).
-* **Palette Options:** Pure AMOLED Black, Material Light, and System Default, paired with Periwinkle, Mint Teal, Soft Coral, Lavender, Soft Gold, and Pale Blue accents.
-* **Adaptive App Icon:** The *Meridian Offset* symbol — two interlocking day/night crescents stepped across a meridian gap — fully supported with dynamic Monet themed icon colouring on Android 13+.
+Chrona is a native Android clock application designed with Material 3 and Pixel aesthetic sensibilities. Beyond standard timekeeping, Chrona solves distributed coordination with its **Cross-Timezone Alarm Engine**: schedule an alarm targeting local time in any destination city (e.g., 09:00 AM Tokyo or 08:30 AM Paris), and Chrona automatically maps, converts, and rings on your device at the exact local moment—dynamically handling daylight saving transitions (DST) via IANA `ZoneRules`.
 
 ---
 
-## 🏗️ Architecture & Tech Stack
+## 📸 Visual Showcase
+
+<p align="center">
+  <img src="art/screenshots/alarms_screen.png" width="30%" alt="Alarms Screen" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="art/screenshots/create_alarm.png" width="30%" alt="Create World Alarm" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="art/screenshots/world_clock_screen.png" width="30%" alt="World Clock Screen" />
+</p>
+
+<p align="center">
+  <em>Left: Cross-timezone alarms (Paris, Tokyo, Local). Center: Real-time timezone conversion & destination scheduling. Right: Interactive Natural Earth world clock.</em>
+</p>
+
+<br/>
+
+<p align="center">
+  <img src="art/screenshots/timer_screen.png" width="22%" alt="Timer Screen" />
+  &nbsp;&nbsp;
+  <img src="art/screenshots/stopwatch_screen.png" width="22%" alt="Stopwatch Screen" />
+  &nbsp;&nbsp;
+  <img src="art/screenshots/bedtime_screen.png" width="22%" alt="Bedtime Screen" />
+  &nbsp;&nbsp;
+  <img src="art/screenshots/settings_screen.png" width="22%" alt="Settings Screen" />
+</p>
+
+<p align="center">
+  <em>Left to right: Monotonic timer with presets, precision chronograph stopwatch, circadian bedtime schedule, and permissions & reliability settings.</em>
+</p>
+
+---
+
+## ⚡ Core Capabilities
+
+### 🌐 Cross-Timezone Alarm Scheduling
+* **Target-City Time Input**: Set alarms in the destination city's clock time without manual conversions.
+* **Dual-Time Preview**: Displays destination time alongside local trigger time and relative day offset (`Today`, `Monday`, `Tomorrow`).
+* **Daylight Saving Resilience**: Backed by `java.time.ZonedDateTime` and IANA `ZoneRules`, automatically adjusting for DST boundary shifts.
+* **Radial Material 3 Dial**: Tactile 12-hour / 24-hour radial clock picker for rapid time selection.
+
+### 🔔 Reliable Full-Screen Alarm Presentation
+* **Android 14+ Runtime Full-Screen Guard**: Checks `NotificationManager.canUseFullScreenIntent()`, waking the display and displaying `AlarmRingingActivity` over the lock screen (`turnScreenOn`, `showWhenLocked`, `FLAG_KEEP_SCREEN_ON`).
+* **Graceful Fallback**: If full-screen intent is restricted, drops down cleanly to a high-priority heads-up notification with action buttons without crashing or foreground loops.
+* **Acoustically Tuned Audio**: Single-owner `AlarmAudioService` using `USAGE_ALARM` and `CONTENT_TYPE_SONIFICATION` with a gentle 30-second volume ramp starting at an audible baseline (`0.25 × maxVolume`).
+
+### 🗺️ Natural Earth World Clock
+* **Interactive Cartographic Projection**: Natural Earth vector coordinates projected onto a theme-aware map canvas.
+* **Instant City Inspection**: Tap pins to inspect local time, UTC offsets, and relative time differences.
+* **Custom City Library**: Search and add cities across all global IANA time zones.
+
+### ⏱️ Timers, Stopwatch & Bedtime
+* **Multi-Timer Engine**: Keypad entry, quick presets (+1m, +5m, +10m, +15m), active progress ring, and continuous background notification alerts.
+* **Chronograph Stopwatch**: 60fps sweep animation, precision tick markers, split times, and lap differentials.
+* **Sleep Routine**: Target sleep consistency tracker with customizable wind-down reminders.
+
+---
+
+## 🏛️ Architecture
 
 ```
 com.example.chrona/
 ├── core/
-│   ├── alarm/          # AlarmScheduler, AlarmReceiver, AlarmAudioService, BootReceiver
+│   ├── alarm/          # AlarmScheduler, AlarmAudioService, AlarmReceiver, BootReceiver
 │   ├── data/           # AlarmRepository, CityRepository, BedtimeRepository, PreferencesRepository
 │   ├── database/       # ChronaDatabaseHelper, AlarmDao, SavedCityDao, TimerDao (SQLite)
 │   ├── map/            # WorldMapComposable, WorldMapProjection, MapMarker
 │   ├── model/          # Alarm, City, TimerItem, BedtimeSchedule, UserPreferences
-│   ├── timezone/       # TimezoneEngine (IANA ZoneRules, DST gap/overlap calculations)
-│   └── ui/             # ChronaTopBar, ChronaBottomBar, TimezoneCard, components
+│   └── timezone/       # TimezoneEngine, DST & UTC offset resolvers
 ├── feature/
 │   ├── alarms/         # AlarmsScreen, CreateAlarmSheet, ChronaRadialTimePicker, AlarmRingingActivity
 │   ├── bedtime/        # BedtimeScreen
-│   ├── onboarding/     # OnboardingDialog, PermissionsSheet
-│   ├── screensaver/    # ScreensaverScreen (Minimal, Typography, World Clock modes)
-│   ├── settings/       # SettingsScreen (Theme, Accents, Permissions, Preferences)
+│   ├── settings/       # SettingsScreen (Theme, Accents, Permissions & Reliability)
 │   ├── stopwatch/      # StopwatchScreen, StopwatchManager
 │   ├── timer/          # TimerScreen, TimerManager
-│   └── worldclock/     # WorldClockScreen, CityDetailSheet, TimezoneSearchSheet
-├── navigation/         # ChronaNavHost, Screen definitions
-└── ui/theme/           # Color, Theme, Shape, Type, ChronaThemeTokens
+│   └── worldclock/     # WorldClockScreen, CityDetailSheet, AddCitySheet
+├── navigation/         # ChronaNavHost, Bottom navigation with animated indicators
+└── ui/theme/           # Material 3 tokens, AMOLED dark & light color schemes, typography
 ```
 
-* **UI Toolkit:** Jetpack Compose (100% declarative UI) with Material 3.
-* **State Management:** Unidirectional Data Flow (UDF) powered by Kotlin `StateFlow` and Compose `collectAsStateWithLifecycle`.
-* **Concurrency:** Kotlin Coroutines (`Dispatchers.IO`, `Dispatchers.Main`) with structured lifecycle scoping.
-* **Persistence:** Robust local SQLite persistence for alarms, saved cities, and active timers, combined with Jetpack DataStore Preferences for user configuration.
-* **Time API:** Java Time (`java.time.*`) exclusively — `ZoneId`, `ZonedDateTime`, `ZoneRules`, `Instant`.
+* **Modern Stack**: 100% Jetpack Compose, Kotlin Coroutines & Flow, Material 3.
+* **State Management**: Unidirectional Data Flow (UDF) with lifecycle-aware state observation (`collectAsStateWithLifecycle`).
+* **Persistence**: Structured local SQLite storage with Jetpack DataStore preferences.
 
 ---
 
-## 🚀 Getting Started
+## 🔒 Permissions & System Integration
 
-### Prerequisites
-* **Android Studio:** Ladybug (2024.2) or newer.
-* **JDK:** Java 11 or Java 17.
-* **Android SDK:** Compile SDK 37, Min SDK 31 (Android 12+).
+| Permission | API Level | Purpose |
+|:---|:---|:---|
+| `USE_FULL_SCREEN_INTENT` | API 34+ | Presents full-screen alarm over lock screen with runtime fallback to heads-up alert. |
+| `SCHEDULE_EXACT_ALARM` | API 31+ | Schedules exact millisecond alarm triggers via Android `AlarmManager`. |
+| `POST_NOTIFICATIONS` | API 33+ | Posts ongoing timer status and alarm alert banners. |
+| `FOREGROUND_SERVICE_MEDIA_PLAYBACK` | API 34+ | Keeps alarm audio playback active and uninterrupted by OS task killing. |
+| `RECEIVE_BOOT_COMPLETED` | All | Reschedules alarms and bedtime notifications on device reboot. |
 
-### Building from Source
+---
+
+## 🛠️ Building & Running
 
 ```bash
 # Clone the repository
 git clone https://github.com/your-username/chrona.git
 cd chrona
 
-# Build debug APK
+# Run unit tests
+./gradlew testDebugUnitTest
+
+# Assemble debug APK
 ./gradlew assembleDebug
 
-# Run unit tests (Projection math, Timezone engine, Stopwatch logic)
-./gradlew testDebugUnitTest
-```
-
-### Installing on Device / Emulator
-
-```bash
-# Install to connected device via ADB
+# Install on connected device/emulator
 adb install -r app/build/outputs/apk/debug/app-debug.apk
-
-# Launch MainActivity
-adb shell am start -n com.example.chrona/.MainActivity
 ```
-
----
-
-## 🔒 Permissions & Security
-
-Chrona requests only the permissions necessary for reliable timekeeping:
-
-| Permission | Purpose |
-|:---|:---|
-| `android.permission.SCHEDULE_EXACT_ALARM` | Guarantees alarms ring at the precise millisecond requested. |
-| `android.permission.USE_EXACT_ALARM` | Ensures exact alarm execution under battery optimization and Doze mode. |
-| `android.permission.POST_NOTIFICATIONS` | Displays ongoing timer notifications and persistent alarm alerts. |
-| `android.permission.USE_FULL_SCREEN_INTENT` | Allows the ringing alarm screen to wake and display over the locked device. |
-| `android.permission.FOREGROUND_SERVICE` | Manages reliable, continuous looping alarm playback via `AlarmAudioService`. |
-| `android.permission.WAKE_LOCK` | Keeps the CPU active during active alarm ringing and gradual volume ramping. |
-| `android.permission.VIBRATE` | Provides haptic feedback during alarms, timers, and button interactions. |
-| `android.permission.RECEIVE_BOOT_COMPLETED` | Reschedules all active alarms and bedtime schedules after device restart. |
 
 ---
 
 ## 📄 License
 
-```text
-Copyright 2026 Chrona Contributors
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-```
+Licensed under the [Apache License, Version 2.0](LICENSE).

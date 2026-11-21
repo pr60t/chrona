@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1180" width="1440" height="1180">
+  <title>CHRONA — Card Components &amp; Anatomy</title>
+  <desc>Timezone cards (with &amp; without image), weather card, time comparison card, alarm card, timer card, and settings rows.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <!-- Procedural City Skyline Gradients &amp; Silhouettes for Replaceable City Tiles -->
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/>
+      <stop offset="55%" stop-color="#8C7A7B"/>
+      <stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/>
+      <stop offset="60%" stop-color="#9EB1C7"/>
+      <stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/>
+      <stop offset="60%" stop-color="#7D6B7D"/>
+      <stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/>
+      <stop offset="55%" stop-color="#939BA8"/>
+      <stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <clipPath id="clip-city-tile">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-tile-sm">
+      <rect x="0" y="0" width="68" height="54" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+  <g id="layer-background">
+    <rect x="0" y="0" width="1440" height="1180" fill="#000000"/>
+    <rect x="24" y="24" width="1392" height="1132" rx="28" fill="#080B10" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="layer-header">
+    <rect x="48" y="48" width="168" height="28" rx="14" fill="#2A384D"/>
+    <text x="132" y="66" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" letter-spacing="1.2" fill="#DCE6F7">09 · CARD SYSTEM</text>
+    <text x="48" y="112" class="font-sans" font-size="30" font-weight="600" fill="#F1F5F9">Domain Cards &amp; Timezone Tile Anatomy</text>
+    <text x="48" y="138" class="font-sans" font-size="14" fill="#94A3B8">Deep blue-gray card surfaces (#1A202C) on pitch-black AMOLED (#000000) · 80dp image tile · 4dp pastel identity strip</text>
+    <text x="1392" y="72" text-anchor="end" class="font-mono" font-size="12" fill="#64748B">CHRONA DESIGN SYSTEM · v1.0</text>
+    <text x="1392" y="92" text-anchor="end" class="font-mono" font-size="11" fill="#93A8C7">360dp Component Grid · 412×915dp Screen Standard</text>
+    <line x1="48" y1="158" x2="1392" y2="158" stroke="#1E293B" stroke-width="1"/>
+  </g><g id="layer-timezone-card-with-image" transform="translate(48, 184)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">A. Canonical Timezone Card — With City Image (372dp Screen Width = 412dp - 2×20dp Margins)</text>
+  <g id="card-tz-image-warsaw" transform="translate(0, 36)">
+    <rect x="0" y="0" width="372" height="80" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <g id="city-tile-warsaw" transform="translate(8,8)">
+      <rect x="0" y="0" width="80" height="64" rx="12" fill="url(#sky-warsaw)"/>
+      <g clip-path="url(#clip-city-tile)">
+        <rect x="0" y="42" width="80" height="22" fill="#2A2630"/>
+        <rect x="10" y="28" width="12" height="36" fill="#36303D"/>
+        <rect x="33" y="14" width="14" height="50" fill="#241F29"/>
+        <polygon points="37,14 40,4 43,14" fill="#241F29"/>
+        <rect x="52" y="24" width="16" height="40" fill="#312B38"/>
+        <rect x="24" y="34" width="8" height="30" fill="#423A4A"/>
+        </g>
+    </g>
+    <rect x="96" y="8" width="4" height="64" rx="2" fill="#A7E8D8"/>
+    <text x="112" y="34" class="font-sans" font-size="13" fill="#94A3B8">Poland (GMT +0)</text>
+    <text x="112" y="58" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">Warsaw</text>
+    <text x="352" y="48" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">21:06</text>
+  </g>
+  <g id="card-tz-image-london" transform="translate(410, 36)">
+    <rect x="0" y="0" width="372" height="80" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <g id="city-tile-london" transform="translate(8,8)">
+      <rect x="0" y="0" width="80" height="64" rx="12" fill="url(#sky-london)"/>
+      <g clip-path="url(#clip-city-tile)">
+        <rect x="0" y="44" width="80" height="20" fill="#435366"/>
+        <rect x="8" y="16" width="16" height="32" fill="#324052"/>
+        <rect x="30" y="24" width="12" height="24" fill="#3D4D61"/>
+        <polygon points="52,48 58,18 64,48" fill="#2C394A"/>
+        <line x1="0" y1="45" x2="80" y2="45" stroke="#8CA1BA" stroke-width="1"/>
+        </g>
+    </g>
+    <rect x="96" y="8" width="4" height="64" rx="2" fill="#B8C7F2"/>
+    <text x="112" y="34" class="font-sans" font-size="13" fill="#94A3B8">England (GMT -1)</text>
+    <text x="112" y="58" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">London</text>
+    <text x="352" y="48" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">20:06</text>
+  </g>
+  <g id="card-tz-image-boston" transform="translate(820, 36)">
+    <rect x="0" y="0" width="372" height="80" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <g id="city-tile-boston" transform="translate(8,8)">
+      <rect x="0" y="0" width="80" height="64" rx="12" fill="url(#sky-boston)"/>
+      <g clip-path="url(#clip-city-tile)">
+        <rect x="0" y="44" width="80" height="20" fill="#262533"/>
+        <rect x="12" y="22" width="14" height="42" fill="#343245"/>
+        <rect x="30" y="14" width="16" height="50" fill="#282636"/>
+        <rect x="50" y="26" width="14" height="38" fill="#3B384D"/>
+        <rect x="6" y="34" width="8" height="30" fill="#464259"/>
+        </g>
+    </g>
+    <rect x="96" y="8" width="4" height="64" rx="2" fill="#F4C2A1"/>
+    <text x="112" y="34" class="font-sans" font-size="13" fill="#94A3B8">United States (GMT -6)</text>
+    <text x="112" y="58" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">Boston</text>
+    <text x="352" y="48" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">15:06</text>
+  </g>
+  <g transform="translate(0, 128)">
+    <rect x="0" y="0" width="1192" height="34" rx="10" fill="#11161F"/>
+    <text x="16" y="21" class="font-mono" font-size="11" fill="#93A8C7">ANATOMY SPEC:  [1] 80×64dp Image Tile (rx=12dp, inset=8dp)  →  [2] 8dp Gap  →  [3] 4×64dp TZ Strip (rx=2dp)  →  [4] 12dp Gap  →  [5] Region + City  →  [6] Right-Aligned tnum Time</text>
+  </g>
+</g>
+<g id="layer-timezone-card-no-image" transform="translate(48, 376)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">B. Timezone Card — Without Image (Compact / Minimalist Mode) &amp; Standalone Strip</text>
+  <g id="card-tz-no-image-0" transform="translate(0, 36)">
+    <text x="0" y="10" class="font-mono" font-size="10" fill="#94A3B8">Default</text>
+    <rect x="0" y="18" width="372" height="76" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="14" y="12" width="4" height="52" rx="2" fill="#D4B8F0" transform="translate(0, 18)"/>
+    <text x="32" y="50" class="font-sans" font-size="13" fill="#94A3B8">Australia (GMT +6)</text>
+    <text x="32" y="74" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">Perth</text>
+    <text x="352" y="64" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">03:06</text>
+  </g>
+  <g id="card-tz-no-image-1" transform="translate(400, 36)">
+    <text x="0" y="10" class="font-mono" font-size="10" fill="#94A3B8">Selected / Active</text>
+    <rect x="0" y="18" width="372" height="76" rx="20" fill="#222A38" stroke="#93A8C7"/>
+    <rect x="14" y="12" width="4" height="52" rx="2" fill="#F2DF9B" transform="translate(0, 18)"/>
+    <text x="32" y="50" class="font-sans" font-size="13" fill="#94A3B8">Japan (GMT +9)</text>
+    <text x="32" y="74" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">Tokyo</text>
+    <text x="352" y="64" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">06:06</text>
+  </g>
+  <g id="card-tz-no-image-2" transform="translate(800, 36)">
+    <text x="0" y="10" class="font-mono" font-size="10" fill="#94A3B8">Disabled / Dimmed</text>
+    <rect x="0" y="18" width="372" height="76" rx="20" fill="#11161F" stroke="#1E293B"/>
+    <rect x="14" y="12" width="4" height="52" rx="2" fill="#F2B5C8" transform="translate(0, 18)"/>
+    <text x="32" y="50" class="font-sans" font-size="13" fill="#94A3B8">India (GMT +5:30)</text>
+    <text x="32" y="74" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">New Delhi</text>
+    <text x="352" y="64" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">02:36</text>
+  </g>
+</g>
+<g id="layer-alarm-timer-cards" transform="translate(48, 536)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">C. Alarm Card &amp; Timer Card (372dp Screen Width · Active vs Inactive States)</text>
+  <g id="card-alarm-active" transform="translate(0, 38)">
+    <rect x="0" y="0" width="372" height="124" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="28" class="font-sans" font-size="12" font-weight="500" fill="#93A8C7">Morning Flight · Warsaw Sync</text>
+    <text x="20" y="68" class="font-sans tnum" font-size="36" font-weight="400" fill="#F1F5F9">06:30</text>
+    <text x="118" y="68" class="font-sans" font-size="14" fill="#94A3B8">AM</text>
+    <!-- Active M3 Switch -->
+    <rect x="300" y="34" width="52" height="32" rx="16" fill="#93A8C7"/>
+    <circle cx="336" cy="50" r="11" fill="#0B1320"/>
+    <line x1="20" y1="84" x2="352" y2="84" stroke="#1E293B"/>
+    <text x="20" y="106" class="font-sans" font-size="12" fill="#94A3B8">Mon, Tue, Wed, Thu, Fri</text>
+    <text x="352" y="106" text-anchor="end" class="font-mono" font-size="11" fill="#6EE7B7">In 7h 24m</text>
+  </g>
+  <g id="card-alarm-disabled" transform="translate(400, 38)">
+    <rect x="0" y="0" width="372" height="124" rx="20" fill="#11161F" stroke="#1E293B"/>
+    <text x="20" y="28" class="font-sans" font-size="12" fill="#64748B">Weekend Recovery</text>
+    <text x="20" y="68" class="font-sans tnum" font-size="36" font-weight="400" fill="#64748B">09:00</text>
+    <text x="118" y="68" class="font-sans" font-size="14" fill="#64748B">AM</text>
+    <!-- Inactive Switch -->
+    <rect x="300" y="34" width="52" height="32" rx="16" fill="#2B3547" stroke="#334155"/>
+    <circle cx="316" cy="50" r="8" fill="#94A3B8"/>
+    <line x1="20" y1="84" x2="352" y2="84" stroke="#1E293B"/>
+    <text x="20" y="106" class="font-sans" font-size="12" fill="#64748B">Sat, Sun · Off</text>
+  </g>
+  <g id="card-timer-running" transform="translate(800, 38)">
+    <rect x="0" y="0" width="372" height="124" rx="20" fill="#1A202C" stroke="#93A8C7" stroke-width="1"/>
+    <text x="20" y="28" class="font-sans" font-size="13" font-weight="600" fill="#F1F5F9">Pour-Over Coffee Bloom</text>
+    <text x="20" y="68" class="font-sans tnum" font-size="34" font-weight="500" fill="#F1F5F9">02:45</text>
+    <text x="116" y="68" class="font-mono tnum" font-size="12" fill="#94A3B8">/ 04:00</text>
+    <!-- Progress Track -->
+    <rect x="20" y="86" width="236" height="6" rx="3" fill="#2B3547"/>
+    <rect x="20" y="86" width="162" height="6" rx="3" fill="#93A8C7"/>
+    <!-- Pause &amp; Reset Buttons -->
+    <circle cx="292" cy="56" r="22" fill="#93A8C7"/>
+    <g id="icon-pause" transform="translate(282,46) scale(0.833)" fill="none" stroke="#0B1320" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></g>
+    <circle cx="342" cy="56" r="20" fill="#222A38"/>
+    <g id="icon-refresh" transform="translate(333,47) scale(0.750)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36L21 8M21 3v5h-5"/></g>
+    <text x="20" y="110" class="font-mono" font-size="11" fill="#93A8C7">RUNNING · +1:00</text>
+  </g>
+</g>
+<g id="layer-weather-comparison-settings" transform="translate(48, 732)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">D. Weather Card, Cross-Timezone Comparison Card &amp; Settings Row</text>
+  <g id="card-weather" transform="translate(0, 38)">
+    <rect x="0" y="0" width="372" height="104" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="16" y="16" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-wb_sunny" transform="translate(28,28) scale(1.000)" fill="none" stroke="#F2DF9B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g>
+    <text x="78" y="36" class="font-sans" font-size="15" font-weight="600" fill="#F1F5F9">Warsaw · Clear Sky</text>
+    <text x="78" y="56" class="font-sans" font-size="12" fill="#94A3B8">Feels like 13° · Humidity 54%</text>
+    <text x="352" y="48" text-anchor="end" class="font-sans tnum" font-size="28" font-weight="500" fill="#F1F5F9">14°</text>
+    <text x="352" y="72" text-anchor="end" class="font-mono tnum" font-size="11" fill="#94A3B8">H:16° L:7°</text>
+  </g>
+  <g id="card-time-comparison" transform="translate(400, 38)">
+    <rect x="0" y="0" width="460" height="156" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="28" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Overlap Window · Warsaw vs Boston</text>
+    <text x="440" y="28" text-anchor="end" class="font-mono" font-size="11" fill="#93A8C7">-6 HRS</text>
+    <!-- Warsaw Track -->
+    <rect x="20" y="46" width="4" height="28" rx="2" fill="#A7E8D8"/>
+    <text x="32" y="64" class="font-sans" font-size="12" fill="#F1F5F9">Warsaw</text>
+    <rect x="110" y="48" width="330" height="22" rx="6" fill="#222A38"/>
+    <rect x="220" y="48" width="120" height="22" rx="6" fill="#2A384D" stroke="#93A8C7"/>
+    <text x="280" y="63" text-anchor="middle" class="font-mono tnum" font-size="10" fill="#DCE6F7">15:00–19:00</text>
+    <!-- Boston Track -->
+    <rect x="20" y="86" width="4" height="28" rx="2" fill="#F4C2A1"/>
+    <text x="32" y="104" class="font-sans" font-size="12" fill="#F1F5F9">Boston</text>
+    <rect x="110" y="88" width="330" height="22" rx="6" fill="#222A38"/>
+    <rect x="220" y="88" width="120" height="22" rx="6" fill="#2A384D" stroke="#93A8C7"/>
+    <text x="280" y="103" text-anchor="middle" class="font-mono tnum" font-size="10" fill="#DCE6F7">09:00–13:00</text>
+    <text x="20" y="138" class="font-sans" font-size="11" fill="#6EE7B7">✓ Optimal shared working hours highlighted</text>
+  </g>
+  <g id="component-settings-row" transform="translate(888, 38)">
+    <rect x="0" y="0" width="456" height="72" rx="18" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="16" y="16" width="40" height="40" rx="12" fill="#222A38"/>
+    <g id="icon-public" transform="translate(26,26) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+    <text x="68" y="33" class="font-sans" font-size="14" font-weight="500" fill="#F1F5F9">Automatic home clock</text>
+    <text x="68" y="52" class="font-sans" font-size="12" fill="#94A3B8">Show local time card when traveling</text>
+    <rect x="388" y="20" width="52" height="32" rx="16" fill="#93A8C7"/>
+    <circle cx="424" cy="36" r="11" fill="#0B1320"/>
+  </g>
+</g>
+</svg>

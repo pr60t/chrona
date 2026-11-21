@@ -1,0 +1,48 @@
+{
+  "background": "#000000",
+  "mapLand": "#252D3B",
+  "mapCoastline": "#343D4D",
+  "secondaryGeographicLine": "#303A49",
+  "palette": [
+    {
+      "name": "Soft Lavender",
+      "hex": "#C39BE2",
+      "cardStripRef": "#D4B8F0"
+    },
+    {
+      "name": "Mint Seafoam",
+      "hex": "#8FD8B9",
+      "cardStripRef": "#A7E8D8"
+    },
+    {
+      "name": "Pastel Citron",
+      "hex": "#E3EAA6",
+      "cardStripRef": "#F2DF9B"
+    },
+    {
+      "name": "Periwinkle Sky",
+      "hex": "#85A8E5",
+      "cardStripRef": "#B8C7F2"
+    },
+    {
+      "name": "Blush Coral",
+      "hex": "#E7A19A",
+      "cardStripRef": "#E7A19A"
+    },
+    {
+      "name": "Glacier Blue",
+      "hex": "#A3C7DE",
+      "cardStripRef": "#A3C7DE"
+    },
+    {
+      "name": "Warm Apricot",
+      "hex": "#EAB994",
+      "cardStripRef": "#F4C2A1"
+    },
+    {
+      "name": "Lagoon Teal",
+      "hex": "#78C7C7",
+      "cardStripRef": "#78C7C7"
+    }
+  ]
+}

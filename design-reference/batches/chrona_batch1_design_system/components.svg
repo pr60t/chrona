@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1280" width="1600" height="1280">
+  <title>CHRONA — Master Reusable Component Library (360dp Reference Grid)</title>
+  <desc>Complete consolidated component matrix across all UI primitives, domain cards, navigation, and overlays.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <!-- Procedural City Skyline Gradients &amp; Silhouettes for Replaceable City Tiles -->
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/>
+      <stop offset="55%" stop-color="#8C7A7B"/>
+      <stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/>
+      <stop offset="60%" stop-color="#9EB1C7"/>
+      <stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/>
+      <stop offset="60%" stop-color="#7D6B7D"/>
+      <stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/>
+      <stop offset="55%" stop-color="#939BA8"/>
+      <stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <clipPath id="clip-city-tile">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-tile-sm">
+      <rect x="0" y="0" width="68" height="54" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+  <g id="layer-background">
+    <rect x="0" y="0" width="1600" height="1280" fill="#000000"/>
+    <rect x="24" y="24" width="1552" height="1232" rx="28" fill="#080B10" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="layer-header">
+    <rect x="48" y="48" width="168" height="28" rx="14" fill="#2A384D"/>
+    <text x="132" y="66" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" letter-spacing="1.2" fill="#DCE6F7">11 · MASTER COMPONENT MATRIX</text>
+    <text x="48" y="112" class="font-sans" font-size="30" font-weight="600" fill="#F1F5F9">CHRONA Consolidated Component Library</text>
+    <text x="48" y="138" class="font-sans" font-size="14" fill="#94A3B8">360dp reference component base · Scales responsively to 412×915dp artboards (372dp card width with 20dp margins)</text>
+    <text x="1552" y="72" text-anchor="end" class="font-mono" font-size="12" fill="#64748B">CHRONA DESIGN SYSTEM · v1.0</text>
+    <text x="1552" y="92" text-anchor="end" class="font-mono" font-size="11" fill="#93A8C7">360dp Component Grid · 412×915dp Screen Standard</text>
+    <line x1="48" y1="158" x2="1552" y2="158" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="col-1-controls" transform="translate(48, 184)">
+    <text x="0" y="16" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">1 · CHROME &amp; CONTROLS (360dp)</text>
+    <!-- Top App Bar -->
+    <g transform="translate(0, 28)">
+      <rect x="0" y="0" width="360" height="56" rx="14" fill="#000000" stroke="#1E293B"/>
+      <g id="icon-arrow_back" transform="translate(14,16) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+      <text x="52" y="34" class="font-sans" font-size="18" font-weight="500" fill="#F1F5F9">World Clock</text>
+      <g id="icon-more_vert" transform="translate(320,16) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+    </g>
+    <!-- Overflow Menu -->
+    <g transform="translate(160, 92)">
+      <rect x="0" y="0" width="200" height="136" rx="16" fill="#222A38" stroke="#334155"/>
+      <text x="18" y="32" class="font-sans" font-size="13" font-weight="500" fill="#F1F5F9">Settings</text>
+      <text x="18" y="72" class="font-sans" font-size="13" fill="#F1F5F9">Screensaver</text>
+      <text x="18" y="112" class="font-sans" font-size="13" fill="#F1F5F9">About</text>
+    </g>
+    <!-- Search Field -->
+    <g transform="translate(0, 244)">
+      <rect x="0" y="0" width="360" height="48" rx="24" fill="#222A38" stroke="#334155"/>
+      <g id="icon-search" transform="translate(16,13) scale(0.833)" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></g>
+      <text x="46" y="29" class="font-sans" font-size="13" fill="#94A3B8">Search city or timezone...</text>
+    </g>
+    <!-- Primary Pill Button -->
+    <g transform="translate(0, 308)">
+      <rect x="0" y="0" width="360" height="52" rx="26" fill="#93A8C7"/>
+      <text x="180" y="31" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">+  Add place</text>
+    </g>
+    <!-- Secondary &amp; Icon Buttons -->
+    <g transform="translate(0, 376)">
+      <rect x="0" y="0" width="174" height="46" rx="23" fill="#222A38" stroke="#334155"/>
+      <text x="87" y="28" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#F1F5F9">Secondary</text>
+      <rect x="190" y="0" width="46" height="46" rx="23" fill="#2A384D"/>
+      <g id="icon-alarm" transform="translate(201,11) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <rect x="252" y="7" width="52" height="32" rx="16" fill="#93A8C7"/>
+      <circle cx="288" cy="23" r="11" fill="#0B1320"/>
+    </g>
+    <!-- Weekday Selector -->
+    <g transform="translate(0, 442)">
+      <rect x="0" y="0" width="360" height="56" rx="16" fill="#1A202C"/><circle cx="28" cy="28" r="17" fill="#222A38"/><text x="28" y="33" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text><circle cx="78" cy="28" r="17" fill="#93A8C7"/><text x="78" y="33" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">M</text><circle cx="128" cy="28" r="17" fill="#93A8C7"/><text x="128" y="33" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text><circle cx="178" cy="28" r="17" fill="#93A8C7"/><text x="178" y="33" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">W</text><circle cx="228" cy="28" r="17" fill="#93A8C7"/><text x="228" y="33" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text><circle cx="278" cy="28" r="17" fill="#93A8C7"/><text x="278" y="33" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">F</text><circle cx="328" cy="28" r="17" fill="#222A38"/><text x="328" y="33" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text>    </g>
+    <!-- 5-Destination Bottom Navigation -->
+    <g transform="translate(0, 514)">
+      <rect x="0" y="0" width="360" height="76" rx="18" fill="#11161F" stroke="#334155"/><g id="icon-alarm" transform="translate(26,14) scale(0.833)" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g><text x="36" y="58" text-anchor="middle" class="font-sans" font-size="10" font-weight="500" fill="#94A3B8">Alarms</text><rect x="84" y="10" width="48" height="30" rx="15" fill="#2A384D"/><g id="icon-public" transform="translate(98,14) scale(0.833)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g><text x="108" y="58" text-anchor="middle" class="font-sans" font-size="10" font-weight="600" fill="#F1F5F9">World Clock</text><g id="icon-hourglass" transform="translate(170,14) scale(0.833)" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g><text x="180" y="58" text-anchor="middle" class="font-sans" font-size="10" font-weight="500" fill="#94A3B8">Timer</text><g id="icon-stopwatch" transform="translate(242,14) scale(0.833)" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g><text x="252" y="58" text-anchor="middle" class="font-sans" font-size="10" font-weight="500" fill="#94A3B8">Stopwatch</text><g id="icon-bedtime" transform="translate(314,14) scale(0.833)" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g><text x="324" y="58" text-anchor="middle" class="font-sans" font-size="10" font-weight="500" fill="#94A3B8">Bedtime</text>    </g>
+  </g>
+
+  <g id="col-2-cards" transform="translate(444, 184)">
+    <text x="0" y="16" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">2 · DOMAIN CARDS (360dp BASE / 372dp SCREEN)</text>
+    <!-- TZ Card With Image -->
+    <g transform="translate(0, 28)">
+      <rect x="0" y="0" width="360" height="80" rx="20" fill="#1A202C"/>
+      <g id="city-tile-warsaw" transform="translate(8,8)">
+      <rect x="0" y="0" width="80" height="64" rx="12" fill="url(#sky-warsaw)"/>
+      <g clip-path="url(#clip-city-tile)">
+        <rect x="0" y="42" width="80" height="22" fill="#2A2630"/>
+        <rect x="10" y="28" width="12" height="36" fill="#36303D"/>
+        <rect x="33" y="14" width="14" height="50" fill="#241F29"/>
+        <polygon points="37,14 40,4 43,14" fill="#241F29"/>
+        <rect x="52" y="24" width="16" height="40" fill="#312B38"/>
+        <rect x="24" y="34" width="8" height="30" fill="#423A4A"/>
+        </g>
+    </g>
+      <rect x="96" y="8" width="4" height="64" rx="2" fill="#A7E8D8"/>
+      <text x="112" y="34" class="font-sans" font-size="13" fill="#94A3B8">Poland (GMT +0)</text>
+      <text x="112" y="58" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">Warsaw</text>
+      <text x="342" y="48" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">21:06</text>
+    </g>
+    <!-- TZ Card Without Image -->
+    <g transform="translate(0, 120)">
+      <rect x="0" y="0" width="360" height="72" rx="20" fill="#1A202C"/>
+      <rect x="14" y="10" width="4" height="52" rx="2" fill="#B8C7F2"/>
+      <text x="30" y="31" class="font-sans" font-size="13" fill="#94A3B8">England (GMT -1)</text>
+      <text x="30" y="54" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">London</text>
+      <text x="342" y="44" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">20:06</text>
+    </g>
+    <!-- Weather Card -->
+    <g transform="translate(0, 204)">
+      <rect x="0" y="0" width="360" height="84" rx="20" fill="#1A202C"/>
+      <rect x="14" y="18" width="48" height="48" rx="14" fill="#2A384D"/>
+      <g id="icon-wb_sunny" transform="translate(26,30) scale(1.000)" fill="none" stroke="#F2DF9B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g>
+      <text x="74" y="38" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Warsaw · Clear</text>
+      <text x="74" y="58" class="font-sans" font-size="12" fill="#94A3B8">H:16° L:7° · 54% RH</text>
+      <text x="342" y="50" text-anchor="end" class="font-sans tnum" font-size="26" font-weight="500" fill="#F1F5F9">14°</text>
+    </g>
+    <!-- Time Comparison Card -->
+    <g transform="translate(0, 300)">
+      <rect x="0" y="0" width="360" height="96" rx="20" fill="#1A202C"/>
+      <text x="16" y="26" class="font-sans" font-size="13" font-weight="600" fill="#F1F5F9">Overlap · Warsaw / Boston</text>
+      <rect x="16" y="42" width="328" height="16" rx="5" fill="#222A38"/>
+      <rect x="140" y="42" width="96" height="16" rx="5" fill="#2A384D" stroke="#93A8C7"/>
+      <text x="16" y="78" class="font-mono" font-size="11" fill="#6EE7B7">15:00–19:00 CET = 09:00–13:00 EST</text>
+    </g>
+    <!-- Alarm Card -->
+    <g transform="translate(0, 408)">
+      <rect x="0" y="0" width="360" height="92" rx="20" fill="#1A202C"/>
+      <text x="18" y="26" class="font-sans" font-size="12" fill="#93A8C7">Weekday Alarm</text>
+      <text x="18" y="62" class="font-sans tnum" font-size="30" fill="#F1F5F9">06:30</text>
+      <text x="18" y="80" class="font-sans" font-size="11" fill="#94A3B8">Mon–Fri</text>
+      <rect x="292" y="30" width="52" height="32" rx="16" fill="#93A8C7"/>
+      <circle cx="328" cy="46" r="11" fill="#0B1320"/>
+    </g>
+    <!-- Timer Card -->
+    <g transform="translate(0, 512)">
+      <rect x="0" y="0" width="360" height="86" rx="20" fill="#1A202C" stroke="#93A8C7"/>
+      <text x="18" y="26" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Focus Sprint</text>
+      <text x="18" y="58" class="font-sans tnum" font-size="26" fill="#F1F5F9">24:18</text>
+      <rect x="18" y="68" width="240" height="5" rx="2.5" fill="#2B3547"/>
+      <rect x="18" y="68" width="180" height="5" rx="2.5" fill="#93A8C7"/>
+      <circle cx="322" cy="43" r="20" fill="#93A8C7"/>
+      <g id="icon-pause" transform="translate(313,34) scale(0.750)" fill="none" stroke="#0B1320" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></g>
+    </g>
+  </g>
+
+  <g id="col-3-overlays" transform="translate(840, 184)">
+    <text x="0" y="16" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">3 · SETTINGS, PICKERS &amp; DIALOGS</text>
+    <!-- Settings Row -->
+    <g transform="translate(0, 28)">
+      <rect x="0" y="0" width="360" height="64" rx="16" fill="#1A202C"/>
+      <text x="18" y="28" class="font-sans" font-size="14" font-weight="500" fill="#F1F5F9">24-hour time format</text>
+      <text x="18" y="48" class="font-sans" font-size="12" fill="#94A3B8">Use 21:06 instead of 9:06 PM</text>
+      <rect x="292" y="16" width="52" height="32" rx="16" fill="#93A8C7"/>
+      <circle cx="328" cy="32" r="11" fill="#0B1320"/>
+    </g>
+    <!-- Compact Time Picker -->
+    <g transform="translate(0, 108)">
+      <rect x="0" y="0" width="360" height="164" rx="24" fill="#2B3547" stroke="#334155"/>
+      <text x="20" y="28" class="font-mono" font-size="11" fill="#94A3B8">TIME PICKER</text>
+      <rect x="20" y="42" width="120" height="68" rx="14" fill="#2A384D" stroke="#93A8C7"/>
+      <text x="80" y="88" text-anchor="middle" class="font-sans tnum" font-size="38" fill="#DCE6F7">21</text>
+      <text x="152" y="86" text-anchor="middle" class="font-sans" font-size="32" fill="#94A3B8">:</text>
+      <rect x="164" y="42" width="120" height="68" rx="14" fill="#1A202C"/>
+      <text x="224" y="88" text-anchor="middle" class="font-sans tnum" font-size="38" fill="#F1F5F9">06</text>
+      <text x="336" y="144" text-anchor="end" class="font-sans" font-size="13" font-weight="600" fill="#93A8C7">Confirm</text>
+    </g>
+    <!-- Dialog -->
+    <g transform="translate(0, 288)">
+      <rect x="0" y="0" width="360" height="146" rx="24" fill="#2B3547" stroke="#334155"/>
+      <text x="20" y="34" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">Reset all timers?</text>
+      <text x="20" y="58" class="font-sans" font-size="12" fill="#94A3B8">Active countdowns will return to default duration.</text>
+      <text x="240" y="122" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#F1F5F9">Cancel</text>
+      <rect x="280" y="100" width="64" height="32" rx="16" fill="#93A8C7"/>
+      <text x="312" y="120" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#0B1320">Reset</text>
+    </g>
+    <!-- Bottom Sheet Preview -->
+    <g transform="translate(0, 450)">
+      <rect x="0" y="0" width="360" height="84" rx="24" fill="#2B3547" stroke="#334155"/>
+      <rect x="162" y="10" width="36" height="4" rx="2" fill="#64748B"/>
+      <text x="20" y="38" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Bottom Sheet Drawer</text>
+      <text x="20" y="60" class="font-sans" font-size="12" fill="#94A3B8">28dp top corner radius · Modal scrim</text>
+    </g>
+    <!-- Confirmation Message -->
+    <g transform="translate(0, 548)">
+      <rect x="0" y="0" width="360" height="50" rx="14" fill="#222A38" stroke="#6EE7B7"/>
+      <g id="icon-check" transform="translate(14,15) scale(0.833)" fill="none" stroke="#6EE7B7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+      <text x="44" y="30" class="font-sans" font-size="12" font-weight="500" fill="#F1F5F9">Timezone list synced</text>
+    </g>
+  </g>
+
+  <g id="col-4-tokens-summary" transform="translate(1236, 184)">
+    <text x="0" y="16" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">4 · TZ STRIPS &amp; SPECS</text>
+    <rect x="0" y="28" width="316" height="570" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="60" class="font-sans" font-size="15" font-weight="600" fill="#F1F5F9">8 Persistent TZ Colors</text>    <g transform="translate(20, 80)">
+      <rect x="0" y="0" width="6" height="32" rx="3" fill="#A7E8D8"/>
+      <circle cx="264" cy="16" r="8" fill="#A7E8D8"/>
+      <text x="16" y="14" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Glacier Mint</text>
+      <text x="16" y="29" class="font-mono" font-size="10" fill="#94A3B8">#A7E8D8</text>
+    </g>
+    <g transform="translate(20, 126)">
+      <rect x="0" y="0" width="6" height="32" rx="3" fill="#B8C7F2"/>
+      <circle cx="264" cy="16" r="8" fill="#B8C7F2"/>
+      <text x="16" y="14" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Periwinkle Mist</text>
+      <text x="16" y="29" class="font-mono" font-size="10" fill="#94A3B8">#B8C7F2</text>
+    </g>
+    <g transform="translate(20, 172)">
+      <rect x="0" y="0" width="6" height="32" rx="3" fill="#F4C2A1"/>
+      <circle cx="264" cy="16" r="8" fill="#F4C2A1"/>
+      <text x="16" y="14" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Apricot Sand</text>
+      <text x="16" y="29" class="font-mono" font-size="10" fill="#94A3B8">#F4C2A1</text>
+    </g>
+    <g transform="translate(20, 218)">
+      <rect x="0" y="0" width="6" height="32" rx="3" fill="#D4B8F0"/>
+      <circle cx="264" cy="16" r="8" fill="#D4B8F0"/>
+      <text x="16" y="14" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Lavender Bloom</text>
+      <text x="16" y="29" class="font-mono" font-size="10" fill="#94A3B8">#D4B8F0</text>
+    </g>
+    <g transform="translate(20, 264)">
+      <rect x="0" y="0" width="6" height="32" rx="3" fill="#F2DF9B"/>
+      <circle cx="264" cy="16" r="8" fill="#F2DF9B"/>
+      <text x="16" y="14" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Buttercream Gold</text>
+      <text x="16" y="29" class="font-mono" font-size="10" fill="#94A3B8">#F2DF9B</text>
+    </g>
+    <g transform="translate(20, 310)">
+      <rect x="0" y="0" width="6" height="32" rx="3" fill="#F2B5C8"/>
+      <circle cx="264" cy="16" r="8" fill="#F2B5C8"/>
+      <text x="16" y="14" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Rose Quartz</text>
+      <text x="16" y="29" class="font-mono" font-size="10" fill="#94A3B8">#F2B5C8</text>
+    </g>
+    <g transform="translate(20, 356)">
+      <rect x="0" y="0" width="6" height="32" rx="3" fill="#A3D5F7"/>
+      <circle cx="264" cy="16" r="8" fill="#A3D5F7"/>
+      <text x="16" y="14" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Sky Breeze</text>
+      <text x="16" y="29" class="font-mono" font-size="10" fill="#94A3B8">#A3D5F7</text>
+    </g>
+    <g transform="translate(20, 402)">
+      <rect x="0" y="0" width="6" height="32" rx="3" fill="#BCE3B4"/>
+      <circle cx="264" cy="16" r="8" fill="#BCE3B4"/>
+      <text x="16" y="14" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Sage Leaf</text>
+      <text x="16" y="29" class="font-mono" font-size="10" fill="#94A3B8">#BCE3B4</text>
+    </g>
+    <line x1="20" y1="458" x2="296" y2="458" stroke="#1E293B"/>
+    <text x="20" y="486" class="font-mono" font-size="11" font-weight="600" fill="#93A8C7">BATCH 2+ ARTBOARD RULE</text>
+    <text x="20" y="508" class="font-sans" font-size="12" fill="#F1F5F9">Canvas: 412 × 915 dp</text>
+    <text x="20" y="528" class="font-sans" font-size="12" fill="#F1F5F9">Margins: 20 dp left / right</text>
+    <text x="20" y="548" class="font-sans" font-size="12" fill="#F1F5F9">Card Width: 372 dp</text>
+    <text x="20" y="568" class="font-sans" font-size="12" fill="#F1F5F9">Bottom Nav: 5 Destinations</text>
+  </g>
+</svg>

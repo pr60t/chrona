@@ -1,5 +1,6 @@
 package com.example.chrona.feature.stopwatch
 
+import android.content.Context
 import android.os.SystemClock
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -24,6 +25,14 @@ object StopwatchManager {
     private var lastLapTotalTime: Long = 0L
 
     internal var clock: () -> Long = { SystemClock.elapsedRealtime() }
+    private var appContext: Context? = null
+
+    fun init(context: Context) {
+        if (appContext == null) {
+            appContext = context.applicationContext
+            StopwatchNotificationManager.createChannel(context.applicationContext)
+        }
+    }
 
     fun getElapsedMillis(): Long {
         return if (_isRunning.value) {
@@ -37,6 +46,10 @@ object StopwatchManager {
         if (!_isRunning.value) {
             baseTimeElapsed = clock()
             _isRunning.value = true
+            appContext?.let {
+                StopwatchNotificationManager.updateNotification(it)
+                com.example.chrona.widget.WidgetUpdateHelper.updateStopwatchWidgets(it)
+            }
         }
     }
 
@@ -44,6 +57,10 @@ object StopwatchManager {
         if (_isRunning.value) {
             accumulatedMillis += (clock() - baseTimeElapsed)
             _isRunning.value = false
+            appContext?.let {
+                StopwatchNotificationManager.updateNotification(it)
+                com.example.chrona.widget.WidgetUpdateHelper.updateStopwatchWidgets(it)
+            }
         }
     }
 
@@ -53,6 +70,10 @@ object StopwatchManager {
         baseTimeElapsed = 0L
         lastLapTotalTime = 0L
         _laps.value = emptyList()
+        appContext?.let {
+            StopwatchNotificationManager.updateNotification(it)
+            com.example.chrona.widget.WidgetUpdateHelper.updateStopwatchWidgets(it)
+        }
     }
 
     fun recordLap() {
@@ -62,5 +83,9 @@ object StopwatchManager {
         val current = _laps.value.toMutableList()
         current.add(0, Lap(current.size + 1, lapTime, total))
         _laps.value = current
+        appContext?.let {
+            StopwatchNotificationManager.updateNotification(it)
+            com.example.chrona.widget.WidgetUpdateHelper.updateStopwatchWidgets(it)
+        }
     }
 }

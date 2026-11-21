@@ -1,0 +1,5 @@
+<!-- Merge into the existing <application> element. Do not change applicationId or other attributes. -->
+<application
+    android:icon="@mipmap/ic_launcher"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    ... >

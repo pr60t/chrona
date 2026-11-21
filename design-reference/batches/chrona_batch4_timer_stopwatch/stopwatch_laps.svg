@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 915" width="412" height="915">
+  <title>CHRONA — Stopwatch Lap History</title>
+  <desc>Expanded lap history list with restrained accent highlighting for Fastest and Slowest laps.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="timer-done-glow" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#93A8C7" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#A7E8D8" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-screen-412x915">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-screen-412x915)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">13:25</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    <g transform="translate(16,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="52" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Lap history</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+  <g id="lap-extremes-summary" transform="translate(20, 92)">
+    <rect x="0" y="0" width="180" height="78" rx="18" fill="#1A202C" stroke="#A7E8D8" stroke-width="1.2"/>
+    <text x="16" y="26" class="font-mono" font-size="10" font-weight="600" fill="#A7E8D8">FASTEST · LAP 03</text>
+    <text x="16" y="58" class="font-sans tnum" font-size="24" font-weight="600" fill="#F1F5F9">00:41.02</text>
+
+    <rect x="192" y="0" width="180" height="78" rx="18" fill="#1A202C" stroke="#F4C2A1" stroke-width="1.2"/>
+    <text x="208" y="26" class="font-mono" font-size="10" font-weight="600" fill="#F4C2A1">SLOWEST · LAP 02</text>
+    <text x="208" y="58" class="font-sans tnum" font-size="24" font-weight="600" fill="#F1F5F9">00:44.85</text>
+  </g>
+
+  <!-- Full Lap Table -->
+  <g id="full-lap-history-table" transform="translate(20, 186)">
+    <rect x="0" y="0" width="372" height="546" rx="22" fill="#1A202C" stroke="#1E293B"/>
+    <text x="18" y="30" class="font-mono" font-size="11" font-weight="600" fill="#94A3B8">LAP #</text>
+    <text x="214" y="30" text-anchor="end" class="font-mono" font-size="11" font-weight="600" fill="#94A3B8">LAP TIME</text>
+    <text x="354" y="30" text-anchor="end" class="font-mono" font-size="11" font-weight="600" fill="#94A3B8">ELAPSED</text>
+    <line x1="18" y1="42" x2="354" y2="42" stroke="#1E293B"/>
+    
+    <g transform="translate(18, 72)">
+      <text x="0" y="4" class="font-mono tnum" font-size="14" font-weight="600" fill="#F1F5F9">Lap 08</text>
+      
+      <text x="196" y="4" text-anchor="end" class="font-mono tnum" font-size="15" font-weight="600" fill="#F1F5F9">00:41.88</text>
+      <text x="336" y="4" text-anchor="end" class="font-mono tnum" font-size="14" fill="#94A3B8">05:44.12</text>
+    </g>
+    
+    <g transform="translate(18, 130)">
+      <text x="0" y="4" class="font-mono tnum" font-size="14" font-weight="600" fill="#F1F5F9">Lap 07</text>
+      
+      <text x="196" y="4" text-anchor="end" class="font-mono tnum" font-size="15" font-weight="600" fill="#F1F5F9">00:42.40</text>
+      <text x="336" y="4" text-anchor="end" class="font-mono tnum" font-size="14" fill="#94A3B8">05:02.24</text>
+    </g>
+    
+    <g transform="translate(18, 188)">
+      <text x="0" y="4" class="font-mono tnum" font-size="14" font-weight="600" fill="#F1F5F9">Lap 06</text>
+      
+      <text x="196" y="4" text-anchor="end" class="font-mono tnum" font-size="15" font-weight="600" fill="#F1F5F9">00:43.11</text>
+      <text x="336" y="4" text-anchor="end" class="font-mono tnum" font-size="14" fill="#94A3B8">04:19.84</text>
+    </g>
+    
+    <g transform="translate(18, 246)">
+      <text x="0" y="4" class="font-mono tnum" font-size="14" font-weight="600" fill="#F1F5F9">Lap 05</text>
+      
+      <text x="196" y="4" text-anchor="end" class="font-mono tnum" font-size="15" font-weight="600" fill="#F1F5F9">00:43.09</text>
+      <text x="336" y="4" text-anchor="end" class="font-mono tnum" font-size="14" fill="#94A3B8">03:36.73</text>
+    </g>
+    
+    <g transform="translate(18, 304)">
+      <text x="0" y="4" class="font-mono tnum" font-size="14" font-weight="600" fill="#F1F5F9">Lap 04</text>
+      
+      <text x="196" y="4" text-anchor="end" class="font-mono tnum" font-size="15" font-weight="600" fill="#F1F5F9">00:44.18</text>
+      <text x="336" y="4" text-anchor="end" class="font-mono tnum" font-size="14" fill="#94A3B8">02:53.64</text>
+    </g>
+    <rect x="10" y="340" width="352" height="44" rx="12" fill="#222A38"/>
+    <g transform="translate(18, 362)">
+      <text x="0" y="4" class="font-mono tnum" font-size="14" font-weight="600" fill="#A7E8D8">Lap 03</text>
+      <rect x="68" y="-10" width="64" height="19" rx="9.5" fill="#2A384D"/><text x="100" y="3" text-anchor="middle" class="font-mono" font-size="9" font-weight="600" fill="#A7E8D8">FASTEST</text>
+      <text x="196" y="4" text-anchor="end" class="font-mono tnum" font-size="15" font-weight="600" fill="#A7E8D8">00:41.02</text>
+      <text x="336" y="4" text-anchor="end" class="font-mono tnum" font-size="14" fill="#94A3B8">02:09.46</text>
+    </g>
+    <rect x="10" y="398" width="352" height="44" rx="12" fill="#222A38"/>
+    <g transform="translate(18, 420)">
+      <text x="0" y="4" class="font-mono tnum" font-size="14" font-weight="600" fill="#F4C2A1">Lap 02</text>
+      <rect x="68" y="-10" width="64" height="19" rx="9.5" fill="#2A384D"/><text x="100" y="3" text-anchor="middle" class="font-mono" font-size="9" font-weight="600" fill="#F4C2A1">SLOWEST</text>
+      <text x="196" y="4" text-anchor="end" class="font-mono tnum" font-size="15" font-weight="600" fill="#F4C2A1">00:44.85</text>
+      <text x="336" y="4" text-anchor="end" class="font-mono tnum" font-size="14" fill="#94A3B8">01:28.44</text>
+    </g>
+    
+    <g transform="translate(18, 478)">
+      <text x="0" y="4" class="font-mono tnum" font-size="14" font-weight="600" fill="#F1F5F9">Lap 01</text>
+      
+      <text x="196" y="4" text-anchor="end" class="font-mono tnum" font-size="15" font-weight="600" fill="#F1F5F9">00:43.59</text>
+      <text x="336" y="4" text-anchor="end" class="font-mono tnum" font-size="14" fill="#94A3B8">00:43.59</text>
+    </g>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      <rect x="260.4" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Bedtime</text>
+    </g>
+  </g>
+  </g>
+</svg>

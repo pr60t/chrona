@@ -68,7 +68,6 @@ fun ChronaWorldMapHeader(
             .height(containerHeight)
             .clip(RoundedCornerShape(18.dp))
             .background(extendedColors.surfaceLowest)
-            .border(BorderStroke(1.dp, extendedColors.divider), RoundedCornerShape(18.dp))
     ) {
         BoxWithConstraints(
             modifier = Modifier.fillMaxSize()
@@ -76,7 +75,7 @@ fun ChronaWorldMapHeader(
         val density = LocalDensity.current
         val containerSizePx = with(density) { Size(maxWidth.toPx(), maxHeight.toPx()) }
         val renderedRect = remember(containerSizePx) {
-            WorldMapProjection.computeRenderedMapRect(containerSizePx)
+            WorldMapProjection.computeRenderedMapRect(containerSizePx, fillBounds = true)
         }
 
         // Theme-aware VectorDrawable background (Light vs Dark)
@@ -84,7 +83,7 @@ fun ChronaWorldMapHeader(
         Image(
             painter = painterResource(id = mapDrawableId),
             contentDescription = "World timezone map",
-            contentScale = ContentScale.Fit,
+            contentScale = ContentScale.FillBounds,
             modifier = Modifier
                 .fillMaxSize()
                 .alpha(mapAlpha)

@@ -56,8 +56,11 @@ object WorldMapProjection {
         )
     }
 
-    fun computeRenderedMapRect(containerSize: Size): Rect {
+    fun computeRenderedMapRect(containerSize: Size, fillBounds: Boolean = false): Rect {
         if (containerSize.width <= 0f || containerSize.height <= 0f) return Rect.Zero
+        if (fillBounds) {
+            return Rect(0f, 0f, containerSize.width, containerSize.height)
+        }
         val scale = min(
             containerSize.width / VIEWPORT_WIDTH,
             containerSize.height / VIEWPORT_HEIGHT

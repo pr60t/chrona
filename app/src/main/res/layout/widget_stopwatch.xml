@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_stopwatch_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+
+    <!-- Main Circular Body -->
+    <RelativeLayout
+        android:id="@+id/stopwatch_dial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="12dp"
+        android:background="@drawable/widget_stopwatch_bg"
+        android:gravity="center">
+
+        <!-- Running Chronometer -->
+        <Chronometer
+            android:id="@+id/stopwatch_chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="-0.02"
+            android:textColor="#DFE2F3"
+            android:textSize="36sp"
+            android:visibility="gone" />
+
+        <!-- Paused/Idle Time Display -->
+        <TextView
+            android:id="@+id/stopwatch_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="-0.02"
+            android:text="00:00"
+            android:textColor="#DFE2F3"
+            android:textSize="36sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <!-- Upper-Right Overlapping Pill (Lap + Reset) -->
+    <LinearLayout
+        android:id="@+id/stopwatch_upper_pill"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/widget_stopwatch_pill_bg"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageView
+            android:id="@+id/btn_lap"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_widget_lap" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#281B1B1D"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:id="@+id/btn_reset"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_widget_reset" />
+    </LinearLayout>
+
+    <!-- Lower-Left Overlapping Play / Pause Button -->
+    <FrameLayout
+        android:id="@+id/btn_play_pause"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/widget_stopwatch_btn_bg"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/btn_play_pause_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_widget_play" />
+    </FrameLayout>
+</RelativeLayout>

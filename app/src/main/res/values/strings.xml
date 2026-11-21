@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Chrona</string>
+
+    <!-- Widget Picker Names -->
+    <string name="widget_name_analogue">Analogue</string>
+    <string name="widget_name_digital">Digital</string>
+    <string name="widget_name_stacked">Stacked</string>
+    <string name="widget_name_stopwatch">Stopwatch</string>
+    <string name="widget_name_world_clock_atlas">World Clock — Pixel Atlas</string>
+    <string name="widget_name_world_clock_minimal">World Clock — Minimal</string>
+    <string name="widget_name_world_clock_frost">World Clock — Pixel Frost</string>
+
+    <!-- Widget Descriptions -->
+    <string name="widget_desc_analogue">Scalloped charcoal-black analogue clock with Pixel accent hands.</string>
+    <string name="widget_desc_digital">Horizontal oval digital clock with upcoming alarm.</string>
+    <string name="widget_desc_stacked">Vertical capsule clock with stacked digits and alarm.</string>
+    <string name="widget_desc_stopwatch">Circular stopwatch with direct start, pause, reset, and lap controls.</string>
+    <string name="widget_desc_world_clock_atlas">Hardware-style 2×2 world clock grid with solar pixel indicators.</string>
+    <string name="widget_desc_world_clock_minimal">Minimal borderless world clock with floating times.</string>
+    <string name="widget_desc_world_clock_frost">Frosted translucent glass world clock with soft pixel accents.</string>
 </resources>

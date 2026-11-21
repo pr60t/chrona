@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="400dp"
+    android:viewportWidth="400"
+    android:viewportHeight="400">
+    <!-- Light live seconds indicator dot orbiting at radius 96.17 around (200, 200) -->
+    <!-- Pixel light accent #5966A8 -->
+    <path
+        android:fillColor="#5966A8"
+        android:pathData="M 200,96.33 a 7.5,7.5 0 1,0 0.01,0 Z" />
+</vector>

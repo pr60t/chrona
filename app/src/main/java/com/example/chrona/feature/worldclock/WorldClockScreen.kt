@@ -1,5 +1,8 @@
 package com.example.chrona.feature.worldclock
 
+import androidx.compose.animation.*
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -8,19 +11,24 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.DeleteOutline
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.launch
 import com.example.chrona.core.data.CityRepository
 import com.example.chrona.core.data.PreferencesRepository
 import com.example.chrona.core.map.CityMapMarker
 import com.example.chrona.core.map.ChronaWorldMapHeader
 import com.example.chrona.core.model.City
+import com.example.chrona.core.ui.components.ChronaFabDefaults
+import com.example.chrona.core.ui.components.ChronaFloatingActionButton
 import com.example.chrona.core.ui.components.ChronaTopBar
 import com.example.chrona.core.ui.components.TimezoneCard
 import com.example.chrona.ui.theme.ChronaThemeTokens
@@ -37,11 +45,14 @@ fun WorldClockScreen(
     val extendedColors = ChronaThemeTokens.extended
     val savedCities by CityRepository.savedCities.collectAsState()
     val preferences by PreferencesRepository.preferences.collectAsState()
+    val snackbarHostState = remember { SnackbarHostState() }
+    val coroutineScope = rememberCoroutineScope()
 
     var selectedCityId by remember { mutableStateOf<Long?>(null) }
     var showSearchSheet by remember { mutableStateOf(false) }
 
-    // Live clock update every second
+    val listState = rememberLazyListState()
+
     var now by remember { mutableStateOf(Instant.now()) }
     LaunchedEffect(Unit) {
         while (true) {
@@ -50,23 +61,21 @@ fun WorldClockScreen(
         }
     }
 
-    val listState = rememberLazyListState()
-
-    // Smooth map collapse calculation: 0f (fully expanded) to 1f (collapsed)
-    val collapseFraction by remember {
-        derivedStateOf {
-            if (listState.firstVisibleItemIndex > 0) 1f
-            else (listState.firstVisibleItemScrollOffset / 300f).coerceIn(0f, 1f)
+    LaunchedEffect(selectedCityId) {
+        val id = selectedCityId ?: return@LaunchedEffect
+        val index = savedCities.indexOfFirst { it.geonameId == id }
+        if (index >= 0) {
+            listState.animateScrollToItem(index)
         }
     }
 
     val mapMarkers = remember(savedCities, selectedCityId, now, preferences.is24HourFormat) {
-        savedCities.map { city ->
+        savedCities.filter { !it.isUtc }.map { city ->
             CityMapMarker(
                 cityId = city.geonameId.toString(),
                 cityName = city.cityName,
                 formattedTime = city.formattedTime(preferences.is24HourFormat, now),
-                utcOffsetLabel = city.formattedOffset(now),
+                utcOffsetLabel = city.formattedOffset(),
                 mapX = city.mapX,
                 mapY = city.mapY,
                 identityColor = city.identityColor,
@@ -76,7 +85,9 @@ fun WorldClockScreen(
     }
 
     val activeSelectedCity = remember(selectedCityId, savedCities) {
-        savedCities.find { it.geonameId == selectedCityId }
+        selectedCityId?.let { id ->
+            savedCities.find { it.geonameId == id } ?: CityRepository.getAllCities().find { it.geonameId == id }
+        }
     }
 
     Scaffold(
@@ -88,65 +99,163 @@ fun WorldClockScreen(
                 onNavigateToAbout = onNavigateToAbout
             )
         },
-        floatingActionButton = {
-            ExtendedFloatingActionButton(
-                onClick = { showSearchSheet = true },
-                containerColor = MaterialTheme.colorScheme.primaryContainer,
-                contentColor = MaterialTheme.colorScheme.primary,
-                shape = RoundedCornerShape(100.dp),
-                elevation = FloatingActionButtonDefaults.elevation(defaultElevation = 2.dp)
-            ) {
-                Icon(
-                    imageVector = Icons.Default.Add,
-                    contentDescription = null,
-                    modifier = Modifier.size(20.dp)
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = "Add place",
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 15.sp
-                )
-            }
-        },
         containerColor = MaterialTheme.colorScheme.background,
         modifier = modifier
     ) { innerPadding ->
-        Column(
+        Box(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
-            // Interactive Chrona Natural Earth Map Header
-            ChronaWorldMapHeader(
-                markers = mapMarkers,
-                collapseFraction = collapseFraction,
-                onMarkerClick = { markerCityId ->
-                    val id = markerCityId.toLongOrNull()
-                    if (id != null) {
-                        selectedCityId = id
+            Column(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                // Persistent World Map anchored at the top
+                ChronaWorldMapHeader(
+                    markers = mapMarkers,
+                    collapseFraction = 0f,
+                    onMarkerClick = { markerCityId ->
+                        val id = markerCityId.toLongOrNull()
+                        if (id != null) {
+                            selectedCityId = id
+                        }
+                    },
+                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
+                )
+
+                // Independently scrollable Saved Cities List
+                LazyColumn(
+                    state = listState,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f),
+                    contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 4.dp, bottom = 120.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    items(savedCities, key = { it.geonameId }) { city ->
+                        val currentCity by rememberUpdatedState(city)
+                        val dismissState = rememberSwipeToDismissBoxState(
+                            confirmValueChange = { dismissValue ->
+                                if (dismissValue == SwipeToDismissBoxValue.StartToEnd || dismissValue == SwipeToDismissBoxValue.EndToStart) {
+                                    val target = currentCity
+                                    val originalIndex = CityRepository.deleteSavedCity(target.geonameId)
+                                    coroutineScope.launch {
+                                        val result = snackbarHostState.showSnackbar(
+                                            message = "${target.cityName} removed",
+                                            actionLabel = "Undo",
+                                            duration = SnackbarDuration.Short
+                                        )
+                                        if (result == SnackbarResult.ActionPerformed) {
+                                            CityRepository.restoreSavedCity(target.geonameId, originalIndex)
+                                        }
+                                    }
+                                    true
+                                } else {
+                                    false
+                                }
+                            }
+                        )
+
+                        val deleteBgColor = Color(0xFFFEB4AA)
+                        val deleteIconColor = Color(0xFF680004)
+
+                        SwipeToDismissBox(
+                            state = dismissState,
+                            backgroundContent = {
+                                val direction = dismissState.dismissDirection
+                                val alignment = when (direction) {
+                                    SwipeToDismissBoxValue.StartToEnd -> Alignment.CenterStart
+                                    SwipeToDismissBoxValue.EndToStart -> Alignment.CenterEnd
+                                    else -> Alignment.Center
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxSize()
+                                        .clip(RoundedCornerShape(20.dp))
+                                        .background(deleteBgColor)
+                                        .padding(horizontal = 24.dp),
+                                    contentAlignment = alignment
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.DeleteOutline,
+                                        contentDescription = "Delete city",
+                                        tint = deleteIconColor,
+                                        modifier = Modifier.size(24.dp)
+                                    )
+                                }
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            TimezoneCard(
+                                city = city,
+                                is24Hour = preferences.is24HourFormat,
+                                referenceInstant = now,
+                                onClick = {
+                                    selectedCityId = city.geonameId
+                                }
+                            )
+                        }
                     }
                 }
+            }
+
+            // Shared Add Place FAB matching Alarms screen FAB exactly
+            ChronaFloatingActionButton(
+                onClick = { showSearchSheet = true },
+                contentDescription = "Add place",
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(end = ChronaFabDefaults.endPadding, bottom = ChronaFabDefaults.bottomPadding)
             )
 
-            // Saved Cities List
-            LazyColumn(
-                state = listState,
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 16.dp, bottom = 96.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
+            // Undo Deletion Snackbar Host positioned above bottom bar
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth(0.90f)
+                    .padding(bottom = 116.dp)
             ) {
-                items(savedCities, key = { it.geonameId }) { city ->
-                    TimezoneCard(
-                        city = city,
-                        is24Hour = preferences.is24HourFormat,
-                        showImage = preferences.showCityImages,
-                        referenceInstant = now,
-                        onClick = {
-                            selectedCityId = city.geonameId
+                SnackbarHost(
+                    hostState = snackbarHostState,
+                    snackbar = { data ->
+                        Surface(
+                            shape = RoundedCornerShape(28.dp),
+                            color = extendedColors.surfaceHigh,
+                            tonalElevation = 6.dp,
+                            shadowElevation = 8.dp,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 22.dp, vertical = 14.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                Text(
+                                    text = data.visuals.message,
+                                    color = extendedColors.textPrimary,
+                                    fontSize = 14.sp,
+                                    fontWeight = FontWeight.Medium,
+                                    modifier = Modifier.weight(1f, fill = false)
+                                )
+                                data.visuals.actionLabel?.let { actionLabel ->
+                                    TextButton(
+                                        onClick = { data.performAction() },
+                                        contentPadding = PaddingValues(horizontal = 14.dp, vertical = 4.dp)
+                                    ) {
+                                        Text(
+                                            text = actionLabel,
+                                            color = MaterialTheme.colorScheme.primary,
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 14.sp
+                                        )
+                                    }
+                                }
+                            }
                         }
-                    )
-                }
+                    }
+                )
             }
         }
     }
@@ -167,7 +276,7 @@ fun WorldClockScreen(
         )
     }
 
-    // Timezone Search Sheet
+    // Add Place Modal Bottom Sheet (~80% height)
     if (showSearchSheet) {
         TimezoneSearchSheet(
             is24Hour = preferences.is24HourFormat,

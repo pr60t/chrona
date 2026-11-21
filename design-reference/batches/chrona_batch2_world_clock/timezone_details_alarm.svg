@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 915" width="412" height="915">
+  <title>CHRONA — Inline Timezone Alarm Editor</title>
+  <desc>Inline alarm creation inside the city detail sheet with clear visual hierarchy between Alarm Time in Selected City and Phone Ring Time.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/><stop offset="55%" stop-color="#8C7A7B"/><stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/><stop offset="60%" stop-color="#9EB1C7"/><stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/><stop offset="60%" stop-color="#7D6B7D"/><stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/><stop offset="55%" stop-color="#939BA8"/><stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <linearGradient id="sky-kathmandu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D4363"/><stop offset="55%" stop-color="#758BA8"/><stop offset="100%" stop-color="#E5C896"/>
+    </linearGradient>
+    <clipPath id="clip-city-80x64">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-72x56">
+      <rect x="0" y="0" width="72" height="56" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-screen-412x915">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-screen-412x915)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">13:17</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">ILLUSTRATIVE SAMPLE · NOV 19, 2026</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    
+    <text x="20" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">World Clock</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+  <g id="layer-world-map" transform="translate(16, 90)">
+    <g id="map-graticule" transform="scale(1, 0.820)" opacity="0.55">
+      <line x1="12" y1="38" x2="368" y2="38" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="2 4"/>
+      <line x1="12" y1="76" x2="368" y2="76" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="2 4"/>
+      <line x1="12" y1="114" x2="368" y2="114" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="4 3"/>
+      <line x1="12" y1="152" x2="368" y2="152" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="2 4"/>
+      <line x1="12" y1="184" x2="368" y2="184" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="2 4"/>
+      <line x1="64" y1="12" x2="64" y2="196" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="2 4"/>
+      <line x1="128" y1="12" x2="128" y2="196" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="2 4"/>
+      <line x1="190" y1="12" x2="190" y2="196" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="2 4"/>
+      <line x1="252" y1="12" x2="252" y2="196" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="2 4"/>
+      <line x1="314" y1="12" x2="314" y2="196" stroke="#1E293B" stroke-width="0.9" stroke-dasharray="2 4"/>
+    </g>
+    <g id="map-continents" transform="scale(1, 0.820)" fill="#242C3A" stroke="#323D50" stroke-width="0.8" stroke-linejoin="round">
+      <!-- North America -->
+      <path d="M26,34 L62,24 L108,28 L126,48 L114,72 L96,86 L82,102 L68,96 L56,74 L36,56 Z"/>
+      <!-- Greenland -->
+      <path d="M124,16 L154,14 L158,32 L136,38 L122,28 Z"/>
+      <!-- South America -->
+      <path d="M98,108 L124,116 L136,144 L118,184 L104,188 L96,154 L90,126 Z"/>
+      <!-- Europe -->
+      <path d="M168,36 L204,28 L226,40 L220,64 L196,70 L172,66 L166,50 Z"/>
+      <!-- Africa -->
+      <path d="M168,76 L208,76 L226,104 L214,154 L194,168 L180,142 L166,108 Z"/>
+      <!-- Asia -->
+      <path d="M224,32 L308,28 L348,48 L340,84 L302,104 L274,108 L252,96 L228,74 Z"/>
+      <!-- Southeast Asia Islands -->
+      <path d="M286,114 L308,116 L312,126 L288,124 Z"/>
+      <!-- Australia -->
+      <path d="M294,136 L336,134 L344,162 L316,172 L292,160 Z"/>
+    </g>
+    <g id="map-markers">
+      <g id="marker-warsaw">
+        <circle cx="198" cy="50.8" r="13.1" fill="#A7E8D8" fill-opacity="0.32"/>
+        <circle cx="198" cy="50.8" r="8.9" fill="none" stroke="#A7E8D8" stroke-width="1.2"/>
+        <circle cx="198" cy="50.8" r="4.5" fill="#A7E8D8" stroke="#000000" stroke-width="1.2"/>
+      </g>
+      <g id="marker-london">
+        <circle cx="176" cy="49.2" r="9.0" fill="#B8C7F2" fill-opacity="0.18"/>
+        <circle cx="176" cy="49.2" r="3.4" fill="#B8C7F2" stroke="#000000" stroke-width="1.2"/>
+      </g>
+      <g id="marker-boston">
+        <circle cx="106" cy="60.7" r="9.0" fill="#F4C2A1" fill-opacity="0.18"/>
+        <circle cx="106" cy="60.7" r="3.4" fill="#F4C2A1" stroke="#000000" stroke-width="1.2"/>
+      </g>
+      <g id="marker-perth">
+        <circle cx="306" cy="124.6" r="9.0" fill="#D4B8F0" fill-opacity="0.18"/>
+        <circle cx="306" cy="124.6" r="3.4" fill="#D4B8F0" stroke="#000000" stroke-width="1.2"/>
+      </g>
+      <g id="marker-kathmandu">
+        <circle cx="272" cy="75.4" r="9.0" fill="#F2DF9B" fill-opacity="0.18"/>
+        <circle cx="272" cy="75.4" r="3.4" fill="#F2DF9B" stroke="#000000" stroke-width="1.2"/>
+      </g>
+    </g>
+  </g>
+  <rect x="0" y="0" width="412" height="915" fill="#000000" fill-opacity="0.68"/>
+  <g id="layer-inline-alarm-sheet" transform="translate(0, 76)">
+    <rect x="0" y="0" width="412" height="839" rx="28" fill="#2B3547" stroke="#334155" stroke-width="1"/>
+    <rect x="186" y="12" width="40" height="4" rx="2" fill="#64748B"/>
+
+    <!-- Top Sheet Header -->
+    <g transform="translate(20, 28)">
+      <rect x="0" y="8" width="4" height="36" rx="2" fill="#A7E8D8"/>
+      <text x="14" y="24" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">Timezone Alarm · Warsaw</text>
+      <text x="14" y="42" class="font-mono" font-size="11" fill="#94A3B8">Europe/Warsaw (UTC +1) · Sample</text>
+      <rect x="332" y="6" width="40" height="40" rx="20" fill="#1A202C"/>
+      <g transform="translate(342,16) scale(0.833)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></g>
+    </g>
+
+    <!-- MOST IMPORTANT HIERARCHY BLOCK: Destination Alarm Time vs Phone Ring Time -->
+    <g id="alarm-dual-time-hierarchy" transform="translate(20, 92)">
+      <!-- Card 1: ALARM TIME IN SELECTED CITY -->
+      <rect x="0" y="0" width="372" height="148" rx="20" fill="#1A202C" stroke="#A7E8D8" stroke-width="1.4"/>
+      <text x="18" y="26" class="font-mono" font-size="11" font-weight="600" letter-spacing="0.8" fill="#A7E8D8">ALARM TIME IN SELECTED CITY</text>
+      <!-- 24h / AM-PM Segmented Toggle -->
+      <rect x="266" y="12" width="90" height="24" rx="12" fill="#222A38"/>
+      <rect x="268" y="14" width="42" height="20" rx="10" fill="#93A8C7"/>
+      <text x="289" y="28" text-anchor="middle" class="font-mono" font-size="10" font-weight="700" fill="#0B1320">24H</text>
+      <text x="333" y="28" text-anchor="middle" class="font-mono" font-size="10" fill="#94A3B8">AM/PM</text>
+
+      <!-- Interactive Destination Time Selector Drums/Boxes -->
+      <g transform="translate(18, 44)">
+        <rect x="0" y="0" width="96" height="68" rx="16" fill="#2A384D" stroke="#93A8C7" stroke-width="1.5"/>
+        <text x="48" y="48" text-anchor="middle" class="font-sans tnum" font-size="40" font-weight="500" fill="#DCE6F7">09</text>
+        <text x="110" y="46" text-anchor="middle" class="font-sans" font-size="32" fill="#94A3B8">:</text>
+        <rect x="124" y="0" width="96" height="68" rx="16" fill="#222A38"/>
+        <text x="172" y="48" text-anchor="middle" class="font-sans tnum" font-size="40" font-weight="500" fill="#F1F5F9">00</text>
+        <text x="236" y="30" class="font-sans" font-size="13" font-weight="600" fill="#F1F5F9">Warsaw</text>
+        <text x="236" y="48" class="font-sans" font-size="11.5" fill="#94A3B8">Fri, Nov 20</text>
+      </g>
+      <text x="18" y="134" class="font-sans" font-size="11" fill="#94A3B8">Tap hour or minute to adjust target city wake/meeting time</text>
+
+      <!-- Card 2: YOUR PHONE WILL RING AT -->
+      <g transform="translate(0, 160)">
+        <rect x="0" y="0" width="372" height="104" rx="20" fill="#11161F" stroke="#93A8C7" stroke-width="1.2"/>
+        <text x="18" y="26" class="font-mono" font-size="11" font-weight="600" letter-spacing="0.8" fill="#93A8C7">YOUR PHONE WILL RING AT</text>
+        <text x="18" y="72" class="font-sans tnum" font-size="40" font-weight="600" fill="#F1F5F9">13:45</text>
+        <text x="134" y="70" class="font-sans" font-size="14" font-weight="500" fill="#94A3B8">Kathmandu (Local)</text>
+        <text x="18" y="92" class="font-sans" font-size="12" fill="#6EE7B7">Friday, Nov 20 · Rings in 24 hrs 28 min</text>
+      </g>
+    </g>
+
+    <!-- Recurrence &amp; Weekday Selector -->
+    <g transform="translate(20, 372)">
+      <rect x="0" y="0" width="372" height="122" rx="20" fill="#1A202C" stroke="#1E293B"/>
+      <text x="18" y="28" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Recurrence</text>
+      <text x="354" y="28" text-anchor="end" class="font-sans" font-size="12" font-weight="500" fill="#93A8C7">Weekdays (Warsaw)</text>
+      <g transform="translate(18, 44)"><circle cx="20" cy="20" r="19" fill="#222A38"/><text x="20" y="25" text-anchor="middle" class="font-sans" font-size="12.5" font-weight="600" fill="#94A3B8">S</text><circle cx="69" cy="20" r="19" fill="#93A8C7"/><text x="69" y="25" text-anchor="middle" class="font-sans" font-size="12.5" font-weight="600" fill="#0B1320">M</text><circle cx="118" cy="20" r="19" fill="#93A8C7"/><text x="118" y="25" text-anchor="middle" class="font-sans" font-size="12.5" font-weight="600" fill="#0B1320">T</text><circle cx="167" cy="20" r="19" fill="#93A8C7"/><text x="167" y="25" text-anchor="middle" class="font-sans" font-size="12.5" font-weight="600" fill="#0B1320">W</text><circle cx="216" cy="20" r="19" fill="#93A8C7"/><text x="216" y="25" text-anchor="middle" class="font-sans" font-size="12.5" font-weight="600" fill="#0B1320">T</text><circle cx="265" cy="20" r="19" fill="#93A8C7"/><text x="265" y="25" text-anchor="middle" class="font-sans" font-size="12.5" font-weight="600" fill="#0B1320">F</text><circle cx="314" cy="20" r="19" fill="#222A38"/><text x="314" y="25" text-anchor="middle" class="font-sans" font-size="12.5" font-weight="600" fill="#94A3B8">S</text>      </g>
+      <text x="18" y="106" class="font-sans" font-size="11.5" fill="#94A3B8">Next occurrence: Fri, Nov 20, 2026</text>
+    </g>
+
+    <!-- Date, Sound &amp; Vibration Settings Rows -->
+    <g transform="translate(20, 508)">
+      <rect x="0" y="0" width="372" height="168" rx="20" fill="#1A202C" stroke="#1E293B"/>
+      <!-- Date Row -->
+      <g transform="translate(18,16) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></g>
+      <text x="50" y="31" class="font-sans" font-size="14" fill="#F1F5F9">Specific date</text>
+      <text x="354" y="31" text-anchor="end" class="font-sans" font-size="13" font-weight="500" fill="#93A8C7">Nov 20, 2026</text>
+      <line x1="18" y1="54" x2="354" y2="54" stroke="#1E293B"/>
+      <!-- Sound Row -->
+      <g transform="translate(18,72) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></g>
+      <text x="50" y="87" class="font-sans" font-size="14" fill="#F1F5F9">Alarm sound</text>
+      <text x="354" y="87" text-anchor="end" class="font-sans" font-size="13" fill="#94A3B8">Pixel Chimes · Gentle</text>
+      <line x1="18" y1="110" x2="354" y2="110" stroke="#1E293B"/>
+      <!-- Vibration Row -->
+      <g transform="translate(18,128) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="8" height="16" rx="2"/><path d="M4 8v8M20 8v8M2 10v4M22 10v4"/></g>
+      <text x="50" y="143" class="font-sans" font-size="14" fill="#F1F5F9">Vibrate</text>
+      <rect x="302" y="123" width="52" height="32" rx="16" fill="#93A8C7"/>
+      <circle cx="338" cy="139" r="11" fill="#0B1320"/>
+    </g>
+
+    <!-- Create Alarm Primary Pill CTA -->
+    <g transform="translate(20, 696)">
+      <rect x="0" y="0" width="372" height="54" rx="27" fill="#93A8C7"/>
+      <g transform="translate(112,16) scale(0.917)" fill="none" stroke="#0B1320" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+      <text x="204" y="32" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Create alarm</text>
+    </g>
+  </g>
+  </g>
+</svg>

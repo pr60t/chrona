@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" width="1440" height="960">
+  <title>CHRONA — Master Design Token Architecture</title>
+  <desc>W3C DTCG semantic token mapping from raw primitives to component-level properties.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <!-- Procedural City Skyline Gradients &amp; Silhouettes for Replaceable City Tiles -->
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/>
+      <stop offset="55%" stop-color="#8C7A7B"/>
+      <stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/>
+      <stop offset="60%" stop-color="#9EB1C7"/>
+      <stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/>
+      <stop offset="60%" stop-color="#7D6B7D"/>
+      <stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/>
+      <stop offset="55%" stop-color="#939BA8"/>
+      <stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <clipPath id="clip-city-tile">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-tile-sm">
+      <rect x="0" y="0" width="68" height="54" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+  <g id="layer-background">
+    <rect x="0" y="0" width="1440" height="960" fill="#000000"/>
+    <rect x="24" y="24" width="1392" height="912" rx="28" fill="#080B10" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="layer-header">
+    <rect x="48" y="48" width="168" height="28" rx="14" fill="#2A384D"/>
+    <text x="132" y="66" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" letter-spacing="1.2" fill="#DCE6F7">05 · DESIGN TOKENS</text>
+    <text x="48" y="112" class="font-sans" font-size="30" font-weight="600" fill="#F1F5F9">Token Taxonomy &amp; Component Mapping</text>
+    <text x="48" y="138" class="font-sans" font-size="14" fill="#94A3B8">Single source of truth synced with tokens.json · Semantic aliases isolate theme switching (AMOLED vs Light)</text>
+    <text x="1392" y="72" text-anchor="end" class="font-mono" font-size="12" fill="#64748B">CHRONA DESIGN SYSTEM · v1.0</text>
+    <text x="1392" y="92" text-anchor="end" class="font-mono" font-size="11" fill="#93A8C7">360dp Component Grid · 412×915dp Screen Standard</text>
+    <line x1="48" y1="158" x2="1392" y2="158" stroke="#1E293B" stroke-width="1"/>
+  </g><g id="layer-token-tiers" transform="translate(48, 184)">
+  <g transform="translate(0, 0)">
+    <rect x="0" y="0" width="432" height="530" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="24" y="38" class="font-mono" font-size="14" font-weight="600" fill="#93A8C7">TIER 1 · PRIMITIVE TOKENS</text>
+    <text x="24" y="58" class="font-sans" font-size="12" fill="#94A3B8">Raw calibrated values</text>
+    <line x1="24" y1="74" x2="408" y2="74" stroke="#1E293B"/>
+    <g transform="translate(24, 94)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">palette.black.0</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">#000000</text>
+    </g>
+    <g transform="translate(24, 146)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">palette.slate.850</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">#1A202C</text>
+    </g>
+    <g transform="translate(24, 198)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">palette.slate.800</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">#222A38</text>
+    </g>
+    <g transform="translate(24, 250)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">palette.slate.750</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">#2B3547</text>
+    </g>
+    <g transform="translate(24, 302)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">palette.periwinkle.300</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">#93A8C7</text>
+    </g>
+    <g transform="translate(24, 354)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">palette.mint.200</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">#A7E8D8</text>
+    </g>
+    <g transform="translate(24, 406)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">radius.20</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">20dp</text>
+    </g>
+    <g transform="translate(24, 458)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">space.20</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">20dp</text>
+    </g>
+  </g>
+  <g transform="translate(456, 0)">
+    <rect x="0" y="0" width="432" height="530" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="24" y="38" class="font-mono" font-size="14" font-weight="600" fill="#93A8C7">TIER 2 · SEMANTIC TOKENS</text>
+    <text x="24" y="58" class="font-sans" font-size="12" fill="#94A3B8">Role-based theme aliases</text>
+    <line x1="24" y1="74" x2="408" y2="74" stroke="#1E293B"/>
+    <g transform="translate(24, 94)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">color.bg.canvas</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">-> #000000</text>
+    </g>
+    <g transform="translate(24, 146)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">color.surface.card</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">-> #1A202C</text>
+    </g>
+    <g transform="translate(24, 198)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">color.surface.dialog</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">-> #2B3547</text>
+    </g>
+    <g transform="translate(24, 250)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">color.accent.primary</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">-> #93A8C7</text>
+    </g>
+    <g transform="translate(24, 302)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">color.accent.pill</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">-> #2A384D</text>
+    </g>
+    <g transform="translate(24, 354)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">color.tz.slot01</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">-> #A7E8D8</text>
+    </g>
+    <g transform="translate(24, 406)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">shape.card.corner</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">-> 20dp</text>
+    </g>
+    <g transform="translate(24, 458)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">layout.screen.margin</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">-> 20dp</text>
+    </g>
+  </g>
+  <g transform="translate(912, 0)">
+    <rect x="0" y="0" width="432" height="530" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="24" y="38" class="font-mono" font-size="14" font-weight="600" fill="#93A8C7">TIER 3 · COMPONENT TOKENS</text>
+    <text x="24" y="58" class="font-sans" font-size="12" fill="#94A3B8">Bound UI specifications</text>
+    <line x1="24" y1="74" x2="408" y2="74" stroke="#1E293B"/>
+    <g transform="translate(24, 94)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">tzCard.background</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">surface.card</text>
+    </g>
+    <g transform="translate(24, 146)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">tzCard.width.412dp</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">372dp</text>
+    </g>
+    <g transform="translate(24, 198)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">tzCard.imageTile</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">80×64dp · r12</text>
+    </g>
+    <g transform="translate(24, 250)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">tzCard.stripWidth</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">4dp</text>
+    </g>
+    <g transform="translate(24, 302)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">btnPrimary.fill</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">accent.primary</text>
+    </g>
+    <g transform="translate(24, 354)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">btnPrimary.radius</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">9999dp</text>
+    </g>
+    <g transform="translate(24, 406)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">navBar.destinations</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">5 items</text>
+    </g>
+    <g transform="translate(24, 458)">
+      <rect x="0" y="0" width="384" height="40" rx="10" fill="#11161F" stroke="#1E293B"/>
+      <text x="14" y="25" class="font-mono" font-size="12" fill="#F1F5F9">overflow.items</text>
+      <text x="370" y="25" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">3 items</text>
+    </g>
+  </g>
+</g>
+
+  <g id="layer-token-sync-note" transform="translate(48, 744)">
+    <rect x="0" y="0" width="1344" height="164" rx="20" fill="#222A38" stroke="#334155"/>
+    <text x="28" y="38" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">Cross-Batch Token Governance Rules</text>
+    <text x="28" y="66" class="font-sans" font-size="13" fill="#94A3B8">1. Never hardcode #000000 onto cards; all card containers bind strictly to color.surface.card (#1A202C) or color.surface.high (#222A38).</text>
+    <text x="28" y="90" class="font-sans" font-size="13" fill="#94A3B8">2. Keep color.accent.primary (#93A8C7) reserved for interactive controls, toggles, sliders, and primary pill buttons.</text>
+    <text x="28" y="114" class="font-sans" font-size="13" fill="#94A3B8">3. All Batch 2+ screens MUST reference 412×915dp artboards with 20dp horizontal padding yielding 372dp full-bleed card widths.</text>
+    <text x="28" y="138" class="font-mono" font-size="12" fill="#93A8C7">Machine-readable artifact: tokens.json (W3C Design Tokens Format)</text>
+  </g>
+</svg>

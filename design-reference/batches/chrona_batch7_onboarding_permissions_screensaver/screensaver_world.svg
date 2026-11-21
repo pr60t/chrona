@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 915" width="412" height="915">
+  <title>CHRONA Screensaver — Ambient World Clock</title>
+  <desc>Ambient AMOLED world map screensaver with glowing city markers, primary local clock, and selected city readout.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="ambient-periwinkle" cx="50%" cy="32%" r="48%">
+      <stop offset="0%" stop-color="#93A8C7" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#A7E8D8" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-screen-412x915">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-screen-412x915)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+  <g id="screensaver-ambient-world">
+    <!-- Minimal World Map Silhouette -->
+    <g transform="translate(16, 150)" fill="#11161F" stroke="#1E293B" stroke-width="0.8">
+      <path d="M26,34 L62,24 L108,28 L126,48 L114,72 L96,86 L82,102 L68,96 L56,74 L36,56 Z"/>
+      <path d="M98,108 L124,116 L136,144 L118,184 L104,188 L96,154 L90,126 Z"/>
+      <path d="M168,36 L204,28 L226,40 L220,64 L196,70 L172,66 L166,50 Z"/>
+      <path d="M168,76 L208,76 L226,104 L214,154 L194,168 L180,142 L166,108 Z"/>
+      <path d="M224,32 L308,28 L348,48 L340,84 L302,104 L274,108 L252,96 L228,74 Z"/>
+      <path d="M294,136 L336,134 L344,162 L316,172 L292,160 Z"/>
+    </g>
+    <!-- Selected Timezone Dots -->
+    <circle cx="122" cy="224" r="4" fill="#F4C2A1" opacity="0.75"/>
+    <circle cx="192" cy="210" r="4" fill="#B8C7F2" opacity="0.75"/>
+    <circle cx="214" cy="212" r="12" fill="#A7E8D8" fill-opacity="0.22"/>
+    <circle cx="214" cy="212" r="5" fill="#A7E8D8"/>
+    <circle cx="288" cy="242" r="4.5" fill="#F2DF9B"/>
+    <circle cx="322" cy="302" r="4" fill="#D4B8F0" opacity="0.75"/>
+
+    <!-- Main Clock -->
+    <text x="206" y="476" text-anchor="middle" class="font-sans tnum" font-size="80" font-weight="300" letter-spacing="-1.5" fill="#F1F5F9" opacity="0.9">02:14</text>
+    <text x="206" y="512" text-anchor="middle" class="font-sans" font-size="14" fill="#94A3B8" opacity="0.75">Kathmandu · Friday, Nov 20</text>
+
+    <!-- Small Selected City Ambient Pill -->
+    <g transform="translate(86, 566)">
+      <rect x="0" y="0" width="240" height="44" rx="22" fill="#080B10" stroke="#1E293B"/>
+      <circle cx="22" cy="22" r="4.5" fill="#A7E8D8"/>
+      <text x="38" y="27" class="font-sans" font-size="13" fill="#94A3B8">Warsaw</text>
+      <text x="218" y="27" text-anchor="end" class="font-sans tnum" font-size="15" font-weight="500" fill="#F1F5F9">21:29</text>
+    </g>
+  </g>
+  </g>
+</svg>

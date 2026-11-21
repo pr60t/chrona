@@ -1,5 +1,7 @@
 package com.example.chrona.feature.settings
 
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -13,6 +15,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.activity.compose.BackHandler
+import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.*
@@ -32,7 +36,9 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.example.chrona.core.alarm.AlarmScheduler
 import com.example.chrona.core.data.PreferencesRepository
+import com.example.chrona.core.model.ClockStyle
 import com.example.chrona.core.model.ThemeMode
+import com.example.chrona.core.model.TimeFormatPreference
 import com.example.chrona.ui.theme.ChronaThemeTokens
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -41,12 +47,27 @@ fun SettingsScreen(
     onNavigateBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    // Intercept system/hardware/gesture Back so it returns to World Clock without exiting the app
+    BackHandler {
+        onNavigateBack()
+    }
+
     val context = LocalContext.current
     val extendedColors = ChronaThemeTokens.extended
     val preferences by PreferencesRepository.preferences.collectAsState()
 
+    fun checkFullScreenPermission(ctx: Context): Boolean {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            val nm = ctx.getSystemService(Context.NOTIFICATION_SERVICE) as? NotificationManager
+            nm?.canUseFullScreenIntent() ?: true
+        } else {
+            true
+        }
+    }
+
     var canExactAlarm by remember { mutableStateOf(AlarmScheduler.canScheduleExactAlarms(context)) }
     var areNotificationsEnabled by remember { mutableStateOf(NotificationManagerCompat.from(context).areNotificationsEnabled()) }
+    var canFullScreen by remember { mutableStateOf(checkFullScreenPermission(context)) }
 
     // Re-check permissions on lifecycle ON_RESUME (e.g. when returning from system Settings)
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -55,6 +76,7 @@ fun SettingsScreen(
             if (event == Lifecycle.Event.ON_RESUME) {
                 canExactAlarm = AlarmScheduler.canScheduleExactAlarms(context)
                 areNotificationsEnabled = NotificationManagerCompat.from(context).areNotificationsEnabled()
+                canFullScreen = checkFullScreenPermission(context)
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
@@ -63,13 +85,20 @@ fun SettingsScreen(
         }
     }
 
+    data class AccentChoice(
+        val hex: String,
+        val name: String,
+        val isDefault: Boolean = false
+    )
+
     val accentOptions = listOf(
-        "#93A8C7" to "Periwinkle",
-        "#A7E8D8" to "Mint Teal",
-        "#E7A19A" to "Soft Coral",
-        "#D4B8F0" to "Lavender",
-        "#F2DF9B" to "Soft Gold",
-        "#A3C7DE" to "Pale Blue"
+        AccentChoice("#93A8C7", "Periwinkle"),
+        AccentChoice("#A7E8D8", "Mint Teal"),
+        AccentChoice("#E7A19A", "Soft Coral"),
+        AccentChoice("#DCE2FA", "Pixel", isDefault = true),
+        AccentChoice("#D4B8F0", "Lavender"),
+        AccentChoice("#F2DF9B", "Soft Gold"),
+        AccentChoice("#A3C7DE", "Pale Blue")
     )
 
     Scaffold(
@@ -176,36 +205,70 @@ fun SettingsScreen(
 
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.Top
                     ) {
-                        accentOptions.forEach { (hex, name) ->
-                            val color = try { Color(android.graphics.Color.parseColor(hex)) } catch (e: Exception) { Color.Gray }
-                            val isSelected = preferences.accentColorHex.equals(hex, ignoreCase = true)
+                        accentOptions.forEach { choice ->
+                            val color = try { Color(android.graphics.Color.parseColor(choice.hex)) } catch (e: Exception) { Color.Gray }
+                            val isSelected = preferences.accentColorHex.equals(choice.hex, ignoreCase = true)
 
-                            Box(
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
                                 modifier = Modifier
-                                    .size(38.dp)
-                                    .clip(CircleShape)
-                                    .background(color)
-                                    .border(
-                                        width = if (isSelected) 3.dp else 0.dp,
-                                        color = if (isSelected) extendedColors.textPrimary else Color.Transparent,
-                                        shape = CircleShape
-                                    )
-                                    .clickable { PreferencesRepository.setAccentColor(context, hex) },
-                                contentAlignment = Alignment.Center
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .clickable { PreferencesRepository.setAccentColor(context, choice.hex) }
+                                    .padding(horizontal = 2.dp, vertical = 2.dp)
                             ) {
-                                if (isSelected) {
-                                    Icon(
-                                        imageVector = Icons.Default.Check,
-                                        contentDescription = name,
-                                        tint = Color(0xFF0B1320),
-                                        modifier = Modifier.size(18.dp)
-                                    )
+                                Box(
+                                    modifier = Modifier
+                                        .size(34.dp)
+                                        .clip(CircleShape)
+                                        .background(color)
+                                        .border(
+                                            width = if (isSelected) 2.5.dp else 0.dp,
+                                            color = if (isSelected) extendedColors.textPrimary else Color.Transparent,
+                                            shape = CircleShape
+                                        ),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    if (isSelected) {
+                                        Icon(
+                                            imageVector = Icons.Default.Check,
+                                            contentDescription = choice.name,
+                                            tint = Color(0xFF0B1320),
+                                            modifier = Modifier.size(16.dp)
+                                        )
+                                    }
+                                }
+
+                                if (choice.isDefault) {
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Surface(
+                                        shape = RoundedCornerShape(4.dp),
+                                        color = MaterialTheme.colorScheme.primaryContainer
+                                    ) {
+                                        Text(
+                                            text = "DEFAULT",
+                                            fontSize = 7.5.sp,
+                                            fontWeight = FontWeight.ExtraBold,
+                                            color = MaterialTheme.colorScheme.primary,
+                                            modifier = Modifier.padding(horizontal = 3.dp, vertical = 1.dp)
+                                        )
+                                    }
+                                } else {
+                                    Spacer(modifier = Modifier.height(18.dp))
                                 }
                             }
                         }
                     }
+
+                    val currentAccent = accentOptions.find { it.hex.equals(preferences.accentColorHex, ignoreCase = true) }
+                    Text(
+                        text = if (currentAccent?.isDefault == true) "Selected: Pixel (Default Google Pixel theme)" else "Selected: ${currentAccent?.name ?: "Custom"}",
+                        color = extendedColors.textSecondary,
+                        fontSize = 12.sp,
+                        modifier = Modifier.padding(top = 2.dp)
+                    )
                 }
             }
 
@@ -224,65 +287,97 @@ fun SettingsScreen(
                 color = extendedColors.cardBackground
             ) {
                 Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
-                    // 24 Hour format toggle
-                    Row(
+                    // Time format selector (Follow System, 12-hour, 24-hour)
+                    Column(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(vertical = 12.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
+                            .padding(vertical = 10.dp)
                     ) {
-                        Column {
-                            Text(
-                                text = "24-hour format",
-                                color = extendedColors.textPrimary,
-                                fontSize = 16.sp
-                            )
-                            Text(
-                                text = "Use 13:00 instead of 1:00 PM",
-                                color = extendedColors.textSecondary,
-                                fontSize = 13.sp
-                            )
-                        }
-                        Switch(
-                            checked = preferences.is24HourFormat,
-                            onCheckedChange = { PreferencesRepository.set24HourFormat(context, it) },
-                            colors = SwitchDefaults.colors(
-                                checkedThumbColor = Color(0xFF0B1320),
-                                checkedTrackColor = MaterialTheme.colorScheme.primary
-                            )
+                        Text(
+                            text = "Time format",
+                            color = extendedColors.textPrimary,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Medium
                         )
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(
+                            text = "Display times using 12-hour, 24-hour, or device system format",
+                            color = extendedColors.textSecondary,
+                            fontSize = 13.sp
+                        )
+                        Spacer(modifier = Modifier.height(10.dp))
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            listOf(
+                                TimeFormatPreference.FOLLOW_SYSTEM to "Follow system",
+                                TimeFormatPreference.TWELVE_HOUR to "12-hour",
+                                TimeFormatPreference.TWENTY_FOUR_HOUR to "24-hour"
+                            ).forEach { (pref, label) ->
+                                val isSelected = preferences.timeFormatPreference == pref
+                                Surface(
+                                    shape = RoundedCornerShape(100.dp),
+                                    color = if (isSelected) MaterialTheme.colorScheme.primaryContainer else extendedColors.surfaceHigh,
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clip(RoundedCornerShape(100.dp))
+                                        .clickable { PreferencesRepository.setTimeFormatPreference(context, pref) }
+                                ) {
+                                    Box(
+                                        modifier = Modifier.padding(vertical = 10.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = label,
+                                            fontSize = 12.sp,
+                                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                                            color = if (isSelected) MaterialTheme.colorScheme.primary else extendedColors.textSecondary
+                                        )
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     HorizontalDivider(color = extendedColors.divider)
 
-                    // Show city images toggle
+                    // Date & time system settings row
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
+                            .clip(RoundedCornerShape(12.dp))
+                            .clickable {
+                                try {
+                                    context.startActivity(Intent(Settings.ACTION_DATE_SETTINGS))
+                                } catch (e: Exception) {
+                                    context.startActivity(Intent(Settings.ACTION_SETTINGS))
+                                }
+                            }
                             .padding(vertical = 12.dp),
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Column {
+                        Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = "Show city images",
+                                text = "Date & time",
                                 color = extendedColors.textPrimary,
-                                fontSize = 16.sp
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Medium
                             )
+                            Spacer(modifier = Modifier.height(2.dp))
                             Text(
-                                text = "Display visual cards in World Clock",
+                                text = "Manage your device's date, time and timezone.",
                                 color = extendedColors.textSecondary,
                                 fontSize = 13.sp
                             )
                         }
-                        Switch(
-                            checked = preferences.showCityImages,
-                            onCheckedChange = { PreferencesRepository.setShowCityImages(context, it) },
-                            colors = SwitchDefaults.colors(
-                                checkedThumbColor = Color(0xFF0B1320),
-                                checkedTrackColor = MaterialTheme.colorScheme.primary
-                            )
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
+                            contentDescription = null,
+                            tint = extendedColors.textMuted,
+                            modifier = Modifier.size(16.dp)
                         )
                     }
 
@@ -311,6 +406,154 @@ fun SettingsScreen(
                                 checkedTrackColor = MaterialTheme.colorScheme.primary
                             )
                         )
+                    }
+                }
+            }
+
+            // Alarm Preferences Section
+            Text(
+                text = "ALARM PREFERENCES",
+                color = MaterialTheme.colorScheme.primary,
+                fontSize = 12.sp,
+                fontWeight = FontWeight.Bold,
+                letterSpacing = 1.sp
+            )
+
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(20.dp),
+                color = extendedColors.cardBackground
+            ) {
+                Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)) {
+                    // Default snooze duration slider (1..30 min)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Default snooze duration",
+                            color = extendedColors.textPrimary,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                        Text(
+                            text = "${preferences.defaultSnoozeDurationMinutes} min",
+                            color = MaterialTheme.colorScheme.primary,
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                    Text(
+                        text = "Default snooze time for newly created alarms",
+                        color = extendedColors.textSecondary,
+                        fontSize = 13.sp
+                    )
+                    Slider(
+                        value = preferences.defaultSnoozeDurationMinutes.toFloat(),
+                        onValueChange = {
+                            PreferencesRepository.setDefaultSnoozeDuration(context, it.toInt())
+                        },
+                        valueRange = 1f..30f,
+                        steps = 28,
+                        colors = SliderDefaults.colors(
+                            thumbColor = MaterialTheme.colorScheme.primary,
+                            activeTrackColor = MaterialTheme.colorScheme.primary
+                        )
+                    )
+
+                    HorizontalDivider(color = extendedColors.divider, modifier = Modifier.padding(vertical = 8.dp))
+
+                    // Alarm playback volume slider (0..100%)
+                    var localVolume by remember(preferences.alarmVolumePercent) {
+                        mutableFloatStateOf(preferences.alarmVolumePercent.toFloat())
+                    }
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Alarm volume",
+                            color = extendedColors.textPrimary,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                        Text(
+                            text = "${localVolume.toInt()}%",
+                            color = MaterialTheme.colorScheme.primary,
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                    Text(
+                        text = "Application playback volume for Chrona alarms",
+                        color = extendedColors.textSecondary,
+                        fontSize = 13.sp
+                    )
+                    Slider(
+                        value = localVolume,
+                        onValueChange = { localVolume = it },
+                        onValueChangeFinished = {
+                            PreferencesRepository.setAlarmVolumePercent(context, localVolume.toInt())
+                        },
+                        valueRange = 0f..100f,
+                        steps = 0,
+                        colors = SliderDefaults.colors(
+                            thumbColor = MaterialTheme.colorScheme.primary,
+                            activeTrackColor = MaterialTheme.colorScheme.primary,
+                            inactiveTrackColor = extendedColors.surfaceHigh
+                        )
+                    )
+
+                    HorizontalDivider(color = extendedColors.divider, modifier = Modifier.padding(vertical = 8.dp))
+
+                    // Alarm Clock Style (Digital vs Analog)
+                    Text(
+                        text = "Alarm clock style",
+                        color = extendedColors.textPrimary,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Medium
+                    )
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text(
+                        text = "Clock style presented when an alarm is actively ringing",
+                        color = extendedColors.textSecondary,
+                        fontSize = 13.sp
+                    )
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        listOf(
+                            ClockStyle.DIGITAL to "Digital",
+                            ClockStyle.ANALOG to "Analog"
+                        ).forEach { (style, label) ->
+                            val isSelected = preferences.alarmClockStyle == style
+                            Surface(
+                                shape = RoundedCornerShape(100.dp),
+                                color = if (isSelected) MaterialTheme.colorScheme.primaryContainer else extendedColors.surfaceHigh,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .clip(RoundedCornerShape(100.dp))
+                                    .clickable { PreferencesRepository.setAlarmClockStyle(context, style) }
+                            ) {
+                                Box(
+                                    modifier = Modifier.padding(vertical = 10.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = label,
+                                        fontSize = 13.sp,
+                                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                                        color = if (isSelected) MaterialTheme.colorScheme.primary else extendedColors.textSecondary
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -398,6 +641,63 @@ fun SettingsScreen(
                                 }
                             ) {
                                 Text("Enable")
+                            }
+                        }
+                    }
+
+                    HorizontalDivider(color = extendedColors.divider, modifier = Modifier.padding(vertical = 12.dp))
+
+                    // Full-screen Alarms Status (Android 14+ / API 34+)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "Full-screen alarms",
+                                color = extendedColors.textPrimary,
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Medium
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                text = if (canFullScreen) {
+                                    "Allowed · Alarms wake the display and show full-screen on lock"
+                                } else {
+                                    "Permission off · Alarms will use heads-up notification fallback"
+                                },
+                                color = if (canFullScreen) Color(0xFF6EE7B7) else Color(0xFFFCD34D),
+                                fontSize = 13.sp
+                            )
+                        }
+
+                        if (!canFullScreen && Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                            TextButton(
+                                onClick = {
+                                    try {
+                                        val intent = Intent(Settings.ACTION_MANAGE_APP_USE_FULL_SCREEN_INTENT).apply {
+                                            data = Uri.parse("package:${context.packageName}")
+                                        }
+                                        if (intent.resolveActivity(context.packageManager) != null) {
+                                            context.startActivity(intent)
+                                        } else {
+                                            val fallbackIntent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                                                data = Uri.parse("package:${context.packageName}")
+                                            }
+                                            context.startActivity(fallbackIntent)
+                                        }
+                                    } catch (_: Exception) {
+                                        try {
+                                            val fallbackIntent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                                                data = Uri.parse("package:${context.packageName}")
+                                            }
+                                            context.startActivity(fallbackIntent)
+                                        } catch (_: Exception) {}
+                                    }
+                                }
+                            ) {
+                                Text("Allow")
                             }
                         }
                     }

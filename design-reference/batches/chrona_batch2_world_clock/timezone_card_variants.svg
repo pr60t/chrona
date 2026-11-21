@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 915" width="412" height="915">
+  <title>CHRONA — Timezone Card Variants (Images Enabled vs Disabled)</title>
+  <desc>Comparison of saved timezone cards and search results with city photographs enabled versus disabled.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/><stop offset="55%" stop-color="#8C7A7B"/><stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/><stop offset="60%" stop-color="#9EB1C7"/><stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/><stop offset="60%" stop-color="#7D6B7D"/><stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/><stop offset="55%" stop-color="#939BA8"/><stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <linearGradient id="sky-kathmandu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D4363"/><stop offset="55%" stop-color="#758BA8"/><stop offset="100%" stop-color="#E5C896"/>
+    </linearGradient>
+    <clipPath id="clip-city-80x64">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-72x56">
+      <rect x="0" y="0" width="72" height="56" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-screen-412x915">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-screen-412x915)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">13:17</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">ILLUSTRATIVE SAMPLE · NOV 19, 2026</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    <g transform="translate(16,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="52" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Card Image Toggle</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+  <!-- Setting Toggle Preview Banner -->
+  <g transform="translate(20, 92)">
+    <rect x="0" y="0" width="372" height="56" rx="18" fill="#222A38" stroke="#334155"/>
+    <text x="16" y="25" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Show city photographs</text>
+    <text x="16" y="43" class="font-sans" font-size="11.5" fill="#94A3B8">Rebalances horizontal spacing while keeping TZ strip</text>
+    <rect x="304" y="12" width="52" height="32" rx="16" fill="#93A8C7"/>
+    <circle cx="340" cy="28" r="11" fill="#0B1320"/>
+  </g>
+
+  <text x="20" y="176" class="font-mono" font-size="11" font-weight="600" fill="#93A8C7">A. IMAGES ENABLED (SAVED LIST &amp; SEARCH RESULT)</text>
+  <g id="tz-card-warsaw" transform="translate(20, 188)">
+    <rect x="0" y="0" width="372" height="80" rx="20" fill="#1A202C" stroke="#1E293B" stroke-width="1"/>
+<g id="tile-warsaw" transform="translate(8,8)">
+      <rect x="0" y="0" width="80" height="64" rx="12" fill="url(#sky-warsaw)"/>
+      <g clip-path="url(#clip-city-80x64)"><g transform="scale(1.000,1.000)"><rect x="0" y="42" width="80" height="22" fill="#2A2630"/><rect x="10" y="28" width="12" height="36" fill="#36303D"/><rect x="33" y="14" width="14" height="50" fill="#241F29"/><polygon points="37,14 40,4 43,14" fill="#241F29"/><rect x="52" y="24" width="16" height="40" fill="#312B38"/></g></g>
+    </g>    <rect x="96" y="10" width="4" height="60" rx="2" fill="#A7E8D8"/>
+    <text x="112" y="29" class="font-sans" font-size="12.5" fill="#94A3B8">Poland (UTC +1)</text>
+    <text x="112" y="57" class="font-sans" font-size="17.5" font-weight="600" fill="#F1F5F9">Warsaw</text>
+    <text x="354" y="38" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">08:32</text>
+    <text x="354" y="60" text-anchor="end" class="font-mono" font-size="10" fill="#94A3B8">Thu, Nov 19 · -4h 45m</text>
+  </g>
+  <g id="tz-card-kathmandu" transform="translate(20, 280)">
+    <rect x="0" y="0" width="372" height="80" rx="20" fill="#222A38" stroke="#F2DF9B" stroke-width="1.4"/>
+<g id="tile-kathmandu" transform="translate(8,8)">
+      <rect x="0" y="0" width="80" height="64" rx="12" fill="url(#sky-kathmandu)"/>
+      <g clip-path="url(#clip-city-80x64)"><g transform="scale(1.000,1.000)"><polygon points="0,42 18,22 38,34 58,18 80,38 80,64 0,64" fill="#3A4B63"/><polygon points="28,50 40,34 52,50" fill="#D9B97E"/><rect x="38" y="24" width="4" height="11" fill="#F2DF9B"/><rect x="0" y="48" width="80" height="16" fill="#232B38"/></g></g>
+    </g>    <rect x="96" y="10" width="4" height="60" rx="2" fill="#F2DF9B"/>
+    <text x="112" y="29" class="font-sans" font-size="12.5" fill="#94A3B8">Nepal (UTC +5:45)</text>
+    <text x="112" y="57" class="font-sans" font-size="17.5" font-weight="600" fill="#F1F5F9">Kathmandu</text>
+    <text x="354" y="38" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">13:17</text>
+    <text x="354" y="60" text-anchor="end" class="font-mono" font-size="10" fill="#94A3B8">Thu, Nov 19 · Local</text>
+  </g>
+  <line x1="20" y1="384" x2="392" y2="384" stroke="#1E293B"/>
+  <text x="20" y="410" class="font-mono" font-size="11" font-weight="600" fill="#93A8C7">B. IMAGES DISABLED (REBALANCED HORIZONTAL SPACING)</text>
+  <text x="20" y="428" class="font-sans" font-size="12" fill="#94A3B8">Photograph removed · 4dp TZ strip preserved at 14dp leading inset</text>
+  <g id="tz-card-warsaw" transform="translate(20, 444)">
+    <rect x="0" y="0" width="372" height="76" rx="20" fill="#222A38" stroke="#A7E8D8" stroke-width="1.4"/>
+    <rect x="14" y="10" width="4" height="56" rx="2" fill="#A7E8D8"/>
+    <text x="30" y="28" class="font-sans" font-size="12.5" fill="#94A3B8">Poland (UTC +1)</text>
+    <text x="30" y="54" class="font-sans" font-size="17.5" font-weight="600" fill="#F1F5F9">Warsaw</text>
+    <text x="354" y="36" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">08:32</text>
+    <text x="354" y="57" text-anchor="end" class="font-mono" font-size="10" fill="#94A3B8">Thu, Nov 19 · -4h 45m</text>
+  </g>
+  <g id="tz-card-london" transform="translate(20, 532)">
+    <rect x="0" y="0" width="372" height="76" rx="20" fill="#1A202C" stroke="#1E293B" stroke-width="1"/>
+    <rect x="14" y="10" width="4" height="56" rx="2" fill="#B8C7F2"/>
+    <text x="30" y="28" class="font-sans" font-size="12.5" fill="#94A3B8">England (UTC +0)</text>
+    <text x="30" y="54" class="font-sans" font-size="17.5" font-weight="600" fill="#F1F5F9">London</text>
+    <text x="354" y="36" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">07:32</text>
+    <text x="354" y="57" text-anchor="end" class="font-mono" font-size="10" fill="#94A3B8">Thu, Nov 19 · -5h 45m</text>
+  </g>
+  <g id="tz-card-boston" transform="translate(20, 620)">
+    <rect x="0" y="0" width="372" height="76" rx="20" fill="#1A202C" stroke="#1E293B" stroke-width="1"/>
+    <rect x="14" y="10" width="4" height="56" rx="2" fill="#F4C2A1"/>
+    <text x="30" y="28" class="font-sans" font-size="12.5" fill="#94A3B8">United States (UTC -5)</text>
+    <text x="30" y="54" class="font-sans" font-size="17.5" font-weight="600" fill="#F1F5F9">Boston</text>
+    <text x="354" y="36" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">02:32</text>
+    <text x="354" y="57" text-anchor="end" class="font-mono" font-size="10" fill="#94A3B8">Thu, Nov 19 · -10h 45m</text>
+  </g>
+<text x="20" y="724" class="font-mono" font-size="10.5" fill="#94A3B8">SEARCH RESULT · IMAGES DISABLED</text>
+  <g id="tz-card-perth" transform="translate(20, 734)">
+    <rect x="0" y="0" width="372" height="76" rx="20" fill="#1A202C" stroke="#1E293B" stroke-width="1"/>
+    <rect x="14" y="10" width="4" height="56" rx="2" fill="#D4B8F0"/>
+    <text x="30" y="28" class="font-sans" font-size="12.5" fill="#94A3B8">Australia (UTC +8)</text>
+    <text x="30" y="54" class="font-sans" font-size="17.5" font-weight="600" fill="#F1F5F9">Perth</text>
+    <text x="354" y="36" text-anchor="end" class="font-sans tnum" font-size="22" font-weight="500" fill="#F1F5F9">15:32</text>
+    <text x="354" y="57" text-anchor="end" class="font-mono" font-size="10" fill="#94A3B8">Thu, Nov 19 · +2h 15m</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      <rect x="95.6" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Bedtime</text>
+    </g>
+  </g>
+  </g>
+</svg>

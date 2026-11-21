@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1080" width="1440" height="1080">
+  <title>CHRONA — Color Palette &amp; Surface Elevation System</title>
+  <desc>AMOLED pitch-black surfaces, deep blue-gray elevation, light theme tokens, periwinkle accent, and 8 timezone identity colors.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <!-- Procedural City Skyline Gradients &amp; Silhouettes for Replaceable City Tiles -->
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/>
+      <stop offset="55%" stop-color="#8C7A7B"/>
+      <stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/>
+      <stop offset="60%" stop-color="#9EB1C7"/>
+      <stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/>
+      <stop offset="60%" stop-color="#7D6B7D"/>
+      <stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/>
+      <stop offset="55%" stop-color="#939BA8"/>
+      <stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <clipPath id="clip-city-tile">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-tile-sm">
+      <rect x="0" y="0" width="68" height="54" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+  <g id="layer-background">
+    <rect x="0" y="0" width="1440" height="1080" fill="#000000"/>
+    <rect x="24" y="24" width="1392" height="1032" rx="28" fill="#080B10" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="layer-header">
+    <rect x="48" y="48" width="168" height="28" rx="14" fill="#2A384D"/>
+    <text x="132" y="66" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" letter-spacing="1.2" fill="#DCE6F7">02 · COLOR SYSTEM</text>
+    <text x="48" y="112" class="font-sans" font-size="30" font-weight="600" fill="#F1F5F9">Color Tokens &amp; Tonal Surface Hierarchy</text>
+    <text x="48" y="138" class="font-sans" font-size="14" fill="#94A3B8">True AMOLED #000000 canvas · Distinct blue-gray card surfaces · Independent periwinkle UI &amp; 8 pastel timezone accents</text>
+    <text x="1392" y="72" text-anchor="end" class="font-mono" font-size="12" fill="#64748B">CHRONA DESIGN SYSTEM · v1.0</text>
+    <text x="1392" y="92" text-anchor="end" class="font-mono" font-size="11" fill="#93A8C7">360dp Component Grid · 412×915dp Screen Standard</text>
+    <line x1="48" y1="158" x2="1392" y2="158" stroke="#1E293B" stroke-width="1"/>
+  </g><g id="layer-amoled-surfaces" transform="translate(48, 184)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">A. AMOLED Dark Surfaces (Pitch-Black Base + Blue-Gray Elevation)</text>
+  <g transform="translate(0, 32)">
+    <rect x="0" y="0" width="180" height="118" rx="16" fill="#000000" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="76" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">#000000</text>
+    <text x="14" y="94" class="font-mono" font-size="10" fill="#93A8C7">amoled.background</text>
+    <text x="14" y="108" class="font-sans" font-size="11" fill="#94A3B8">Pitch Black Canvas</text>
+  </g>
+  <g transform="translate(194, 32)">
+    <rect x="0" y="0" width="180" height="118" rx="16" fill="#080B10" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="76" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">#080B10</text>
+    <text x="14" y="94" class="font-mono" font-size="10" fill="#93A8C7">surface.lowest</text>
+    <text x="14" y="108" class="font-sans" font-size="11" fill="#94A3B8">Recessed Well</text>
+  </g>
+  <g transform="translate(388, 32)">
+    <rect x="0" y="0" width="180" height="118" rx="16" fill="#11161F" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="76" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">#11161F</text>
+    <text x="14" y="94" class="font-mono" font-size="10" fill="#93A8C7">surface.low</text>
+    <text x="14" y="108" class="font-sans" font-size="11" fill="#94A3B8">Nav Bar / Subtle</text>
+  </g>
+  <g transform="translate(582, 32)">
+    <rect x="0" y="0" width="180" height="118" rx="16" fill="#1A202C" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="76" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">#1A202C</text>
+    <text x="14" y="94" class="font-mono" font-size="10" fill="#93A8C7">surface.container</text>
+    <text x="14" y="108" class="font-sans" font-size="11" fill="#94A3B8">Card Surface (Primary)</text>
+  </g>
+  <g transform="translate(776, 32)">
+    <rect x="0" y="0" width="180" height="118" rx="16" fill="#222A38" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="76" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">#222A38</text>
+    <text x="14" y="94" class="font-mono" font-size="10" fill="#93A8C7">surface.high</text>
+    <text x="14" y="108" class="font-sans" font-size="11" fill="#94A3B8">Elevated Card / Menu</text>
+  </g>
+  <g transform="translate(970, 32)">
+    <rect x="0" y="0" width="180" height="118" rx="16" fill="#2B3547" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="76" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">#2B3547</text>
+    <text x="14" y="94" class="font-mono" font-size="10" fill="#93A8C7">surface.highest</text>
+    <text x="14" y="108" class="font-sans" font-size="11" fill="#94A3B8">Bottom Sheet / Dialog</text>
+  </g>
+  <g transform="translate(1164, 32)">
+    <rect x="0" y="0" width="180" height="118" rx="16" fill="#242C3A" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="76" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">#242C3A</text>
+    <text x="14" y="94" class="font-mono" font-size="10" fill="#93A8C7">map.landmass</text>
+    <text x="14" y="108" class="font-sans" font-size="11" fill="#94A3B8">World Map Fill</text>
+  </g>
+</g>
+<g id="layer-text-and-light" transform="translate(48, 362)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">B. Typography, Borders &amp; Dividers</text>
+  <g transform="translate(0, 32)">
+    <rect x="0" y="0" width="124" height="96" rx="14" fill="#F1F5F9" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#000000">#F1F5F9</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#000000">onSurface</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#000000">Primary Text / Time</text>
+  </g>
+  <g transform="translate(134, 32)">
+    <rect x="0" y="0" width="124" height="96" rx="14" fill="#94A3B8" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#1A202C">#94A3B8</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#1A202C">onSurfaceVariant</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#1A202C">Secondary / Offsets</text>
+  </g>
+  <g transform="translate(268, 32)">
+    <rect x="0" y="0" width="124" height="96" rx="14" fill="#64748B" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#1A202C">#64748B</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#1A202C">onSurfaceMuted</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#1A202C">Disabled / Hints</text>
+  </g>
+  <g transform="translate(402, 32)">
+    <rect x="0" y="0" width="124" height="96" rx="14" fill="#334155" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#000000">#334155</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#000000">outline</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#000000">Input / Card Border</text>
+  </g>
+  <g transform="translate(536, 32)">
+    <rect x="0" y="0" width="124" height="96" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#000000">#1E293B</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#000000">outlineVariant</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#000000">Hairline Divider</text>
+  </g>
+  <text x="692" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">C. Light Theme Counterpart Surfaces</text>
+  <g transform="translate(692, 32)">
+    <rect x="0" y="0" width="122" height="96" rx="14" fill="#F8FAFC" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#0F172A">#F8FAFC</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#0F172A">light.background</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#0F172A">Daylight Canvas</text>
+  </g>
+  <g transform="translate(824, 32)">
+    <rect x="0" y="0" width="122" height="96" rx="14" fill="#E8EEF5" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#0F172A">#E8EEF5</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#0F172A">light.surfaceCard</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#0F172A">Daylight Card</text>
+  </g>
+  <g transform="translate(956, 32)">
+    <rect x="0" y="0" width="122" height="96" rx="14" fill="#DDE5F0" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#0F172A">#DDE5F0</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#0F172A">light.surfaceHigh</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#0F172A">Daylight Elevated</text>
+  </g>
+  <g transform="translate(1088, 32)">
+    <rect x="0" y="0" width="122" height="96" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#F8FAFC">#0F172A</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#F8FAFC">light.onSurface</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#F8FAFC">Daylight Primary Ink</text>
+  </g>
+  <g transform="translate(1220, 32)">
+    <rect x="0" y="0" width="122" height="96" rx="14" fill="#475569" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="56" class="font-mono" font-size="11" font-weight="600" fill="#F8FAFC">#475569</text>
+    <text x="10" y="72" class="font-mono" font-size="9" fill="#F8FAFC">light.onVariant</text>
+    <text x="10" y="86" class="font-sans" font-size="10" fill="#F8FAFC">Daylight Secondary</text>
+  </g>
+</g>
+<g id="layer-accent-semantic" transform="translate(48, 524)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">D. Main Application Accent (Periwinkle Slate) &amp; Semantic States</text>
+  <g transform="translate(0, 32)">
+    <rect x="0" y="0" width="180" height="104" rx="16" fill="#93A8C7" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="62" class="font-mono" font-size="12" font-weight="600" fill="#0B1320">#93A8C7</text>
+    <text x="14" y="79" class="font-mono" font-size="10" fill="#0B1320">accent.primary</text>
+    <text x="14" y="94" class="font-sans" font-size="11" fill="#0B1320">Primary Pill CTA</text>
+  </g>
+  <g transform="translate(194, 32)">
+    <rect x="0" y="0" width="180" height="104" rx="16" fill="#A8BBD6" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="62" class="font-mono" font-size="12" font-weight="600" fill="#0B1320">#A8BBD6</text>
+    <text x="14" y="79" class="font-mono" font-size="10" fill="#0B1320">accent.pressed</text>
+    <text x="14" y="94" class="font-sans" font-size="11" fill="#0B1320">Pressed CTA State</text>
+  </g>
+  <g transform="translate(388, 32)">
+    <rect x="0" y="0" width="180" height="104" rx="16" fill="#2A384D" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="62" class="font-mono" font-size="12" font-weight="600" fill="#DCE6F7">#2A384D</text>
+    <text x="14" y="79" class="font-mono" font-size="10" fill="#DCE6F7">accent.container</text>
+    <text x="14" y="94" class="font-sans" font-size="11" fill="#DCE6F7">Selected Nav Pill</text>
+  </g>
+  <g transform="translate(582, 32)">
+    <rect x="0" y="0" width="180" height="104" rx="16" fill="#DCE6F7" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="62" class="font-mono" font-size="12" font-weight="600" fill="#0B1320">#DCE6F7</text>
+    <text x="14" y="79" class="font-mono" font-size="10" fill="#0B1320">accent.onContainer</text>
+    <text x="14" y="94" class="font-sans" font-size="11" fill="#0B1320">Selected Nav Icon/Text</text>
+  </g>
+  <g transform="translate(776, 32)">
+    <rect x="0" y="0" width="180" height="104" rx="16" fill="#6EE7B7" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="62" class="font-mono" font-size="12" font-weight="600" fill="#063729">#6EE7B7</text>
+    <text x="14" y="79" class="font-mono" font-size="10" fill="#063729">semantic.success</text>
+    <text x="14" y="94" class="font-sans" font-size="11" fill="#063729">Alarm Active / Synced</text>
+  </g>
+  <g transform="translate(970, 32)">
+    <rect x="0" y="0" width="180" height="104" rx="16" fill="#FCD34D" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="62" class="font-mono" font-size="12" font-weight="600" fill="#3B2804">#FCD34D</text>
+    <text x="14" y="79" class="font-mono" font-size="10" fill="#3B2804">semantic.warning</text>
+    <text x="14" y="94" class="font-sans" font-size="11" fill="#3B2804">DST Shift / Caution</text>
+  </g>
+  <g transform="translate(1164, 32)">
+    <rect x="0" y="0" width="180" height="104" rx="16" fill="#FCA5A5" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="62" class="font-mono" font-size="12" font-weight="600" fill="#450A0A">#FCA5A5</text>
+    <text x="14" y="79" class="font-mono" font-size="10" fill="#450A0A">semantic.error</text>
+    <text x="14" y="94" class="font-sans" font-size="11" fill="#450A0A">Destructive / Missed</text>
+  </g>
+</g>
+<g id="layer-timezone-identity-palette" transform="translate(48, 694)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">E. 8 Persistent Timezone Identity Colors (Isolated from Main UI Accent)</text>
+  <text x="0" y="38" class="font-sans" font-size="13" fill="#94A3B8">Assigned deterministically to saved cities for 4dp card identity strips, world map pins, and comparison timeline markers.</text>
+  <g transform="translate(0, 56)">
+    <rect x="0" y="0" width="324" height="118" rx="18" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="14" y="14" width="6" height="90" rx="3" fill="#A7E8D8"/>
+    <circle cx="286" cy="34" r="14" fill="#A7E8D8"/>
+    <text x="34" y="36" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">TZ-01 Glacier Mint</text>
+    <text x="34" y="58" class="font-mono" font-size="12" fill="#A7E8D8">#A7E8D8</text>
+    <text x="34" y="80" class="font-sans" font-size="12" fill="#94A3B8">Warsaw · CET (GMT +0)</text>
+    <text x="34" y="100" class="font-mono" font-size="10" fill="#64748B">token: color.timezoneIdentity.tz01</text>
+  </g>
+  <g transform="translate(340, 56)">
+    <rect x="0" y="0" width="324" height="118" rx="18" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="14" y="14" width="6" height="90" rx="3" fill="#B8C7F2"/>
+    <circle cx="286" cy="34" r="14" fill="#B8C7F2"/>
+    <text x="34" y="36" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">TZ-02 Periwinkle Mist</text>
+    <text x="34" y="58" class="font-mono" font-size="12" fill="#B8C7F2">#B8C7F2</text>
+    <text x="34" y="80" class="font-sans" font-size="12" fill="#94A3B8">London · GMT (GMT -1)</text>
+    <text x="34" y="100" class="font-mono" font-size="10" fill="#64748B">token: color.timezoneIdentity.tz02</text>
+  </g>
+  <g transform="translate(680, 56)">
+    <rect x="0" y="0" width="324" height="118" rx="18" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="14" y="14" width="6" height="90" rx="3" fill="#F4C2A1"/>
+    <circle cx="286" cy="34" r="14" fill="#F4C2A1"/>
+    <text x="34" y="36" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">TZ-03 Apricot Sand</text>
+    <text x="34" y="58" class="font-mono" font-size="12" fill="#F4C2A1">#F4C2A1</text>
+    <text x="34" y="80" class="font-sans" font-size="12" fill="#94A3B8">Boston · EST (GMT -6)</text>
+    <text x="34" y="100" class="font-mono" font-size="10" fill="#64748B">token: color.timezoneIdentity.tz03</text>
+  </g>
+  <g transform="translate(1020, 56)">
+    <rect x="0" y="0" width="324" height="118" rx="18" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="14" y="14" width="6" height="90" rx="3" fill="#D4B8F0"/>
+    <circle cx="286" cy="34" r="14" fill="#D4B8F0"/>
+    <text x="34" y="36" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">TZ-04 Lavender Bloom</text>
+    <text x="34" y="58" class="font-mono" font-size="12" fill="#D4B8F0">#D4B8F0</text>
+    <text x="34" y="80" class="font-sans" font-size="12" fill="#94A3B8">Perth · AWST (GMT +6)</text>
+    <text x="34" y="100" class="font-mono" font-size="10" fill="#64748B">token: color.timezoneIdentity.tz04</text>
+  </g>
+  <g transform="translate(0, 192)">
+    <rect x="0" y="0" width="324" height="118" rx="18" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="14" y="14" width="6" height="90" rx="3" fill="#F2DF9B"/>
+    <circle cx="286" cy="34" r="14" fill="#F2DF9B"/>
+    <text x="34" y="36" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">TZ-05 Buttercream Gold</text>
+    <text x="34" y="58" class="font-mono" font-size="12" fill="#F2DF9B">#F2DF9B</text>
+    <text x="34" y="80" class="font-sans" font-size="12" fill="#94A3B8">Tokyo · JST (GMT +9)</text>
+    <text x="34" y="100" class="font-mono" font-size="10" fill="#64748B">token: color.timezoneIdentity.tz05</text>
+  </g>
+  <g transform="translate(340, 192)">
+    <rect x="0" y="0" width="324" height="118" rx="18" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="14" y="14" width="6" height="90" rx="3" fill="#F2B5C8"/>
+    <circle cx="286" cy="34" r="14" fill="#F2B5C8"/>
+    <text x="34" y="36" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">TZ-06 Rose Quartz</text>
+    <text x="34" y="58" class="font-mono" font-size="12" fill="#F2B5C8">#F2B5C8</text>
+    <text x="34" y="80" class="font-sans" font-size="12" fill="#94A3B8">New Delhi · IST (GMT +5:30)</text>
+    <text x="34" y="100" class="font-mono" font-size="10" fill="#64748B">token: color.timezoneIdentity.tz06</text>
+  </g>
+  <g transform="translate(680, 192)">
+    <rect x="0" y="0" width="324" height="118" rx="18" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="14" y="14" width="6" height="90" rx="3" fill="#A3D5F7"/>
+    <circle cx="286" cy="34" r="14" fill="#A3D5F7"/>
+    <text x="34" y="36" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">TZ-07 Sky Breeze</text>
+    <text x="34" y="58" class="font-mono" font-size="12" fill="#A3D5F7">#A3D5F7</text>
+    <text x="34" y="80" class="font-sans" font-size="12" fill="#94A3B8">Sydney · AEST (GMT +10)</text>
+    <text x="34" y="100" class="font-mono" font-size="10" fill="#64748B">token: color.timezoneIdentity.tz07</text>
+  </g>
+  <g transform="translate(1020, 192)">
+    <rect x="0" y="0" width="324" height="118" rx="18" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="14" y="14" width="6" height="90" rx="3" fill="#BCE3B4"/>
+    <circle cx="286" cy="34" r="14" fill="#BCE3B4"/>
+    <text x="34" y="36" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">TZ-08 Sage Leaf</text>
+    <text x="34" y="58" class="font-mono" font-size="12" fill="#BCE3B4">#BCE3B4</text>
+    <text x="34" y="80" class="font-sans" font-size="12" fill="#94A3B8">San Francisco · PST (GMT -8)</text>
+    <text x="34" y="100" class="font-mono" font-size="10" fill="#64748B">token: color.timezoneIdentity.tz08</text>
+  </g>
+</g>
+</svg>

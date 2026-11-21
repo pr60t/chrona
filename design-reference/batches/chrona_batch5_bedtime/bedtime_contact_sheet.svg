@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 2040" width="1960" height="2040">
+  <title>CHRONA Batch 5 — Bedtime Experience Contact Sheet</title>
+  <desc>Complete 4x2 visual overview of all 8 Bedtime artboards on 412x915dp AMOLED canvases.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="1960" height="2040" fill="#000000"/>
+  <rect x="24" y="24" width="1912" height="1992" rx="28" fill="#080B10" stroke="#1E293B"/>
+  <text x="56" y="78" class="font-sans" font-size="28" font-weight="600" fill="#F1F5F9">CHRONA Batch 5 — Bedtime Experience Contact Sheet</text>
+  <text x="56" y="106" class="font-sans" font-size="14" fill="#94A3B8">8 Artboards · 412 × 915dp AMOLED Grid · Calm Moonlight Palette (#D4B8F0) + Periwinkle Controls (#93A8C7)</text>
+  <line x1="56" y1="128" x2="1904" y2="128" stroke="#1E293B"/>
+  <g id="bedtime-contact-tile-1" transform="translate(68, 156)">
+    <text x="0" y="0" class="font-mono" font-size="12" font-weight="600" fill="#D4B8F0">1 · Bedtime Home (Active)</text>
+    <g transform="translate(0, 12) scale(0.91)">
+      <rect x="-2" y="-2" width="416" height="919" rx="38" fill="none" stroke="#334155" stroke-width="2"/>
+      
+
+  <title>CHRONA — Bedtime Home (Schedule Active)</title>
+  <desc>Calm AMOLED Bedtime home showing next scheduled wake-up, bedtime reminder, 8h sleep target, active weekdays, schedule toggle, and Edit schedule CTA.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="moon-halo-0" cx="50%" cy="22%" r="48%">
+      <stop offset="0%" stop-color="#D4B8F0" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#93A8C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-bedtime-0">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-bedtime-0)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+    <rect x="0" y="0" width="412" height="420" fill="url(#moon-halo-0)"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">22:15</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    
+    <text x="20" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Bedtime</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+<g id="moonlight-illustration" transform="translate(20,88)" opacity="1.0">
+      <rect x="0" y="0" width="372" height="96" rx="20" fill="#080B10" stroke="#1E293B"/>
+      <!-- Soft concentric lunar rings -->
+      <circle cx="62" cy="52" r="36" fill="#D4B8F0" fill-opacity="0.06"/>
+      <circle cx="62" cy="52" r="24" fill="#D4B8F0" fill-opacity="0.10"/>
+      <!-- Crescent Moon -->
+      <path d="M68 38 A15 15 0 1 0 76 62 A12 12 0 1 1 68 38 Z" fill="#D4B8F0"/>
+      <!-- Subtle Twinkling Stars -->
+      <circle cx="118" cy="28" r="1.5" fill="#DCE6F7" opacity="0.7"/>
+      <circle cx="156" cy="44" r="1.2" fill="#B8C7F2" opacity="0.5"/>
+      <circle cx="294" cy="24" r="1.6" fill="#D4B8F0" opacity="0.75"/>
+      <circle cx="332" cy="38" r="1.2" fill="#DCE6F7" opacity="0.55"/>
+      <!-- Gentle Rolling Ridge -->
+      <path d="M0 92 Q 96 68, 198 84 T 372 78 L 372 110 L 0 110 Z" fill="#11161F"/>
+    </g>  <g transform="translate(20, 88)">
+    <text x="116" y="34" class="font-mono" font-size="10.5" font-weight="600" fill="#D4B8F0">SLEEP SCHEDULE · ACTIVE</text>
+    <text x="116" y="58" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">Calm Night Routine</text>
+    <text x="116" y="78" class="font-sans" font-size="12" fill="#94A3B8">Next wake-up tomorrow at 06:30</text>
+    <g transform="translate(304,24)"><rect x="0" y="0" width="52" height="32" rx="16" fill="#93A8C7" stroke="none" stroke-width="1.2"/><circle cx="36" cy="16" r="11" fill="#0B1320"/></g>
+  </g>
+  <g id="bedtime-wake-hero-card" transform="translate(20, 198)">
+    <rect x="0" y="0" width="372" height="164" rx="22" fill="#1A202C" stroke="#1E293B"/>
+    <!-- Left: Bedtime -->
+    <g transform="translate(20, 20)">
+      <rect x="0" y="0" width="4" height="72" rx="2" fill="#D4B8F0"/>
+      <text x="14" y="16" class="font-mono" font-size="10.5" font-weight="600" fill="#D4B8F0">BEDTIME</text>
+      <text x="14" y="54" class="font-sans tnum" font-size="36" font-weight="400" fill="#F1F5F9">22:30</text>
+      <text x="14" y="74" class="font-sans" font-size="12" fill="#94A3B8">Reminder at 22:00</text>
+    </g>
+
+    <line x1="186" y1="22" x2="186" y2="96" stroke="#1E293B"/>
+
+    <!-- Right: Next Scheduled Wake-Up -->
+    <g transform="translate(204, 20)">
+      <rect x="0" y="0" width="4" height="72" rx="2" fill="#93A8C7"/>
+      <text x="14" y="16" class="font-mono" font-size="10.5" font-weight="600" fill="#93A8C7">WAKE-UP ALARM</text>
+      <text x="14" y="54" class="font-sans tnum" font-size="36" font-weight="500" fill="#F1F5F9">06:30</text>
+      <text x="14" y="74" class="font-sans" font-size="12" fill="#6EE7B7">In 8 hrs 15 min</text>
+    </g>
+
+    <line x1="20" y1="112" x2="352" y2="112" stroke="#1E293B"/>
+    <text x="20" y="142" class="font-sans" font-size="13" fill="#94A3B8">Sleep duration target</text>
+    <text x="352" y="142" text-anchor="end" class="font-sans tnum" font-size="15" font-weight="600" fill="#D4B8F0">8 hrs 00 min</text>
+  </g>
+  <g id="bedtime-selected-days-card" transform="translate(20, 376)">
+    <rect x="0" y="0" width="372" height="114" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="18" y="28" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Active days</text>
+    <text x="354" y="28" text-anchor="end" class="font-sans" font-size="12.5" font-weight="500" fill="#93A8C7">Mon–Fri</text>
+    <g id="component-weekday-selector" transform="translate(18,48)">
+  <circle cx="19.0" cy="19" r="18" fill="#222A38" stroke="#334155"/>
+  <text x="19.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text>
+  <circle cx="67.5" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="67.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">M</text>
+  <circle cx="116.0" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="116.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text>
+  <circle cx="164.5" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="164.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">W</text>
+  <circle cx="213.0" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="213.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text>
+  <circle cx="261.5" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="261.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">F</text>
+  <circle cx="310.0" cy="19" r="18" fill="#222A38" stroke="#334155"/>
+  <text x="310.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text>
+</g>
+
+  </g>
+  <g id="bedtime-quick-rows" transform="translate(20, 504)">
+    <rect x="0" y="0" width="372" height="128" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <g transform="translate(18,18) scale(0.833)" fill="none" stroke="#D4B8F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></g>
+    <text x="50" y="31" class="font-sans" font-size="14" font-weight="500" fill="#F1F5F9">Bedtime reminder</text>
+    <text x="50" y="49" class="font-sans" font-size="12" fill="#94A3B8">30 min before bedtime (22:00)</text>
+    <g transform="translate(336,22) scale(0.833)" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></g>
+
+    <line x1="18" y1="64" x2="354" y2="64" stroke="#1E293B"/>
+
+    <g transform="translate(18,82) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+    <text x="50" y="95" class="font-sans" font-size="14" font-weight="500" fill="#F1F5F9">Wake-up preferences</text>
+    <text x="50" y="113" class="font-sans" font-size="12" fill="#94A3B8">Morning Dew · Gradual 30s · Vibrate</text>
+    <g transform="translate(336,86) scale(0.833)" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></g>
+  </g>
+  <g id="cta-edit-schedule" transform="translate(20, 766)">
+    <rect x="0" y="0" width="372" height="52" rx="26" fill="#93A8C7"/>
+    <g transform="translate(116,15) scale(0.917)" fill="none" stroke="#0B1320" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></g>
+    <text x="206" y="31" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Edit schedule</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      <rect x="342.8" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Bedtime</text>
+    </g>
+  </g>
+  </g>
+
+    </g>
+  </g>
+  <g id="bedtime-contact-tile-2" transform="translate(530, 156)">
+    <text x="0" y="0" class="font-mono" font-size="12" font-weight="600" fill="#D4B8F0">2 · Empty / No Schedule</text>
+    <g transform="translate(0, 12) scale(0.91)">
+      <rect x="-2" y="-2" width="416" height="919" rx="38" fill="none" stroke="#334155" stroke-width="2"/>
+      
+
+  <title>CHRONA — Bedtime Empty State</title>
+  <desc>No schedule configured state with moonlight illustration and Set up schedule CTA.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="moon-halo-1" cx="50%" cy="22%" r="48%">
+      <stop offset="0%" stop-color="#D4B8F0" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#93A8C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-bedtime-1">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-bedtime-1)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+    <rect x="0" y="0" width="412" height="420" fill="url(#moon-halo-1)"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">22:15</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    
+    <text x="20" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Bedtime</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+  <g id="bedtime-empty-state" transform="translate(20, 146)">
+    <rect x="0" y="0" width="372" height="420" rx="24" fill="#1A202C" stroke="#1E293B"/>
+    <!-- Crescent Moonlight Emblem -->
+    <circle cx="186" cy="96" r="52" fill="#D4B8F0" fill-opacity="0.08"/>
+    <circle cx="186" cy="96" r="36" fill="#2A384D"/>
+    <path d="M193 80 A17 17 0 1 0 202 108 A13.5 13.5 0 1 1 193 80 Z" fill="#D4B8F0"/>
+    <circle cx="152" cy="72" r="1.8" fill="#DCE6F7"/>
+    <circle cx="222" cy="78" r="1.5" fill="#D4B8F0"/>
+
+    <text x="186" y="178" text-anchor="middle" class="font-sans" font-size="20" font-weight="600" fill="#F1F5F9">Set a consistent sleep schedule</text>
+    <text x="186" y="206" text-anchor="middle" class="font-sans" font-size="13.5" fill="#94A3B8">Choose your target bedtime and wake-up</text>
+    <text x="186" y="226" text-anchor="middle" class="font-sans" font-size="13.5" fill="#94A3B8">alarm to receive gentle wind-down reminders</text>
+    <text x="186" y="246" text-anchor="middle" class="font-sans" font-size="13.5" fill="#94A3B8">and calm morning wake-ups.</text>
+
+    <!-- Suggested Default Pill Preview -->
+    <rect x="24" y="274" width="324" height="46" rx="14" fill="#11161F"/>
+    <text x="186" y="302" text-anchor="middle" class="font-mono tnum" font-size="12" fill="#D4B8F0">Suggested: 22:30 → 06:30 (8h 00m)</text>
+
+    <rect x="24" y="340" width="324" height="52" rx="26" fill="#93A8C7"/>
+    <text x="186" y="371" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Set up schedule</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      <rect x="342.8" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Bedtime</text>
+    </g>
+  </g>
+  </g>
+
+    </g>
+  </g>
+  <g id="bedtime-contact-tile-3" transform="translate(992, 156)">
+    <text x="0" y="0" class="font-mono" font-size="12" font-weight="600" fill="#D4B8F0">3 · Sleep Schedule Editor</text>
+    <g transform="translate(0, 12) scale(0.91)">
+      <rect x="-2" y="-2" width="416" height="919" rx="38" fill="none" stroke="#334155" stroke-width="2"/>
+      
+
+  <title>CHRONA — Sleep Schedule Editor</title>
+  <desc>Interactive circular sleep arc with bedtime and wake-up selectors, 8h 00m duration readout, repeat weekday selector, and Save button.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="moon-halo-2" cx="50%" cy="22%" r="48%">
+      <stop offset="0%" stop-color="#D4B8F0" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#93A8C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-bedtime-2">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-bedtime-2)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+    <rect x="0" y="0" width="412" height="420" fill="url(#moon-halo-2)"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">22:15</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    <g transform="translate(16,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="52" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Edit sleep schedule</text>
+    <text x="392" y="71" text-anchor="end" class="font-sans" font-size="14" font-weight="600" fill="#93A8C7">Save</text>
+  </g>
+  <g id="sleep-schedule-circular-editor" transform="translate(0, 92)">
+    <g id="sleep-schedule-dial">
+      <circle cx="206" cy="138" r="114" fill="#080B10" stroke="#222A38" stroke-width="12"/>
+      <path d="M 125.4 57.4 A 114 114 0 0 1 319.2 151.9" fill="none" stroke="#D4B8F0" stroke-width="12" stroke-linecap="round"/>
+      <!-- Bedtime Handle Node -->
+      <circle cx="125.4" cy="57.4" r="12" fill="#2B3547" stroke="#D4B8F0" stroke-width="2"/>
+      <g transform="translate(118.38982694473357,50.389826944733585) scale(0.583)" fill="none" stroke="#D4B8F0" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <!-- Wake-up Handle Node -->
+      <circle cx="319.2" cy="151.9" r="12" fill="#2B3547" stroke="#93A8C7" stroke-width="2"/>
+      <g transform="translate(312.1502612871107,144.89310514818683) scale(0.583)" fill="none" stroke="#93A8C7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g>
+    </g>
+    <text x="206" y="124" text-anchor="middle" class="font-mono" font-size="10.5" font-weight="600" fill="#D4B8F0">SLEEP DURATION</text>
+    <text x="206" y="156" text-anchor="middle" class="font-sans tnum" font-size="30" font-weight="600" fill="#F1F5F9">8h 00m</text>
+    <text x="206" y="176" text-anchor="middle" class="font-sans" font-size="11.5" fill="#6EE7B7">Meets 8h target</text>
+  </g>
+  <g id="bedtime-wakeup-selectors" transform="translate(20, 382)">
+    <!-- Bedtime Selector -->
+    <rect x="0" y="0" width="180" height="104" rx="20" fill="#1A202C" stroke="#D4B8F0" stroke-width="1.3"/>
+    <g transform="translate(16,16) scale(0.750)" fill="none" stroke="#D4B8F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+    <text x="42" y="30" class="font-mono" font-size="10.5" font-weight="600" fill="#D4B8F0">BEDTIME</text>
+    <text x="18" y="72" class="font-sans tnum" font-size="34" font-weight="500" fill="#F1F5F9">22:30</text>
+    <text x="18" y="92" class="font-sans" font-size="11.5" fill="#94A3B8">Tap to adjust</text>
+
+    <!-- Wake-up Selector -->
+    <rect x="192" y="0" width="180" height="104" rx="20" fill="#1A202C" stroke="#93A8C7" stroke-width="1.3"/>
+    <g transform="translate(208,16) scale(0.750)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g>
+    <text x="234" y="30" class="font-mono" font-size="10.5" font-weight="600" fill="#93A8C7">WAKE-UP</text>
+    <text x="210" y="72" class="font-sans tnum" font-size="34" font-weight="500" fill="#F1F5F9">06:30</text>
+    <text x="210" y="92" class="font-sans" font-size="11.5" fill="#94A3B8">Alarm active</text>
+  </g>
+  <g id="schedule-editor-repeat-days" transform="translate(20, 500)">
+    <rect x="0" y="0" width="372" height="114" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="18" y="28" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Repeat days</text>
+    <text x="354" y="28" text-anchor="end" class="font-sans" font-size="12.5" font-weight="500" fill="#93A8C7">Weekdays</text>
+    <g id="component-weekday-selector" transform="translate(18,48)">
+  <circle cx="19.0" cy="19" r="18" fill="#222A38" stroke="#334155"/>
+  <text x="19.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text>
+  <circle cx="67.5" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="67.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">M</text>
+  <circle cx="116.0" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="116.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text>
+  <circle cx="164.5" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="164.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">W</text>
+  <circle cx="213.0" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="213.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text>
+  <circle cx="261.5" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="261.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">F</text>
+  <circle cx="310.0" cy="19" r="18" fill="#222A38" stroke="#334155"/>
+  <text x="310.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text>
+</g>
+
+  </g>
+  <g id="cta-save-sleep-schedule" transform="translate(20, 766)">
+    <rect x="0" y="0" width="372" height="52" rx="26" fill="#93A8C7"/>
+    <g transform="translate(112,15) scale(0.917)" fill="none" stroke="#0B1320" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+    <text x="206" y="31" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Save schedule</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      <rect x="342.8" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Bedtime</text>
+    </g>
+  </g>
+  </g>
+
+    </g>
+  </g>
+  <g id="bedtime-contact-tile-4" transform="translate(1454, 156)">
+    <text x="0" y="0" class="font-mono" font-size="12" font-weight="600" fill="#D4B8F0">4 · Weekday Selector</text>
+    <g transform="translate(0, 12) scale(0.91)">
+      <rect x="-2" y="-2" width="416" height="919" rx="38" fill="none" stroke="#334155" stroke-width="2"/>
+      
+
+  <title>CHRONA — Bedtime Weekday Selector</title>
+  <desc>Reusable weekday selection component with quick circadian schedule pattern presets.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="moon-halo-3" cx="50%" cy="22%" r="48%">
+      <stop offset="0%" stop-color="#D4B8F0" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#93A8C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-bedtime-3">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-bedtime-3)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+    <rect x="0" y="0" width="412" height="420" fill="url(#moon-halo-3)"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">22:15</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    <g transform="translate(16,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="52" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Repeat days</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+  <g id="bedtime-days-selector-card" transform="translate(20, 96)">
+    <rect x="0" y="0" width="372" height="148" rx="22" fill="#1A202C" stroke="#93A8C7" stroke-width="1.2"/>
+    <text x="18" y="30" class="font-sans" font-size="15" font-weight="600" fill="#F1F5F9">Selected wake-up days</text>
+    <text x="18" y="50" class="font-sans" font-size="12" fill="#94A3B8">Bedtime reminders trigger the evening before</text>
+    <g id="component-weekday-selector" transform="translate(18,72)">
+  <circle cx="19.0" cy="19" r="18" fill="#222A38" stroke="#334155"/>
+  <text x="19.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text>
+  <circle cx="67.5" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="67.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">M</text>
+  <circle cx="116.0" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="116.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text>
+  <circle cx="164.5" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="164.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">W</text>
+  <circle cx="213.0" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="213.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text>
+  <circle cx="261.5" cy="19" r="18" fill="#93A8C7" stroke="none"/>
+  <text x="261.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">F</text>
+  <circle cx="310.0" cy="19" r="18" fill="#222A38" stroke="#334155"/>
+  <text x="310.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text>
+</g>
+
+  </g>
+
+  <!-- Quick Schedule Presets -->
+  <g id="bedtime-day-presets" transform="translate(20, 262)">
+    <text x="0" y="14" class="font-mono" font-size="11" font-weight="600" fill="#93A8C7">SCHEDULE PATTERNS</text>
+    <g transform="translate(0, 28)">
+      <rect x="0" y="0" width="372" height="66" rx="18" fill="#2A384D" stroke="#93A8C7"/>
+      <circle cx="24" cy="33" r="9" fill="none" stroke="#93A8C7" stroke-width="2"/>
+      <circle cx="24" cy="33" r="4.5" fill="#93A8C7"/>
+      <text x="46" y="29" class="font-sans" font-size="14.5" font-weight="600" fill="#F1F5F9">Weekdays (Mon–Fri)</text>
+      <text x="46" y="48" class="font-sans" font-size="12" fill="#DCE6F7">5 nights · Work &amp; study rhythm</text>
+    </g>
+    <g transform="translate(0, 106)">
+      <rect x="0" y="0" width="372" height="66" rx="18" fill="#1A202C" stroke="#1E293B"/>
+      <circle cx="24" cy="33" r="9" fill="none" stroke="#94A3B8" stroke-width="2"/>
+      
+      <text x="46" y="29" class="font-sans" font-size="14.5" font-weight="600" fill="#F1F5F9">Every day (Sun–Sat)</text>
+      <text x="46" y="48" class="font-sans" font-size="12" fill="#94A3B8">7 nights · Consistent circadian anchor</text>
+    </g>
+    <g transform="translate(0, 184)">
+      <rect x="0" y="0" width="372" height="66" rx="18" fill="#1A202C" stroke="#1E293B"/>
+      <circle cx="24" cy="33" r="9" fill="none" stroke="#94A3B8" stroke-width="2"/>
+      
+      <text x="46" y="29" class="font-sans" font-size="14.5" font-weight="600" fill="#F1F5F9">Weekends (Sat–Sun)</text>
+      <text x="46" y="48" class="font-sans" font-size="12" fill="#94A3B8">2 nights · Later morning wake-up</text>
+    </g>
+  </g>
+  <g transform="translate(20, 766)">
+    <rect x="0" y="0" width="372" height="52" rx="26" fill="#93A8C7"/>
+    <text x="186" y="31" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Confirm days</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      <rect x="342.8" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Bedtime</text>
+    </g>
+  </g>
+  </g>
+
+    </g>
+  </g>
+  <g id="bedtime-contact-tile-5" transform="translate(68, 1076)">
+    <text x="0" y="0" class="font-mono" font-size="12" font-weight="600" fill="#D4B8F0">5 · Wake-Up Preferences</text>
+    <g transform="translate(0, 12) scale(0.91)">
+      <rect x="-2" y="-2" width="416" height="919" rx="38" fill="none" stroke="#334155" stroke-width="2"/>
+      
+
+  <title>CHRONA — Wake-Up Preferences</title>
+  <desc>Alarm sound, gradual volume ramp, vibration, snooze duration, and sunrise wake-up behavior settings.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="moon-halo-4" cx="50%" cy="22%" r="48%">
+      <stop offset="0%" stop-color="#D4B8F0" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#93A8C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-bedtime-4">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-bedtime-4)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+    <rect x="0" y="0" width="412" height="420" fill="url(#moon-halo-4)"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">22:15</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    <g transform="translate(16,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="52" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Wake-up preferences</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+  <g id="wakeup-configured-banner" transform="translate(20, 92)">
+    <rect x="0" y="0" width="372" height="58" rx="18" fill="#222A38" stroke="#6EE7B7" stroke-width="1"/>
+    <g transform="translate(16,19) scale(0.833)" fill="none" stroke="#6EE7B7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+    <text x="46" y="26" class="font-sans" font-size="13.5" font-weight="600" fill="#F1F5F9">Wake-up alarm configured · 06:30</text>
+    <text x="46" y="44" class="font-sans" font-size="11.5" fill="#94A3B8">Synced with Bedtime schedule (Mon–Fri)</text>
+  </g>
+
+  <!-- Sound, Gradual Volume, Vibration, Snooze Card -->
+  <g id="wakeup-audio-haptics-card" transform="translate(20, 166)">
+    <rect x="0" y="0" width="372" height="278" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <!-- Alarm Sound -->
+    <g transform="translate(18,18) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></g>
+    <text x="50" y="33" class="font-sans" font-size="14" fill="#F1F5F9">Alarm sound</text>
+    <text x="354" y="33" text-anchor="end" class="font-sans" font-size="13" font-weight="500" fill="#93A8C7">Morning Dew</text>
+    <line x1="18" y1="58" x2="354" y2="58" stroke="#1E293B"/>
+
+    <!-- Gradual Volume -->
+    <g transform="translate(18,76) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></g>
+    <text x="50" y="88" class="font-sans" font-size="14" fill="#F1F5F9">Gradual volume</text>
+    <text x="50" y="106" class="font-sans" font-size="11.5" fill="#94A3B8">Gentle crescendo over 45 seconds</text>
+    <rect x="50" y="118" width="236" height="6" rx="3" fill="#2B3547"/>
+    <rect x="50" y="118" width="180" height="6" rx="3" fill="#93A8C7"/>
+    <circle cx="230" cy="121" r="8" fill="#93A8C7"/>
+    <text x="354" y="125" text-anchor="end" class="font-mono" font-size="11" fill="#F1F5F9">45s</text>
+    <line x1="18" y1="146" x2="354" y2="146" stroke="#1E293B"/>
+
+    <!-- Vibration -->
+    <g transform="translate(18,164) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="8" height="16" rx="2"/><path d="M4 8v8M20 8v8M2 10v4M22 10v4"/></g>
+    <text x="50" y="179" class="font-sans" font-size="14" fill="#F1F5F9">Vibration</text>
+    <g transform="translate(302,158)"><rect x="0" y="0" width="52" height="32" rx="16" fill="#93A8C7" stroke="none" stroke-width="1.2"/><circle cx="36" cy="16" r="11" fill="#0B1320"/></g>
+    <line x1="18" y1="206" x2="354" y2="206" stroke="#1E293B"/>
+
+    <!-- Snooze Duration -->
+    <g transform="translate(18,226) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h6l-6 8h6M15 4h4l-4 5h4"/></g>
+    <text x="50" y="241" class="font-sans" font-size="14" fill="#F1F5F9">Snooze duration</text>
+    <rect x="272" y="221" width="82" height="30" rx="15" fill="#2A384D"/>
+    <text x="313" y="240" text-anchor="middle" class="font-mono" font-size="12" font-weight="600" fill="#DCE6F7">10 min</text>
+  </g>
+
+  <!-- Wake-Up Behavior Card -->
+  <g id="wakeup-behavior-card" transform="translate(20, 460)">
+    <rect x="0" y="0" width="372" height="168" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <text x="18" y="28" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Wake-up behavior</text>
+
+    <text x="18" y="62" class="font-sans" font-size="13.5" fill="#F1F5F9">Sunrise screen brightness</text>
+    <text x="18" y="80" class="font-sans" font-size="11.5" fill="#94A3B8">Warm amber glow 10 min before alarm</text>
+    <g transform="translate(302,48)"><rect x="0" y="0" width="52" height="32" rx="16" fill="#93A8C7" stroke="none" stroke-width="1.2"/><circle cx="36" cy="16" r="11" fill="#0B1320"/></g>
+
+    <line x1="18" y1="100" x2="354" y2="100" stroke="#1E293B"/>
+
+    <text x="18" y="128" class="font-sans" font-size="13.5" fill="#F1F5F9">Auto-end bedtime mode</text>
+    <text x="18" y="146" class="font-sans" font-size="11.5" fill="#94A3B8">Restore normal display when dismissed</text>
+    <g transform="translate(302,114)"><rect x="0" y="0" width="52" height="32" rx="16" fill="#93A8C7" stroke="none" stroke-width="1.2"/><circle cx="36" cy="16" r="11" fill="#0B1320"/></g>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      <rect x="342.8" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Bedtime</text>
+    </g>
+  </g>
+  </g>
+
+    </g>
+  </g>
+  <g id="bedtime-contact-tile-6" transform="translate(530, 1076)">
+    <text x="0" y="0" class="font-mono" font-size="12" font-weight="600" fill="#D4B8F0">6 · Bedtime Reminder</text>
+    <g transform="translate(0, 12) scale(0.91)">
+      <rect x="-2" y="-2" width="416" height="919" rx="38" fill="none" stroke="#334155" stroke-width="2"/>
+      
+
+  <title>CHRONA — Bedtime Reminder &amp; Wind-Down</title>
+  <desc>Active bedtime reminder showing suggested bedtime, planned wake-up, planned sleep duration, Start winding down CTA, and dismissed state.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="moon-halo-5" cx="50%" cy="22%" r="48%">
+      <stop offset="0%" stop-color="#D4B8F0" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#93A8C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-bedtime-5">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-bedtime-5)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+    <rect x="0" y="0" width="412" height="420" fill="url(#moon-halo-5)"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">22:15</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    <g transform="translate(16,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="52" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Bedtime reminder</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+<g id="moonlight-illustration" transform="translate(20,92)" opacity="1.0">
+      <rect x="0" y="0" width="372" height="108" rx="20" fill="#080B10" stroke="#1E293B"/>
+      <!-- Soft concentric lunar rings -->
+      <circle cx="62" cy="52" r="36" fill="#D4B8F0" fill-opacity="0.06"/>
+      <circle cx="62" cy="52" r="24" fill="#D4B8F0" fill-opacity="0.10"/>
+      <!-- Crescent Moon -->
+      <path d="M68 38 A15 15 0 1 0 76 62 A12 12 0 1 1 68 38 Z" fill="#D4B8F0"/>
+      <!-- Subtle Twinkling Stars -->
+      <circle cx="118" cy="28" r="1.5" fill="#DCE6F7" opacity="0.7"/>
+      <circle cx="156" cy="44" r="1.2" fill="#B8C7F2" opacity="0.5"/>
+      <circle cx="294" cy="24" r="1.6" fill="#D4B8F0" opacity="0.75"/>
+      <circle cx="332" cy="38" r="1.2" fill="#DCE6F7" opacity="0.55"/>
+      <!-- Gentle Rolling Ridge -->
+      <path d="M0 92 Q 96 68, 198 84 T 372 78 L 372 110 L 0 110 Z" fill="#11161F"/>
+    </g>  <g transform="translate(20, 92)">
+    <rect x="112" y="18" width="124" height="22" rx="11" fill="#2A384D"/>
+    <text x="174" y="33" text-anchor="middle" class="font-mono" font-size="10" font-weight="600" fill="#D4B8F0">REMINDER ACTIVE</text>
+    <text x="112" y="64" class="font-sans" font-size="18" font-weight="600" fill="#F1F5F9">Time to wind down</text>
+    <text x="112" y="84" class="font-sans" font-size="12" fill="#94A3B8">30 minutes until your suggested bedtime</text>
+  </g>
+
+  <!-- Suggested Bedtime, Planned Wake-Up &amp; Planned Duration Card -->
+  <g id="bedtime-reminder-metrics" transform="translate(20, 216)">
+    <rect x="0" y="0" width="372" height="196" rx="22" fill="#1A202C" stroke="#D4B8F0" stroke-width="1.2"/>
+    <g transform="translate(20, 22)">
+      <text x="0" y="14" class="font-mono" font-size="10.5" font-weight="600" fill="#D4B8F0">SUGGESTED BEDTIME</text>
+      <text x="0" y="54" class="font-sans tnum" font-size="38" font-weight="500" fill="#F1F5F9">22:30</text>
+    </g>
+    <line x1="186" y1="22" x2="186" y2="86" stroke="#1E293B"/>
+    <g transform="translate(204, 22)">
+      <text x="0" y="14" class="font-mono" font-size="10.5" font-weight="600" fill="#93A8C7">PLANNED WAKE-UP</text>
+      <text x="0" y="54" class="font-sans tnum" font-size="38" font-weight="500" fill="#F1F5F9">06:30</text>
+    </g>
+
+    <line x1="20" y1="104" x2="352" y2="104" stroke="#1E293B"/>
+    <text x="20" y="132" class="font-sans" font-size="13.5" fill="#94A3B8">Planned sleep duration</text>
+    <text x="352" y="132" text-anchor="end" class="font-sans tnum" font-size="16" font-weight="600" fill="#D4B8F0">8 hrs 00 min</text>
+    <text x="20" y="162" class="font-sans" font-size="12" fill="#94A3B8">Silences notifications &amp; dims screen grayscale</text>
+  </g>
+
+  <!-- Primary Action: Start Winding Down + Secondary Dismiss -->
+  <g id="reminder-actions" transform="translate(20, 434)">
+    <rect x="0" y="0" width="372" height="54" rx="27" fill="#93A8C7"/>
+    <g transform="translate(88,16) scale(0.917)" fill="none" stroke="#0B1320" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+    <text x="204" y="32" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Start winding down</text>
+
+    <rect x="0" y="68" width="372" height="46" rx="23" fill="#222A38" stroke="#334155"/>
+    <text x="186" y="96" text-anchor="middle" class="font-sans" font-size="14" font-weight="500" fill="#F1F5F9">Dismiss reminder</text>
+  </g>
+
+  <!-- Reminder Dismissed State Preview Strip -->
+  <g id="reminder-dismissed-state-card" transform="translate(20, 574)">
+    <rect x="0" y="0" width="372" height="64" rx="18" fill="#11161F" stroke="#1E293B"/>
+    <g transform="translate(16,22) scale(0.833)" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+    <text x="46" y="28" class="font-mono" font-size="10.5" font-weight="600" fill="#94A3B8">REMINDER DISMISSED STATE</text>
+    <text x="46" y="47" class="font-sans" font-size="12" fill="#64748B">Wake-up alarm remains active for 06:30 tomorrow</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      <rect x="342.8" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Bedtime</text>
+    </g>
+  </g>
+  </g>
+
+    </g>
+  </g>
+  <g id="bedtime-contact-tile-7" transform="translate(992, 1076)">
+    <text x="0" y="0" class="font-mono" font-size="12" font-weight="600" fill="#D4B8F0">7 · Planned Sleep Summary</text>
+    <g transform="translate(0, 12) scale(0.91)">
+      <rect x="-2" y="-2" width="416" height="919" rx="38" fill="none" stroke="#334155" stroke-width="2"/>
+      
+
+  <title>CHRONA — Planned Sleep Summary</title>
+  <desc>Clean schedule summary showing planned bedtime, planned wake-up, total planned duration, upcoming alarm, and active schedule status.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="moon-halo-6" cx="50%" cy="22%" r="48%">
+      <stop offset="0%" stop-color="#D4B8F0" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#93A8C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-bedtime-6">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-bedtime-6)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+    <rect x="0" y="0" width="412" height="420" fill="url(#moon-halo-6)"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">22:15</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    <g transform="translate(16,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="52" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Sleep plan summary</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+  <g id="sleep-plan-status-card" transform="translate(20, 94)">
+    <rect x="0" y="0" width="372" height="68" rx="20" fill="#1A202C" stroke="#6EE7B7" stroke-width="1.2"/>
+    <rect x="14" y="14" width="4" height="40" rx="2" fill="#6EE7B7"/>
+    <text x="28" y="30" class="font-mono" font-size="10.5" font-weight="600" fill="#6EE7B7">SCHEDULE STATUS · ACTIVE (MON–FRI)</text>
+    <text x="28" y="51" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Planned routine ready for tonight</text>
+  </g>
+
+  <!-- Planned Bedtime, Planned Wake-Up &amp; Total Planned Duration Card -->
+  <g id="planned-sleep-overview" transform="translate(20, 178)">
+    <rect x="0" y="0" width="372" height="236" rx="22" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="30" class="font-mono" font-size="11" font-weight="600" fill="#D4B8F0">TONIGHT'S PLANNED SCHEDULE</text>
+
+    <!-- Timeline Bar -->
+    <rect x="20" y="48" width="332" height="14" rx="7" fill="#222A38"/>
+    <rect x="44" y="48" width="268" height="14" rx="7" fill="#D4B8F0"/>
+    <text x="44" y="80" class="font-mono tnum" font-size="11" fill="#D4B8F0">22:30 Bedtime</text>
+    <text x="312" y="80" text-anchor="end" class="font-mono tnum" font-size="11" fill="#93A8C7">06:30 Wake-up</text>
+
+    <line x1="20" y1="98" x2="352" y2="98" stroke="#1E293B"/>
+
+    <!-- 3 Planned Metrics -->
+    <text x="20" y="128" class="font-sans" font-size="13.5" fill="#94A3B8">Planned bedtime</text>
+    <text x="352" y="128" text-anchor="end" class="font-sans tnum" font-size="16" font-weight="600" fill="#F1F5F9">22:30</text>
+
+    <text x="20" y="162" class="font-sans" font-size="13.5" fill="#94A3B8">Planned wake-up</text>
+    <text x="352" y="162" text-anchor="end" class="font-sans tnum" font-size="16" font-weight="600" fill="#F1F5F9">06:30</text>
+
+    <text x="20" y="196" class="font-sans" font-size="13.5" fill="#94A3B8">Total planned sleep duration</text>
+    <text x="352" y="196" text-anchor="end" class="font-sans tnum" font-size="16" font-weight="600" fill="#D4B8F0">8 hrs 00 min</text>
+  </g>
+
+  <!-- Upcoming Alarm Link Card -->
+  <g id="summary-upcoming-alarm" transform="translate(20, 430)">
+    <rect x="0" y="0" width="372" height="114" rx="20" fill="#1A202C" stroke="#93A8C7" stroke-width="1.1"/>
+    <rect x="14" y="14" width="4" height="86" rx="2" fill="#93A8C7"/>
+    <text x="28" y="32" class="font-mono" font-size="10.5" font-weight="600" fill="#93A8C7">UPCOMING WAKE-UP ALARM</text>
+    <text x="28" y="64" class="font-sans tnum" font-size="28" font-weight="500" fill="#F1F5F9">06:30 <tspan font-size="13" fill="#94A3B8">Fri, Nov 20</tspan></text>
+    <text x="28" y="90" class="font-sans" font-size="12" fill="#94A3B8">Morning Dew · Gradual 45s · Rings in 8h 15m</text>
+  </g>
+
+  <!-- Transparent Scope Note (No biometric tracking) -->
+  <g transform="translate(20, 562)">
+    <rect x="0" y="0" width="372" height="58" rx="16" fill="#11161F" stroke="#1E293B"/>
+    <text x="16" y="25" class="font-sans" font-size="12" font-weight="500" fill="#94A3B8">Schedule-based planning only</text>
+    <text x="16" y="43" class="font-sans" font-size="11.5" fill="#64748B">Displays configured bedtime and wake-up alarm targets.</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      <rect x="342.8" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Bedtime</text>
+    </g>
+  </g>
+  </g>
+
+    </g>
+  </g>
+  <g id="bedtime-contact-tile-8" transform="translate(1454, 1076)">
+    <text x="0" y="0" class="font-mono" font-size="12" font-weight="600" fill="#D4B8F0">8 · Schedule Paused</text>
+    <g transform="translate(0, 12) scale(0.91)">
+      <rect x="-2" y="-2" width="416" height="919" rx="38" fill="none" stroke="#334155" stroke-width="2"/>
+      
+
+  <title>CHRONA — Bedtime Schedule Paused</title>
+  <desc>Paused bedtime schedule state preserving saved bedtime/wake-up settings with one-tap Resume schedule CTA.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="moon-halo-7" cx="50%" cy="22%" r="48%">
+      <stop offset="0%" stop-color="#D4B8F0" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#93A8C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-bedtime-7">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-bedtime-7)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+    <rect x="0" y="0" width="412" height="420" fill="url(#moon-halo-7)"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">22:15</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    
+    <text x="20" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Bedtime</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+<g id="moonlight-illustration" transform="translate(20,88)" opacity="0.45">
+      <rect x="0" y="0" width="372" height="96" rx="20" fill="#080B10" stroke="#1E293B"/>
+      <!-- Soft concentric lunar rings -->
+      <circle cx="62" cy="52" r="36" fill="#D4B8F0" fill-opacity="0.06"/>
+      <circle cx="62" cy="52" r="24" fill="#D4B8F0" fill-opacity="0.10"/>
+      <!-- Crescent Moon -->
+      <path d="M68 38 A15 15 0 1 0 76 62 A12 12 0 1 1 68 38 Z" fill="#D4B8F0"/>
+      <!-- Subtle Twinkling Stars -->
+      <circle cx="118" cy="28" r="1.5" fill="#DCE6F7" opacity="0.7"/>
+      <circle cx="156" cy="44" r="1.2" fill="#B8C7F2" opacity="0.5"/>
+      <circle cx="294" cy="24" r="1.6" fill="#D4B8F0" opacity="0.75"/>
+      <circle cx="332" cy="38" r="1.2" fill="#DCE6F7" opacity="0.55"/>
+      <!-- Gentle Rolling Ridge -->
+      <path d="M0 92 Q 96 68, 198 84 T 372 78 L 372 110 L 0 110 Z" fill="#11161F"/>
+    </g>  <g transform="translate(20, 88)">
+    <text x="116" y="34" class="font-mono" font-size="10.5" font-weight="600" fill="#FCD34D">SLEEP SCHEDULE · PAUSED</text>
+    <text x="116" y="58" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">Schedule paused</text>
+    <text x="116" y="78" class="font-sans" font-size="12" fill="#94A3B8">Reminders and wake-up alarm suspended</text>
+    <g transform="translate(304,24)"><rect x="0" y="0" width="52" height="32" rx="16" fill="#2B3547" stroke="#334155" stroke-width="1.2"/><circle cx="16" cy="16" r="8" fill="#94A3B8"/></g>
+  </g>
+
+  <!-- Paused Schedule Card -->
+  <g id="bedtime-paused-card" transform="translate(20, 200)">
+    <rect x="0" y="0" width="372" height="220" rx="22" fill="#11161F" stroke="#1E293B"/>
+    <g transform="translate(20, 22)">
+      <text x="0" y="14" class="font-mono" font-size="10.5" fill="#64748B">SAVED BEDTIME</text>
+      <text x="0" y="52" class="font-sans tnum" font-size="34" fill="#64748B">22:30</text>
+    </g>
+    <line x1="186" y1="22" x2="186" y2="82" stroke="#1E293B"/>
+    <g transform="translate(204, 22)">
+      <text x="0" y="14" class="font-mono" font-size="10.5" fill="#64748B">SAVED WAKE-UP</text>
+      <text x="0" y="52" class="font-sans tnum" font-size="34" fill="#64748B">06:30</text>
+    </g>
+
+    <line x1="20" y1="100" x2="352" y2="100" stroke="#1E293B"/>
+    <text x="20" y="128" class="font-sans" font-size="13" fill="#64748B">Target duration: 8 hrs 00 min · Mon–Fri</text>
+    <text x="20" y="152" class="font-sans" font-size="12.5" fill="#94A3B8">Your saved times and sound preferences are kept</text>
+    <text x="20" y="170" class="font-sans" font-size="12.5" fill="#94A3B8">safe while your schedule is paused.</text>
+  </g>
+
+  <!-- Resume Schedule Primary Pill CTA -->
+  <g id="cta-resume-schedule" transform="translate(20, 766)">
+    <rect x="0" y="0" width="372" height="52" rx="26" fill="#93A8C7"/>
+    <g transform="translate(108,15) scale(0.917)" fill="none" stroke="#0B1320" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="7 5 19 12 7 19 7 5" fill="currentColor"/></g>
+    <text x="206" y="31" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Resume schedule</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      <rect x="342.8" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Bedtime</text>
+    </g>
+  </g>
+  </g>
+
+    </g>
+  </g>
+</svg>

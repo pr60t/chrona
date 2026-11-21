@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1040" width="960" height="1040">
+  <title>CHRONA — Dark vs. Light Comparison: Alarms &amp; Timer</title>
+  <desc>Verifying contrast, active/disabled switches, identity strips, and tabular numerals across Dark and Light modes.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <clipPath id="clip-dark-c2"><rect x="0" y="0" width="412" height="860" rx="34"/></clipPath>
+    <clipPath id="clip-light-c2"><rect x="0" y="0" width="412" height="860" rx="34"/></clipPath>
+  </defs>
+  <rect x="0" y="0" width="960" height="1040" fill="#080B10"/>
+  <text x="36" y="54" class="font-sans" font-size="24" font-weight="600" fill="#F1F5F9">CHRONA — Dark vs. Light Comparison: Alarms &amp; Timer</text>
+  <text x="36" y="80" class="font-sans" font-size="13" fill="#94A3B8">Verifying contrast, active/disabled switches, identity strips, and tabular numerals across Dark and Light modes.</text>
+  <line x1="36" y1="98" x2="924" y2="98" stroke="#1E293B"/>
+  <g transform="translate(36, 128)">
+      <text x="206" y="-12" text-anchor="middle" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">DARK THEME · AMOLED #000000</text>
+      <g transform="scale(1.0)">
+        <rect x="0" y="0" width="412" height="860" rx="34" fill="#000000" stroke="#334155" stroke-width="2"/>
+        <g clip-path="url(#clip-dark-c2)"><text x="20" y="64" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">Alarms</text>
+<rect x="20" y="102" width="372" height="126" rx="20" fill="#1A202C" stroke="#A7E8D8"/><rect x="34" y="116" width="4" height="98" rx="2" fill="#A7E8D8"/><text x="48" y="136" class="font-mono" font-size="10" fill="#A7E8D8">WORLD · UTC+1 · WARSAW</text><text x="48" y="176" class="font-sans tnum" font-size="34" fill="#F1F5F9">09:00</text><text x="48" y="210" class="font-sans" font-size="12" fill="#94A3B8">Mon–Fri · Rings 13:45 Local</text><rect x="322" y="142" width="52" height="32" rx="16" fill="#93A8C7"/><circle cx="358" cy="158" r="11" fill="#0B1320"/>
+<rect x="20" y="242" width="372" height="116" rx="20" fill="#1A202C" stroke="#1E293B"/><rect x="34" y="256" width="4" height="88" rx="2" fill="#93A8C7"/><text x="48" y="276" class="font-mono" font-size="10" fill="#93A8C7">LOCAL · MORNING WAKE-UP</text><text x="48" y="316" class="font-sans tnum" font-size="34" fill="#F1F5F9">06:30</text><text x="48" y="346" class="font-sans" font-size="12" fill="#94A3B8">Mon–Fri · Kathmandu</text><rect x="322" y="276" width="52" height="32" rx="16" fill="#2B3547"/><circle cx="338" cy="292" r="8" fill="#94A3B8"/>
+<circle cx="206" cy="540" r="112" fill="none" stroke="#222A38" stroke-width="10"/><circle cx="206" cy="540" r="112" fill="none" stroke="#93A8C7" stroke-width="10" stroke-dasharray="480 704" stroke-linecap="round" transform="rotate(-90 206 540)"/><text x="206" y="554" text-anchor="middle" class="font-sans tnum" font-size="44" fill="#F1F5F9">08:30</text></g>
+      </g>
+    </g>
+  <g transform="translate(512, 128)">
+      <text x="206" y="-12" text-anchor="middle" class="font-mono" font-size="12" font-weight="600" fill="#5A7399">LIGHT THEME · WARM OFF-WHITE #F7F8FA</text>
+      <g transform="scale(1.0)">
+        <rect x="0" y="0" width="412" height="860" rx="34" fill="#F7F8FA" stroke="#CBD5E1" stroke-width="2"/>
+        <g clip-path="url(#clip-light-c2)"><text x="20" y="64" class="font-sans" font-size="22" font-weight="500" fill="#0F172A">Alarms</text>
+<rect x="20" y="102" width="372" height="126" rx="20" fill="#FFFFFF" stroke="#5EC2AA" stroke-width="1.2"/><rect x="34" y="116" width="4" height="98" rx="2" fill="#5EC2AA"/><text x="48" y="136" class="font-mono" font-size="10" font-weight="600" fill="#5A7399">WORLD · UTC+1 · WARSAW</text><text x="48" y="176" class="font-sans tnum" font-size="34" fill="#0F172A">09:00</text><text x="48" y="210" class="font-sans" font-size="12" fill="#475569">Mon–Fri · Rings 13:45 Local</text><rect x="322" y="142" width="52" height="32" rx="16" fill="#5A7399"/><circle cx="358" cy="158" r="11" fill="#FFFFFF"/>
+<rect x="20" y="242" width="372" height="116" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="34" y="256" width="4" height="88" rx="2" fill="#5A7399"/><text x="48" y="276" class="font-mono" font-size="10" font-weight="600" fill="#5A7399">LOCAL · MORNING WAKE-UP</text><text x="48" y="316" class="font-sans tnum" font-size="34" fill="#0F172A">06:30</text><text x="48" y="346" class="font-sans" font-size="12" fill="#475569">Mon–Fri · Kathmandu</text><rect x="322" y="276" width="52" height="32" rx="16" fill="#DCE4F0"/><circle cx="338" cy="292" r="8" fill="#475569"/>
+<circle cx="206" cy="540" r="112" fill="none" stroke="#E6ECF5" stroke-width="10"/><circle cx="206" cy="540" r="112" fill="none" stroke="#5A7399" stroke-width="10" stroke-dasharray="480 704" stroke-linecap="round" transform="rotate(-90 206 540)"/><text x="206" y="554" text-anchor="middle" class="font-sans tnum" font-size="44" fill="#0F172A">08:30</text></g>
+      </g>
+    </g>
+</svg>

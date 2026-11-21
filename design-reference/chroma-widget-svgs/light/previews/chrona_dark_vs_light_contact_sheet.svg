@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1040 2240" width="1040" height="2240">
+  <title>CHRONA — Dark vs Light Theme Widget Geometry &amp; Color Parity Sheet</title>
+  <desc>Side-by-side comparison of all five Chrona 2×2 widgets in Dark Mode (left) and Light Mode (right) at identical scale and alignment.</desc>
+<defs>
+    <symbol id="sym-alarm" viewBox="0 0 24 24">
+      <circle cx="12" cy="13" r="7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="12 9.5 12 13 14.5 14.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5.2 4.2 L2.8 6.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M18.8 4.2 L21.2 6.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+  <rect id="comparison-backdrop" x="0" y="0" width="1040" height="2240" fill="#1C1D21"/>
+  <text x="52" y="64" fill="#DFE2F3" font-family="Inter, Roboto, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="0.4">CHRONA · DARK VS LIGHT GEOMETRY &amp; COLOR PARITY</text>
+  <text x="988" y="64" text-anchor="end" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="14" font-weight="500">IDENTICAL 400 × 400 COORDINATES</text>
+  <line x1="52" y1="88" x2="988" y2="88" stroke="#2D2E34" stroke-width="1"/>
+  <!-- Row 1: Analogue (2 × 2) -->
+  <g id="compare-row-1" transform="translate(0, 116)">
+    <!-- Dark Half Background -->
+    <rect x="48" y="0" width="460" height="392" rx="28" fill="#141416"/>
+    <g transform="translate(118, 24) scale(0.80)">
+<g id="widget-analogue">
+    <path id="clock-face-scalloped" d="M385.50,200.00 L385.22,203.23 L384.39,206.44 L383.05,209.59 L381.25,212.67 L379.07,215.67 L376.58,218.56 L373.90,221.35 L371.12,224.05 L368.35,226.66 L365.69,229.22 L363.25,231.73 L361.10,234.24 L359.30,236.78 L357.92,239.37 L356.96,242.06 L356.45,244.86 L356.35,247.80 L356.64,250.89 L357.24,254.14 L358.10,257.54 L359.13,261.08 L360.22,264.73 L361.27,268.46 L362.20,272.22 L362.91,275.97 L363.31,279.65 L363.32,283.22 L362.91,286.62 L362.02,289.81 L360.65,292.75 L358.79,295.41 L356.47,297.77 L353.73,299.83 L350.63,301.60 L347.24,303.10 L343.64,304.36 L339.92,305.44 L336.17,306.39 L332.46,307.27 L328.89,308.15 L325.51,309.11 L322.39,310.20 L319.57,311.50 L317.07,313.06 L314.90,314.90 L313.06,317.07 L311.50,319.57 L310.20,322.39 L309.11,325.51 L308.15,328.89 L307.27,332.46 L306.39,336.17 L305.44,339.92 L304.36,343.64 L303.10,347.24 L301.60,350.63 L299.83,353.73 L297.77,356.47 L295.41,358.79 L292.75,360.65 L289.81,362.02 L286.62,362.91 L283.22,363.32 L279.65,363.31 L275.97,362.91 L272.22,362.20 L268.46,361.27 L264.73,360.22 L261.08,359.13 L257.54,358.10 L254.14,357.24 L250.89,356.64 L247.80,356.35 L244.86,356.45 L242.06,356.96 L239.37,357.92 L236.78,359.30 L234.24,361.10 L231.73,363.25 L229.22,365.69 L226.66,368.35 L224.05,371.12 L221.35,373.90 L218.56,376.58 L215.67,379.07 L212.67,381.25 L209.59,383.05 L206.44,384.39 L203.23,385.22 L200.00,385.50 L196.77,385.22 L193.56,384.39 L190.41,383.05 L187.33,381.25 L184.33,379.07 L181.44,376.58 L178.65,373.90 L175.95,371.12 L173.34,368.35 L170.78,365.69 L168.27,363.25 L165.76,361.10 L163.22,359.30 L160.63,357.92 L157.94,356.96 L155.14,356.45 L152.20,356.35 L149.11,356.64 L145.86,357.24 L142.46,358.10 L138.92,359.13 L135.27,360.22 L131.54,361.27 L127.78,362.20 L124.03,362.91 L120.35,363.31 L116.78,363.32 L113.38,362.91 L110.19,362.02 L107.25,360.65 L104.59,358.79 L102.23,356.47 L100.17,353.73 L98.40,350.63 L96.90,347.24 L95.64,343.64 L94.56,339.92 L93.61,336.17 L92.73,332.46 L91.85,328.89 L90.89,325.51 L89.80,322.39 L88.50,319.57 L86.94,317.07 L85.10,314.90 L82.93,313.06 L80.43,311.50 L77.61,310.20 L74.49,309.11 L71.11,308.15 L67.54,307.27 L63.83,306.39 L60.08,305.44 L56.36,304.36 L52.76,303.10 L49.37,301.60 L46.27,299.83 L43.53,297.77 L41.21,295.41 L39.35,292.75 L37.98,289.81 L37.09,286.62 L36.68,283.22 L36.69,279.65 L37.09,275.97 L37.80,272.22 L38.73,268.46 L39.78,264.73 L40.87,261.08 L41.90,257.54 L42.76,254.14 L43.36,250.89 L43.65,247.80 L43.55,244.86 L43.04,242.06 L42.08,239.37 L40.70,236.78 L38.90,234.24 L36.75,231.73 L34.31,229.22 L31.65,226.66 L28.88,224.05 L26.10,221.35 L23.42,218.56 L20.93,215.67 L18.75,212.67 L16.95,209.59 L15.61,206.44 L14.78,203.23 L14.50,200.00 L14.78,196.77 L15.61,193.56 L16.95,190.41 L18.75,187.33 L20.93,184.33 L23.42,181.44 L26.10,178.65 L28.88,175.95 L31.65,173.34 L34.31,170.78 L36.75,168.27 L38.90,165.76 L40.70,163.22 L42.08,160.63 L43.04,157.94 L43.55,155.14 L43.65,152.20 L43.36,149.11 L42.76,145.86 L41.90,142.46 L40.87,138.92 L39.78,135.27 L38.73,131.54 L37.80,127.78 L37.09,124.03 L36.69,120.35 L36.68,116.78 L37.09,113.38 L37.98,110.19 L39.35,107.25 L41.21,104.59 L43.53,102.23 L46.27,100.17 L49.37,98.40 L52.76,96.90 L56.36,95.64 L60.08,94.56 L63.83,93.61 L67.54,92.73 L71.11,91.85 L74.49,90.89 L77.61,89.80 L80.43,88.50 L82.93,86.94 L85.10,85.10 L86.94,82.93 L88.50,80.43 L89.80,77.61 L90.89,74.49 L91.85,71.11 L92.73,67.54 L93.61,63.83 L94.56,60.08 L95.64,56.36 L96.90,52.76 L98.40,49.37 L100.17,46.27 L102.23,43.53 L104.59,41.21 L107.25,39.35 L110.19,37.98 L113.38,37.09 L116.78,36.68 L120.35,36.69 L124.03,37.09 L127.78,37.80 L131.54,38.73 L135.27,39.78 L138.92,40.87 L142.46,41.90 L145.86,42.76 L149.11,43.36 L152.20,43.65 L155.14,43.55 L157.94,43.04 L160.63,42.08 L163.22,40.70 L165.76,38.90 L168.27,36.75 L170.78,34.31 L173.34,31.65 L175.95,28.88 L178.65,26.10 L181.44,23.42 L184.33,20.93 L187.33,18.75 L190.41,16.95 L193.56,15.61 L196.77,14.78 L200.00,14.50 L203.23,14.78 L206.44,15.61 L209.59,16.95 L212.67,18.75 L215.67,20.93 L218.56,23.42 L221.35,26.10 L224.05,28.88 L226.66,31.65 L229.22,34.31 L231.73,36.75 L234.24,38.90 L236.78,40.70 L239.37,42.08 L242.06,43.04 L244.86,43.55 L247.80,43.65 L250.89,43.36 L254.14,42.76 L257.54,41.90 L261.08,40.87 L264.73,39.78 L268.46,38.73 L272.22,37.80 L275.97,37.09 L279.65,36.69 L283.22,36.68 L286.62,37.09 L289.81,37.98 L292.75,39.35 L295.41,41.21 L297.77,43.53 L299.83,46.27 L301.60,49.37 L303.10,52.76 L304.36,56.36 L305.44,60.08 L306.39,63.83 L307.27,67.54 L308.15,71.11 L309.11,74.49 L310.20,77.61 L311.50,80.43 L313.06,82.93 L314.90,85.10 L317.07,86.94 L319.57,88.50 L322.39,89.80 L325.51,90.89 L328.89,91.85 L332.46,92.73 L336.17,93.61 L339.92,94.56 L343.64,95.64 L347.24,96.90 L350.63,98.40 L353.73,100.17 L356.47,102.23 L358.79,104.59 L360.65,107.25 L362.02,110.19 L362.91,113.38 L363.32,116.78 L363.31,120.35 L362.91,124.03 L362.20,127.78 L361.27,131.54 L360.22,135.27 L359.13,138.92 L358.10,142.46 L357.24,145.86 L356.64,149.11 L356.35,152.20 L356.45,155.14 L356.96,157.94 L357.92,160.63 L359.30,163.22 L361.10,165.76 L363.25,168.27 L365.69,170.78 L368.35,173.34 L371.12,175.95 L373.90,178.65 L376.58,181.44 L379.07,184.33 L381.25,187.33 L383.05,190.41 L384.39,193.56 L385.22,196.77 Z" fill="#202022"/>
+    <circle id="marker-upper-left" cx="132" cy="132" r="7.5" fill="#DCE2FA"/>
+    <g id="clock-hands">
+      <!-- Minute hand (10:10 -> 60 deg clockwise from 12 o'clock) -->
+      <g id="hand-minute" transform="translate(200,200) rotate(60)">
+        <rect x="-6.5" y="-116" width="13" height="122.5" rx="6.5" ry="6.5" fill="#9295A6"/>
+      </g>
+      <!-- Hour hand (10:10 -> 305 deg clockwise from 12 o'clock) -->
+      <g id="hand-hour" transform="translate(200,200) rotate(305)">
+        <rect x="-8" y="-82" width="16" height="90" rx="8" ry="8" fill="#DCE2FA"/>
+      </g>
+    </g>
+  </g>
+    </g>
+    <text x="278" y="368" text-anchor="middle" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Analogue (2 × 2) · DARK</text>
+
+    <!-- Light Half Background -->
+    <rect x="532" y="0" width="460" height="392" rx="28" fill="#F5F6FA" stroke="#E0E2E9" stroke-width="1"/>
+    <g transform="translate(602, 24) scale(0.80)">
+<g id="widget-analogue-light">
+    <path id="clock-face-scalloped" d="M385.50,200.00 L385.22,203.23 L384.39,206.44 L383.05,209.59 L381.25,212.67 L379.07,215.67 L376.58,218.56 L373.90,221.35 L371.12,224.05 L368.35,226.66 L365.69,229.22 L363.25,231.73 L361.10,234.24 L359.30,236.78 L357.92,239.37 L356.96,242.06 L356.45,244.86 L356.35,247.80 L356.64,250.89 L357.24,254.14 L358.10,257.54 L359.13,261.08 L360.22,264.73 L361.27,268.46 L362.20,272.22 L362.91,275.97 L363.31,279.65 L363.32,283.22 L362.91,286.62 L362.02,289.81 L360.65,292.75 L358.79,295.41 L356.47,297.77 L353.73,299.83 L350.63,301.60 L347.24,303.10 L343.64,304.36 L339.92,305.44 L336.17,306.39 L332.46,307.27 L328.89,308.15 L325.51,309.11 L322.39,310.20 L319.57,311.50 L317.07,313.06 L314.90,314.90 L313.06,317.07 L311.50,319.57 L310.20,322.39 L309.11,325.51 L308.15,328.89 L307.27,332.46 L306.39,336.17 L305.44,339.92 L304.36,343.64 L303.10,347.24 L301.60,350.63 L299.83,353.73 L297.77,356.47 L295.41,358.79 L292.75,360.65 L289.81,362.02 L286.62,362.91 L283.22,363.32 L279.65,363.31 L275.97,362.91 L272.22,362.20 L268.46,361.27 L264.73,360.22 L261.08,359.13 L257.54,358.10 L254.14,357.24 L250.89,356.64 L247.80,356.35 L244.86,356.45 L242.06,356.96 L239.37,357.92 L236.78,359.30 L234.24,361.10 L231.73,363.25 L229.22,365.69 L226.66,368.35 L224.05,371.12 L221.35,373.90 L218.56,376.58 L215.67,379.07 L212.67,381.25 L209.59,383.05 L206.44,384.39 L203.23,385.22 L200.00,385.50 L196.77,385.22 L193.56,384.39 L190.41,383.05 L187.33,381.25 L184.33,379.07 L181.44,376.58 L178.65,373.90 L175.95,371.12 L173.34,368.35 L170.78,365.69 L168.27,363.25 L165.76,361.10 L163.22,359.30 L160.63,357.92 L157.94,356.96 L155.14,356.45 L152.20,356.35 L149.11,356.64 L145.86,357.24 L142.46,358.10 L138.92,359.13 L135.27,360.22 L131.54,361.27 L127.78,362.20 L124.03,362.91 L120.35,363.31 L116.78,363.32 L113.38,362.91 L110.19,362.02 L107.25,360.65 L104.59,358.79 L102.23,356.47 L100.17,353.73 L98.40,350.63 L96.90,347.24 L95.64,343.64 L94.56,339.92 L93.61,336.17 L92.73,332.46 L91.85,328.89 L90.89,325.51 L89.80,322.39 L88.50,319.57 L86.94,317.07 L85.10,314.90 L82.93,313.06 L80.43,311.50 L77.61,310.20 L74.49,309.11 L71.11,308.15 L67.54,307.27 L63.83,306.39 L60.08,305.44 L56.36,304.36 L52.76,303.10 L49.37,301.60 L46.27,299.83 L43.53,297.77 L41.21,295.41 L39.35,292.75 L37.98,289.81 L37.09,286.62 L36.68,283.22 L36.69,279.65 L37.09,275.97 L37.80,272.22 L38.73,268.46 L39.78,264.73 L40.87,261.08 L41.90,257.54 L42.76,254.14 L43.36,250.89 L43.65,247.80 L43.55,244.86 L43.04,242.06 L42.08,239.37 L40.70,236.78 L38.90,234.24 L36.75,231.73 L34.31,229.22 L31.65,226.66 L28.88,224.05 L26.10,221.35 L23.42,218.56 L20.93,215.67 L18.75,212.67 L16.95,209.59 L15.61,206.44 L14.78,203.23 L14.50,200.00 L14.78,196.77 L15.61,193.56 L16.95,190.41 L18.75,187.33 L20.93,184.33 L23.42,181.44 L26.10,178.65 L28.88,175.95 L31.65,173.34 L34.31,170.78 L36.75,168.27 L38.90,165.76 L40.70,163.22 L42.08,160.63 L43.04,157.94 L43.55,155.14 L43.65,152.20 L43.36,149.11 L42.76,145.86 L41.90,142.46 L40.87,138.92 L39.78,135.27 L38.73,131.54 L37.80,127.78 L37.09,124.03 L36.69,120.35 L36.68,116.78 L37.09,113.38 L37.98,110.19 L39.35,107.25 L41.21,104.59 L43.53,102.23 L46.27,100.17 L49.37,98.40 L52.76,96.90 L56.36,95.64 L60.08,94.56 L63.83,93.61 L67.54,92.73 L71.11,91.85 L74.49,90.89 L77.61,89.80 L80.43,88.50 L82.93,86.94 L85.10,85.10 L86.94,82.93 L88.50,80.43 L89.80,77.61 L90.89,74.49 L91.85,71.11 L92.73,67.54 L93.61,63.83 L94.56,60.08 L95.64,56.36 L96.90,52.76 L98.40,49.37 L100.17,46.27 L102.23,43.53 L104.59,41.21 L107.25,39.35 L110.19,37.98 L113.38,37.09 L116.78,36.68 L120.35,36.69 L124.03,37.09 L127.78,37.80 L131.54,38.73 L135.27,39.78 L138.92,40.87 L142.46,41.90 L145.86,42.76 L149.11,43.36 L152.20,43.65 L155.14,43.55 L157.94,43.04 L160.63,42.08 L163.22,40.70 L165.76,38.90 L168.27,36.75 L170.78,34.31 L173.34,31.65 L175.95,28.88 L178.65,26.10 L181.44,23.42 L184.33,20.93 L187.33,18.75 L190.41,16.95 L193.56,15.61 L196.77,14.78 L200.00,14.50 L203.23,14.78 L206.44,15.61 L209.59,16.95 L212.67,18.75 L215.67,20.93 L218.56,23.42 L221.35,26.10 L224.05,28.88 L226.66,31.65 L229.22,34.31 L231.73,36.75 L234.24,38.90 L236.78,40.70 L239.37,42.08 L242.06,43.04 L244.86,43.55 L247.80,43.65 L250.89,43.36 L254.14,42.76 L257.54,41.90 L261.08,40.87 L264.73,39.78 L268.46,38.73 L272.22,37.80 L275.97,37.09 L279.65,36.69 L283.22,36.68 L286.62,37.09 L289.81,37.98 L292.75,39.35 L295.41,41.21 L297.77,43.53 L299.83,46.27 L301.60,49.37 L303.10,52.76 L304.36,56.36 L305.44,60.08 L306.39,63.83 L307.27,67.54 L308.15,71.11 L309.11,74.49 L310.20,77.61 L311.50,80.43 L313.06,82.93 L314.90,85.10 L317.07,86.94 L319.57,88.50 L322.39,89.80 L325.51,90.89 L328.89,91.85 L332.46,92.73 L336.17,93.61 L339.92,94.56 L343.64,95.64 L347.24,96.90 L350.63,98.40 L353.73,100.17 L356.47,102.23 L358.79,104.59 L360.65,107.25 L362.02,110.19 L362.91,113.38 L363.32,116.78 L363.31,120.35 L362.91,124.03 L362.20,127.78 L361.27,131.54 L360.22,135.27 L359.13,138.92 L358.10,142.46 L357.24,145.86 L356.64,149.11 L356.35,152.20 L356.45,155.14 L356.96,157.94 L357.92,160.63 L359.30,163.22 L361.10,165.76 L363.25,168.27 L365.69,170.78 L368.35,173.34 L371.12,175.95 L373.90,178.65 L376.58,181.44 L379.07,184.33 L381.25,187.33 L383.05,190.41 L384.39,193.56 L385.22,196.77 Z" fill="#EBEDF4" stroke="#E0E2E9" stroke-width="1"/>
+    <circle id="marker-upper-left" cx="132" cy="132" r="7.5" fill="#5966A8"/>
+    <g id="clock-hands">
+      <!-- Minute hand (10:10 -> 60 deg clockwise from 12 o'clock) -->
+      <g id="hand-minute" transform="translate(200,200) rotate(60)">
+        <rect x="-6.5" y="-116" width="13" height="122.5" rx="6.5" ry="6.5" fill="#888B98"/>
+      </g>
+      <!-- Hour hand (10:10 -> 305 deg clockwise from 12 o'clock) -->
+      <g id="hand-hour" transform="translate(200,200) rotate(305)">
+        <rect x="-8" y="-82" width="16" height="90" rx="8" ry="8" fill="#202127"/>
+      </g>
+    </g>
+  </g>
+    </g>
+    <text x="762" y="368" text-anchor="middle" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Analogue (2 × 2) · LIGHT</text>
+  </g>
+  <!-- Row 2: Digital (2 × 2) -->
+  <g id="compare-row-2" transform="translate(0, 536)">
+    <!-- Dark Half Background -->
+    <rect x="48" y="0" width="460" height="392" rx="28" fill="#141416"/>
+    <g transform="translate(118, 24) scale(0.80)">
+<g id="widget-digital">
+    <ellipse id="digital-oval-surface" cx="200" cy="200" rx="188" ry="114" fill="#202022"/>
+    <text id="digital-date" x="200" y="138" text-anchor="middle" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="15.5" font-weight="500" letter-spacing="0.3">Fri, Nov 20</text>
+    <text id="digital-time" x="200" y="232" text-anchor="middle" fill="#DFE2F3" font-family="Inter, Roboto, Arial, sans-serif" font-size="98" font-weight="300" letter-spacing="-2">10:10</text>
+    <g id="digital-alarm-row" transform="translate(162, 260)" color="#9295A6">
+      <use href="#sym-alarm" xlink:href="#sym-alarm" x="0" y="0" width="18" height="18"/>
+      <text id="digital-alarm-time" x="24" y="14.5" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="15.5" font-weight="500">07:30</text>
+    </g>
+  </g>
+    </g>
+    <text x="278" y="368" text-anchor="middle" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Digital (2 × 2) · DARK</text>
+
+    <!-- Light Half Background -->
+    <rect x="532" y="0" width="460" height="392" rx="28" fill="#F5F6FA" stroke="#E0E2E9" stroke-width="1"/>
+    <g transform="translate(602, 24) scale(0.80)">
+<g id="widget-digital-light">
+    <ellipse id="digital-oval-surface" cx="200" cy="200" rx="188" ry="114" fill="#E8EBFA" stroke="#DCE2FA" stroke-width="1"/>
+    <text id="digital-date" x="200" y="138" text-anchor="middle" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="15.5" font-weight="500" letter-spacing="0.3">Fri, Nov 20</text>
+    <text id="digital-time" x="200" y="232" text-anchor="middle" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="98" font-weight="300" letter-spacing="-2">10:10</text>
+    <g id="digital-alarm-row" transform="translate(162, 260)" color="#5966A8">
+      <use href="#sym-alarm" xlink:href="#sym-alarm" x="0" y="0" width="18" height="18"/>
+      <text id="digital-alarm-time" x="24" y="14.5" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="15.5" font-weight="500">07:30</text>
+    </g>
+  </g>
+    </g>
+    <text x="762" y="368" text-anchor="middle" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Digital (2 × 2) · LIGHT</text>
+  </g>
+  <!-- Row 3: Stacked (2 × 2) -->
+  <g id="compare-row-3" transform="translate(0, 956)">
+    <!-- Dark Half Background -->
+    <rect x="48" y="0" width="460" height="392" rx="28" fill="#141416"/>
+    <g transform="translate(118, 24) scale(0.80)">
+<g id="widget-stacked">
+    <rect id="stacked-capsule-surface" x="86" y="12" width="228" height="376" rx="114" ry="114" fill="#202022"/>
+    <text id="stacked-date" x="200" y="68" text-anchor="middle" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="15.5" font-weight="500" letter-spacing="0.3">Fri, Nov 20</text>
+    <g id="stacked-time-group">
+      <text id="stacked-hours" x="200" y="182" text-anchor="middle" fill="#DFE2F3" font-family="Inter, Roboto, Arial, sans-serif" font-size="112" font-weight="300" letter-spacing="-2">10</text>
+      <text id="stacked-minutes" x="200" y="284" text-anchor="middle" fill="#DFE2F3" font-family="Inter, Roboto, Arial, sans-serif" font-size="112" font-weight="300" letter-spacing="-2">10</text>
+    </g>
+    <g id="stacked-alarm-row" transform="translate(163, 326)" color="#9295A6">
+      <use href="#sym-alarm" xlink:href="#sym-alarm" x="0" y="0" width="17" height="17"/>
+      <text id="stacked-alarm-time" x="23" y="14" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="15" font-weight="500">07:30</text>
+    </g>
+  </g>
+    </g>
+    <text x="278" y="368" text-anchor="middle" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Stacked (2 × 2) · DARK</text>
+
+    <!-- Light Half Background -->
+    <rect x="532" y="0" width="460" height="392" rx="28" fill="#F5F6FA" stroke="#E0E2E9" stroke-width="1"/>
+    <g transform="translate(602, 24) scale(0.80)">
+<g id="widget-stacked-light">
+    <rect id="stacked-capsule-surface" x="86" y="12" width="228" height="376" rx="114" ry="114" fill="#EBEDF4" stroke="#E0E2E9" stroke-width="1"/>
+    <text id="stacked-date" x="200" y="68" text-anchor="middle" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="15.5" font-weight="500" letter-spacing="0.3">Fri, Nov 20</text>
+    <g id="stacked-time-group">
+      <text id="stacked-hours" x="200" y="182" text-anchor="middle" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="112" font-weight="300" letter-spacing="-2">10</text>
+      <text id="stacked-minutes" x="200" y="284" text-anchor="middle" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="112" font-weight="300" letter-spacing="-2">10</text>
+    </g>
+    <g id="stacked-alarm-row" transform="translate(163, 326)" color="#5966A8">
+      <use href="#sym-alarm" xlink:href="#sym-alarm" x="0" y="0" width="17" height="17"/>
+      <text id="stacked-alarm-time" x="23" y="14" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="15" font-weight="500">07:30</text>
+    </g>
+  </g>
+    </g>
+    <text x="762" y="368" text-anchor="middle" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Stacked (2 × 2) · LIGHT</text>
+  </g>
+  <!-- Row 4: Stopwatch (2 × 2) -->
+  <g id="compare-row-4" transform="translate(0, 1376)">
+    <!-- Dark Half Background -->
+    <rect x="48" y="0" width="460" height="392" rx="28" fill="#141416"/>
+    <g transform="translate(118, 24) scale(0.80)">
+<g id="widget-stopwatch">
+    <!-- Main Circular Body -->
+    <circle id="stopwatch-dial" cx="200" cy="204" r="168" fill="#202022"/>
+
+    <!-- Centred Elapsed Time Display -->
+    <text id="stopwatch-elapsed-time" x="200" y="222" text-anchor="middle" fill="#DFE2F3" font-family="Inter, Roboto, Arial, sans-serif" font-size="68" font-weight="400" letter-spacing="-1">00:00</text>
+
+    <!-- Upper-Right Overlapping Light-Lavender Pill (Lap + Reset) -->
+    <g id="stopwatch-upper-pill" transform="translate(226, 22)">
+      <rect x="0" y="0" width="150" height="66" rx="33" ry="33" fill="#DCE2FA"/>
+      <!-- Left Icon: Stopwatch / Lap -->
+      <g id="btn-lap-icon" transform="translate(30, 19)" fill="none" stroke="#1B1B1D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="11" y1="2" x2="17" y2="2"/>
+        <line x1="14" y1="2" x2="14" y2="5"/>
+        <circle cx="14" cy="15" r="9.5"/>
+        <polyline points="14 10.5 14 15 17.5 17"/>
+      </g>
+      <!-- Subtle vertical divider inside pill -->
+      <line x1="75" y1="18" x2="75" y2="48" stroke="#1B1B1D" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Right Icon: Reset (Circular Refresh Arrow) -->
+      <g id="btn-reset-icon" transform="translate(92, 19)" fill="none" stroke="#1B1B1D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 13 A9 9 0 1 1 7.6 19.4"/>
+        <polyline points="5 8 5 13.5 10.5 13.5"/>
+      </g>
+    </g>
+
+    <!-- Lower-Left Overlapping Light-Lavender Rounded-Square Play Button -->
+    <g id="stopwatch-lower-play-btn" transform="translate(24, 274)">
+      <rect x="0" y="0" width="104" height="104" rx="30" ry="30" fill="#DCE2FA"/>
+      <!-- Dark Triangular Play Icon -->
+      <path id="btn-play-triangle" d="M42,34.5 C42,32.8 43.9,31.8 45.3,32.7 L69.5,48.2 C70.8,49.0 70.8,51.0 69.5,51.8 L45.3,67.3 C43.9,68.2 42,67.2 42,65.5 Z" fill="#1B1B1D"/>
+    </g>
+  </g>
+    </g>
+    <text x="278" y="368" text-anchor="middle" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Stopwatch (2 × 2) · DARK</text>
+
+    <!-- Light Half Background -->
+    <rect x="532" y="0" width="460" height="392" rx="28" fill="#F5F6FA" stroke="#E0E2E9" stroke-width="1"/>
+    <g transform="translate(602, 24) scale(0.80)">
+<g id="widget-stopwatch-light">
+    <!-- Main Circular Body -->
+    <circle id="stopwatch-dial" cx="200" cy="204" r="168" fill="#EBEDF4" stroke="#E0E2E9" stroke-width="1"/>
+
+    <!-- Centred Elapsed Time Display -->
+    <text id="stopwatch-elapsed-time" x="200" y="222" text-anchor="middle" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="68" font-weight="400" letter-spacing="-1">00:00</text>
+
+    <!-- Upper-Right Overlapping Light-Lavender Pill (Lap + Reset) -->
+    <g id="stopwatch-upper-pill" transform="translate(226, 22)">
+      <rect x="0" y="0" width="150" height="66" rx="33" ry="33" fill="#DCE2FA" stroke="#C9D2F5" stroke-width="1"/>
+      <!-- Left Icon: Stopwatch / Lap -->
+      <g id="btn-lap-icon" transform="translate(30, 19)" fill="none" stroke="#202127" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="11" y1="2" x2="17" y2="2"/>
+        <line x1="14" y1="2" x2="14" y2="5"/>
+        <circle cx="14" cy="15" r="9.5"/>
+        <polyline points="14 10.5 14 15 17.5 17"/>
+      </g>
+      <!-- Subtle vertical divider inside pill -->
+      <line x1="75" y1="18" x2="75" y2="48" stroke="#202127" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Right Icon: Reset (Circular Refresh Arrow) -->
+      <g id="btn-reset-icon" transform="translate(92, 19)" fill="none" stroke="#202127" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 13 A9 9 0 1 1 7.6 19.4"/>
+        <polyline points="5 8 5 13.5 10.5 13.5"/>
+      </g>
+    </g>
+
+    <!-- Lower-Left Overlapping Light-Lavender Rounded-Square Play Button -->
+    <g id="stopwatch-lower-play-btn" transform="translate(24, 274)">
+      <rect x="0" y="0" width="104" height="104" rx="30" ry="30" fill="#5966A8"/>
+      <!-- Dark Triangular Play Icon -->
+      <path id="btn-play-triangle" d="M42,34.5 C42,32.8 43.9,31.8 45.3,32.7 L69.5,48.2 C70.8,49.0 70.8,51.0 69.5,51.8 L45.3,67.3 C43.9,68.2 42,67.2 42,65.5 Z" fill="#FFFFFF"/>
+    </g>
+  </g>
+    </g>
+    <text x="762" y="368" text-anchor="middle" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Stopwatch (2 × 2) · LIGHT</text>
+  </g>
+  <!-- Row 5: Pixel Atlas — World Clock (2 × 2) -->
+  <g id="compare-row-5" transform="translate(0, 1796)">
+    <!-- Dark Half Background -->
+    <rect x="48" y="0" width="460" height="392" rx="28" fill="#141416"/>
+    <g transform="translate(118, 24) scale(0.80)">
+<g id="widget-pixel-atlas">
+    <!-- Outer Hardware Enclosure -->
+    <rect id="atlas-enclosure" x="14" y="14" width="372" height="372" rx="44" ry="44" fill="#202022"/>
+    <rect id="atlas-inner-bezel" x="14.5" y="14.5" width="371" height="371" rx="43.5" ry="43.5" fill="none" stroke="#2D2E34" stroke-width="1"/>
+
+    <!-- Top Header Bar -->
+    <g id="atlas-header">
+      <text id="atlas-title" x="42" y="56" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="2.2">WORLD CLOCK</text>
+      <!-- Signature 4-pixel micro-matrix on top-right mirroring the 4 cells -->
+      <g id="atlas-header-pixels" transform="translate(338, 43)">
+        <rect x="0" y="0" width="5" height="5" rx="1" fill="#7C8292"/>
+        <rect x="8" y="0" width="5" height="5" rx="1" fill="#96A8E8"/>
+        <rect x="0" y="8" width="5" height="5" rx="1" fill="#E8B872"/>
+        <rect x="8" y="8" width="5" height="5" rx="1" fill="#E8B872"/>
+      </g>
+    </g>
+
+    <!-- Subtle Hairline Separators -->
+    <g id="atlas-separators" stroke="#2E2F34" stroke-width="1" stroke-linecap="round">
+      <line x1="42" y1="74" x2="358" y2="74"/>
+      <line x1="200" y1="90" x2="200" y2="354"/>
+      <line x1="42" y1="222" x2="358" y2="222"/>
+    </g>
+
+    <!-- Cell 1 (Top-Left): UTC (Etc/UTC) — Neutral Grey Pixel -->
+    <g id="cell-utc" transform="translate(42, 96)">
+      <rect id="pixel-utc" x="0" y="3" width="8" height="8" rx="1.5" fill="#7C8292"/>
+      <text id="city-utc" x="16" y="11" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">UTC</text>
+      <text id="time-utc" x="0" y="64" fill="#DFE2F3" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">14:18</text>
+      <text id="day-utc" x="0" y="90" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +0H</text>
+    </g>
+
+    <!-- Cell 2 (Top-Right): TOKYO (Asia/Tokyo) — Night Periwinkle Pixel -->
+    <g id="cell-tokyo" transform="translate(218, 96)">
+      <rect id="pixel-tokyo" x="0" y="3" width="8" height="8" rx="1.5" fill="#96A8E8"/>
+      <text id="city-tokyo" x="16" y="11" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">TOKYO</text>
+      <text id="time-tokyo" x="0" y="64" fill="#DFE2F3" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">23:18</text>
+      <text id="day-tokyo" x="0" y="90" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +9H</text>
+    </g>
+
+    <!-- Cell 3 (Bottom-Left): PARIS (Europe/Paris) — Day Warm Amber Pixel -->
+    <g id="cell-paris" transform="translate(42, 244)">
+      <rect id="pixel-paris" x="0" y="3" width="8" height="8" rx="1.5" fill="#E8B872"/>
+      <text id="city-paris" x="16" y="11" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">PARIS</text>
+      <text id="time-paris" x="0" y="64" fill="#DFE2F3" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">15:18</text>
+      <text id="day-paris" x="0" y="90" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +1H</text>
+    </g>
+
+    <!-- Cell 4 (Bottom-Right): MUNICH (Europe/Berlin) — Day Warm Amber Pixel -->
+    <g id="cell-munich" transform="translate(218, 244)">
+      <rect id="pixel-munich" x="0" y="3" width="8" height="8" rx="1.5" fill="#E8B872"/>
+      <text id="city-munich" x="16" y="11" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">MUNICH</text>
+      <text id="time-munich" x="0" y="64" fill="#DFE2F3" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">15:18</text>
+      <text id="day-munich" x="0" y="90" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +1H</text>
+    </g>
+  </g>
+    </g>
+    <text x="278" y="368" text-anchor="middle" fill="#929AAA" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Pixel Atlas — World Clock (2 × 2) · DARK</text>
+
+    <!-- Light Half Background -->
+    <rect x="532" y="0" width="460" height="392" rx="28" fill="#F5F6FA" stroke="#E0E2E9" stroke-width="1"/>
+    <g transform="translate(602, 24) scale(0.80)">
+<g id="widget-pixel-atlas-light">
+    <!-- Outer Hardware Enclosure -->
+    <rect id="atlas-enclosure" x="14" y="14" width="372" height="372" rx="44" ry="44" fill="#FFFFFF"/>
+    <rect id="atlas-inner-bezel" x="14.5" y="14.5" width="371" height="371" rx="43.5" ry="43.5" fill="none" stroke="#E0E2E9" stroke-width="1"/>
+
+    <!-- Top Header Bar -->
+    <g id="atlas-header">
+      <text id="atlas-title" x="42" y="56" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="2.2">WORLD CLOCK</text>
+      <!-- Signature 4-pixel micro-matrix on top-right mirroring the 4 cells -->
+      <g id="atlas-header-pixels" transform="translate(338, 43)">
+        <rect x="0" y="0" width="5" height="5" rx="1" fill="#888B98"/>
+        <rect x="8" y="0" width="5" height="5" rx="1" fill="#6B7FD4"/>
+        <rect x="0" y="8" width="5" height="5" rx="1" fill="#D99B3C"/>
+        <rect x="8" y="8" width="5" height="5" rx="1" fill="#D99B3C"/>
+      </g>
+    </g>
+
+    <!-- Subtle Hairline Separators -->
+    <g id="atlas-separators" stroke="#E0E2E9" stroke-width="1" stroke-linecap="round">
+      <line x1="42" y1="74" x2="358" y2="74"/>
+      <line x1="200" y1="90" x2="200" y2="354"/>
+      <line x1="42" y1="222" x2="358" y2="222"/>
+    </g>
+
+    <!-- Cell 1 (Top-Left): UTC (Etc/UTC) — Neutral Grey Pixel -->
+    <g id="cell-utc" transform="translate(42, 96)">
+      <rect id="pixel-utc" x="0" y="3" width="8" height="8" rx="1.5" fill="#888B98"/>
+      <text id="city-utc" x="16" y="11" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">UTC</text>
+      <text id="time-utc" x="0" y="64" fill="#202127" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">14:18</text>
+      <text id="day-utc" x="0" y="90" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +0H</text>
+    </g>
+
+    <!-- Cell 2 (Top-Right): TOKYO (Asia/Tokyo) — Night Periwinkle Pixel -->
+    <g id="cell-tokyo" transform="translate(218, 96)">
+      <rect id="pixel-tokyo" x="0" y="3" width="8" height="8" rx="1.5" fill="#6B7FD4"/>
+      <text id="city-tokyo" x="16" y="11" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">TOKYO</text>
+      <text id="time-tokyo" x="0" y="64" fill="#202127" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">23:18</text>
+      <text id="day-tokyo" x="0" y="90" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +9H</text>
+    </g>
+
+    <!-- Cell 3 (Bottom-Left): PARIS (Europe/Paris) — Day Warm Amber Pixel -->
+    <g id="cell-paris" transform="translate(42, 244)">
+      <rect id="pixel-paris" x="0" y="3" width="8" height="8" rx="1.5" fill="#D99B3C"/>
+      <text id="city-paris" x="16" y="11" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">PARIS</text>
+      <text id="time-paris" x="0" y="64" fill="#202127" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">15:18</text>
+      <text id="day-paris" x="0" y="90" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +1H</text>
+    </g>
+
+    <!-- Cell 4 (Bottom-Right): MUNICH (Europe/Berlin) — Day Warm Amber Pixel -->
+    <g id="cell-munich" transform="translate(218, 244)">
+      <rect id="pixel-munich" x="0" y="3" width="8" height="8" rx="1.5" fill="#D99B3C"/>
+      <text id="city-munich" x="16" y="11" fill="#202127" font-family="Inter, Roboto, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4">MUNICH</text>
+      <text id="time-munich" x="0" y="64" fill="#202127" font-family="Roboto Mono, JetBrains Mono, Inter, monospace" font-size="44" font-weight="400" letter-spacing="-1.5">15:18</text>
+      <text id="day-munich" x="0" y="90" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="11.5" font-weight="500" letter-spacing="1.1">FRI · +1H</text>
+    </g>
+  </g>
+    </g>
+    <text x="762" y="368" text-anchor="middle" fill="#686B78" font-family="Inter, Roboto, Arial, sans-serif" font-size="13" font-weight="500">Pixel Atlas — World Clock (2 × 2) · LIGHT</text>
+  </g>
+</svg>

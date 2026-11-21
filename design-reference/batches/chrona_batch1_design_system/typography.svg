@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1020" width="1440" height="1020">
+  <title>CHRONA — Typography System &amp; Tabular Numerals</title>
+  <desc>Type hierarchy, scale metrics, and tabular-nums alignment rules.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <!-- Procedural City Skyline Gradients &amp; Silhouettes for Replaceable City Tiles -->
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/>
+      <stop offset="55%" stop-color="#8C7A7B"/>
+      <stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/>
+      <stop offset="60%" stop-color="#9EB1C7"/>
+      <stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/>
+      <stop offset="60%" stop-color="#7D6B7D"/>
+      <stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/>
+      <stop offset="55%" stop-color="#939BA8"/>
+      <stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <clipPath id="clip-city-tile">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-tile-sm">
+      <rect x="0" y="0" width="68" height="54" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+  <g id="layer-background">
+    <rect x="0" y="0" width="1440" height="1020" fill="#000000"/>
+    <rect x="24" y="24" width="1392" height="972" rx="28" fill="#080B10" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="layer-header">
+    <rect x="48" y="48" width="168" height="28" rx="14" fill="#2A384D"/>
+    <text x="132" y="66" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" letter-spacing="1.2" fill="#DCE6F7">03 · TYPOGRAPHY</text>
+    <text x="48" y="112" class="font-sans" font-size="30" font-weight="600" fill="#F1F5F9">Typography Scale &amp; Tabular Numeral Precision</text>
+    <text x="48" y="138" class="font-sans" font-size="14" fill="#94A3B8">Google Sans / Roboto geometric family · Strict tabular-nums (tnum) alignment across clocks, timers, and lists</text>
+    <text x="1392" y="72" text-anchor="end" class="font-mono" font-size="12" fill="#64748B">CHRONA DESIGN SYSTEM · v1.0</text>
+    <text x="1392" y="92" text-anchor="end" class="font-mono" font-size="11" fill="#93A8C7">360dp Component Grid · 412×915dp Screen Standard</text>
+    <line x1="48" y1="158" x2="1392" y2="158" stroke="#1E293B" stroke-width="1"/>
+  </g><g id="layer-type-scale" transform="translate(48, 184)">
+  <g transform="translate(0, 0)">
+    <rect x="0" y="0" width="1344" height="62" rx="14" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="26" class="font-mono" font-size="13" font-weight="600" fill="#93A8C7">clockHero</text>
+    <text x="20" y="45" class="font-mono" font-size="11" fill="#94A3B8">56sp / 64sp · Regular 400 · -0.5sp · tnum</text>
+    <line x1="360" y1="12" x2="360" y2="50" stroke="#1E293B"/>
+    <text x="384" y="46" class="font-sans tnum" font-size="36" font-weight="400" fill="#F1F5F9">07:30</text>
+  </g>
+  <g transform="translate(0, 72)">
+    <rect x="0" y="0" width="1344" height="62" rx="14" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="26" class="font-mono" font-size="13" font-weight="600" fill="#93A8C7">clockCardTime</text>
+    <text x="20" y="45" class="font-mono" font-size="11" fill="#94A3B8">24sp / 30sp · Medium 500 · 0sp · tnum</text>
+    <line x1="360" y1="12" x2="360" y2="50" stroke="#1E293B"/>
+    <text x="384" y="40" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">21:06</text>
+  </g>
+  <g transform="translate(0, 144)">
+    <rect x="0" y="0" width="1344" height="62" rx="14" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="26" class="font-mono" font-size="13" font-weight="600" fill="#93A8C7">pageHeading</text>
+    <text x="20" y="45" class="font-mono" font-size="11" fill="#94A3B8">24sp / 32sp · Medium 500 · 0sp</text>
+    <line x1="360" y1="12" x2="360" y2="50" stroke="#1E293B"/>
+    <text x="384" y="40" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">World Clock</text>
+  </g>
+  <g transform="translate(0, 216)">
+    <rect x="0" y="0" width="1344" height="62" rx="14" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="26" class="font-mono" font-size="13" font-weight="600" fill="#93A8C7">cardHeading</text>
+    <text x="20" y="45" class="font-mono" font-size="11" fill="#94A3B8">18sp / 24sp · SemiBold 600 · 0sp</text>
+    <line x1="360" y1="12" x2="360" y2="50" stroke="#1E293B"/>
+    <text x="384" y="39" class="font-sans tnum" font-size="18" font-weight="600" fill="#F1F5F9">Warsaw · Poland</text>
+  </g>
+  <g transform="translate(0, 288)">
+    <rect x="0" y="0" width="1344" height="62" rx="14" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="26" class="font-mono" font-size="13" font-weight="600" fill="#93A8C7">titleMedium</text>
+    <text x="20" y="45" class="font-mono" font-size="11" fill="#94A3B8">16sp / 24sp · Medium 500 · +0.15sp</text>
+    <line x1="360" y1="12" x2="360" y2="50" stroke="#1E293B"/>
+    <text x="384" y="39" class="font-sans tnum" font-size="16" font-weight="500" fill="#F1F5F9">Morning Standup &amp; Sync</text>
+  </g>
+  <g transform="translate(0, 360)">
+    <rect x="0" y="0" width="1344" height="62" rx="14" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="26" class="font-mono" font-size="13" font-weight="600" fill="#93A8C7">bodyLarge</text>
+    <text x="20" y="45" class="font-mono" font-size="11" fill="#94A3B8">16sp / 24sp · Regular 400 · +0.25sp</text>
+    <line x1="360" y1="12" x2="360" y2="50" stroke="#1E293B"/>
+    <text x="384" y="39" class="font-sans tnum" font-size="16" font-weight="400" fill="#F1F5F9">Automatically adjust time when traveling</text>
+  </g>
+  <g transform="translate(0, 432)">
+    <rect x="0" y="0" width="1344" height="62" rx="14" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="26" class="font-mono" font-size="13" font-weight="600" fill="#93A8C7">bodyMedium</text>
+    <text x="20" y="45" class="font-mono" font-size="11" fill="#94A3B8">14sp / 20sp · Regular 400 · +0.25sp</text>
+    <line x1="360" y1="12" x2="360" y2="50" stroke="#1E293B"/>
+    <text x="384" y="38" class="font-sans tnum" font-size="14" font-weight="400" fill="#94A3B8">Mon, Tue, Wed, Thu, Fri · Gentle chime</text>
+  </g>
+  <g transform="translate(0, 504)">
+    <rect x="0" y="0" width="1344" height="62" rx="14" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="26" class="font-mono" font-size="13" font-weight="600" fill="#93A8C7">secondaryLabel</text>
+    <text x="20" y="45" class="font-mono" font-size="11" fill="#94A3B8">13sp / 18sp · Medium 500 · +0.1sp</text>
+    <line x1="360" y1="12" x2="360" y2="50" stroke="#1E293B"/>
+    <text x="384" y="38" class="font-sans tnum" font-size="13" font-weight="500" fill="#94A3B8">Poland (GMT +0) · 6 hrs ahead</text>
+  </g>
+  <g transform="translate(0, 576)">
+    <rect x="0" y="0" width="1344" height="62" rx="14" fill="#1A202C" stroke="#1E293B"/>
+    <text x="20" y="26" class="font-mono" font-size="13" font-weight="600" fill="#93A8C7">metadata</text>
+    <text x="20" y="45" class="font-mono" font-size="11" fill="#94A3B8">12sp / 16sp · Regular 400 · +0.4sp · tnum</text>
+    <line x1="360" y1="12" x2="360" y2="50" stroke="#1E293B"/>
+    <text x="384" y="38" class="font-sans tnum" font-size="12" font-weight="400" fill="#64748B">ALARM IN 8 HRS 24 MIN · UTC+00:00</text>
+  </g>
+</g>
+
+  <g id="layer-tabular-rules" transform="translate(48, 846)">
+    <rect x="0" y="0" width="1344" height="126" rx="20" fill="#222A38" stroke="#334155"/>
+    <text x="24" y="34" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">Tabular Numerals (font-variant-numeric: tabular-nums) Standard</text>
+    <text x="24" y="58" class="font-sans" font-size="13" fill="#94A3B8">Every numerical glyph occupies an identical advance width so live seconds, countdown timers, and stacked world clock times remain vertically locked.</text>
+    <g transform="translate(24, 74)">
+      <rect x="0" y="0" width="420" height="36" rx="10" fill="#11161F"/>
+      <text x="16" y="23" class="font-mono tnum" font-size="14" fill="#6EE7B7">✓ TABULAR:  11:11:11   |   08:48:59   |   21:06:00</text>
+      <rect x="440" y="0" width="460" height="36" rx="10" fill="#11161F"/>
+      <text x="456" y="23" class="font-sans" font-size="13" fill="#94A3B8">Applied to: Hero Clocks, Card Times, Timer Rings, Stopwatch Laps</text>
+    </g>
+  </g>
+</svg>

@@ -61,6 +61,14 @@ object AlarmRepository {
         } else {
             AlarmScheduler.cancelAlarm(context, alarm)
         }
+        notifyWidgets(context)
+    }
+
+    private fun notifyWidgets(context: Context) {
+        try {
+            com.example.chrona.widget.WidgetUpdateHelper.updateDigitalWidgets(context)
+            com.example.chrona.widget.WidgetUpdateHelper.updateStackedWidgets(context)
+        } catch (_: Exception) {}
     }
 
     fun toggleAlarm(context: Context, alarmId: String) {
@@ -81,6 +89,7 @@ object AlarmRepository {
             } else {
                 AlarmScheduler.cancelAlarm(context, updated)
             }
+            notifyWidgets(context)
         }
     }
 
@@ -96,19 +105,22 @@ object AlarmRepository {
             scope.launch {
                 dao.delete(alarmId)
             }
+            notifyWidgets(context)
         }
     }
 
     fun snoozeAlarm(context: Context, alarmId: String) {
-        val alarm = getAlarmById(context, alarmId) ?: return
+        val actualId = com.example.chrona.core.alarm.AlarmScheduler.getOriginalAlarmId(alarmId)
+        val alarm = getAlarmById(context, actualId) ?: return
         val snoozeMinutes = alarm.snoozeDurationMinutes.coerceAtLeast(1)
         val snoozeAlarm = alarm.copy(
-            id = "snooze_${alarm.id}_${System.currentTimeMillis()}",
+            id = actualId,
             label = "Snoozed (${snoozeMinutes}m): ${alarm.label}",
             isEnabled = true,
             daysOfWeek = emptySet()
         )
-        AlarmScheduler.scheduleSnooze(context, snoozeAlarm, snoozeMinutes)
+        com.example.chrona.core.alarm.AlarmScheduler.scheduleSnooze(context, snoozeAlarm, snoozeMinutes)
+        com.example.chrona.core.alarm.SnoozeNotificationManager.showSnoozeNotification(context, alarm, snoozeMinutes)
     }
 
     fun rescheduleAll(context: Context) {

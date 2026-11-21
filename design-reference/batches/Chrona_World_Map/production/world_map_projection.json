@@ -1,0 +1,56 @@
+{
+  "projectionName": "Natural Earth",
+  "projIdentifier": "natearth",
+  "projString": "+proj=natearth +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs",
+  "centralMeridian": 0.0,
+  "inputCrs": "EPSG:4326",
+  "outputCoordinateSystem": "SVG viewBox user coordinates (top-left origin, Y-down)",
+  "projectedBoundingBoxMeters": {
+    "minX": -17446561.5882,
+    "maxX": 17446561.5882,
+    "minY": -6247632.5527,
+    "maxY": 8816775.4882
+  },
+  "longitudeRange": [
+    -179.999,
+    179.999
+  ],
+  "latitudeRange": [
+    -56.0,
+    84.0
+  ],
+  "antarcticaExcluded": true,
+  "svgViewBox": [
+    0,
+    0,
+    1200,
+    600
+  ],
+  "mapContentBounds": {
+    "left": 24.0,
+    "top": 51.3235,
+    "width": 1152.0,
+    "height": 497.353
+  },
+  "internalPaddingPx": {
+    "top": 24.0,
+    "right": 24.0,
+    "bottom": 24.0,
+    "left": 24.0
+  },
+  "horizontalMapping": {
+    "formula": "svgX = contentLeft + (xMeters - minX) * uniformScale; mapX = svgX / viewBoxWidth",
+    "uniformScalePxPerMeter": 3.301510140485457e-05
+  },
+  "verticalMapping": {
+    "formula": "svgY = contentTop + (maxY - yMeters) * uniformScale; mapY = svgY / viewBoxHeight",
+    "uniformScalePxPerMeter": 3.301510140485457e-05
+  },
+  "yAxisOrientation": "inverted (SVG Y increases downward; north is smaller Y)",
+  "aspectRatioBehavior": "uniform isotropic scale (xMidYMid meet, zero non-uniform stretching)",
+  "versions": {
+    "naturalEarthDataset": "5.1.1 (1:110m)",
+    "pyprojVersion": "3.7.1",
+    "projVersion": "9.5.1"
+  }
+}

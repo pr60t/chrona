@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 915" width="412" height="915">
+  <title>CHRONA — Timer Setup</title>
+  <desc>Hours, minutes, and seconds numeric input with timer label, sound selection, and Start CTA.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="timer-done-glow" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#93A8C7" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#A7E8D8" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-screen-412x915">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-screen-412x915)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">13:25</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    <g transform="translate(16,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="52" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">New timer</text>
+    <g transform="translate(368,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+  </g>
+  <!-- HH : MM : SS Numeric Display -->
+  <g id="timer-setup-readout" transform="translate(20, 92)">
+    <rect x="0" y="0" width="372" height="106" rx="22" fill="#1A202C" stroke="#1E293B"/>
+    <!-- Hours -->
+    <rect x="18" y="16" width="96" height="56" rx="14" fill="#222A38"/>
+    <text x="66" y="54" text-anchor="middle" class="font-sans tnum" font-size="34" font-weight="500" fill="#94A3B8">00</text>
+    <text x="66" y="90" text-anchor="middle" class="font-mono" font-size="10" fill="#64748B">HOURS</text>
+
+    <text x="126" y="52" text-anchor="middle" class="font-sans" font-size="28" fill="#94A3B8">:</text>
+
+    <!-- Minutes (Active Focus) -->
+    <rect x="138" y="16" width="96" height="56" rx="14" fill="#2A384D" stroke="#93A8C7" stroke-width="1.5"/>
+    <text x="186" y="54" text-anchor="middle" class="font-sans tnum" font-size="34" font-weight="600" fill="#DCE6F7">12</text>
+    <text x="186" y="90" text-anchor="middle" class="font-mono" font-size="10" font-weight="600" fill="#93A8C7">MINUTES</text>
+
+    <text x="246" y="52" text-anchor="middle" class="font-sans" font-size="28" fill="#94A3B8">:</text>
+
+    <!-- Seconds -->
+    <rect x="258" y="16" width="96" height="56" rx="14" fill="#222A38"/>
+    <text x="306" y="54" text-anchor="middle" class="font-sans tnum" font-size="34" font-weight="500" fill="#F1F5F9">30</text>
+    <text x="306" y="90" text-anchor="middle" class="font-mono" font-size="10" fill="#64748B">SECONDS</text>
+  </g>
+
+  <!-- Label &amp; Sound Rows -->
+  <g id="timer-setup-metadata" transform="translate(20, 210)">
+    <rect x="0" y="0" width="372" height="112" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <g transform="translate(16,18) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></g>
+    <text x="48" y="33" class="font-sans" font-size="14" font-weight="500" fill="#F1F5F9">Pour-Over Coffee</text>
+    <text x="354" y="33" text-anchor="end" class="font-mono" font-size="11" fill="#94A3B8">Label</text>
+    <line x1="16" y1="56" x2="356" y2="56" stroke="#1E293B"/>
+    <g transform="translate(16,74) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></g>
+    <text x="48" y="89" class="font-sans" font-size="14" fill="#F1F5F9">Sound</text>
+    <text x="354" y="89" text-anchor="end" class="font-sans" font-size="13" font-weight="500" fill="#93A8C7">Crystal Marimba</text>
+  </g>
+
+  <!-- Numeric Time Keypad (1-9, 00, 0, Backspace) -->
+  <g id="timer-numeric-keypad" transform="translate(20, 336)"><g transform="translate(0, 0)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">1</text></g>
+<g transform="translate(128, 0)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">2</text></g>
+<g transform="translate(256, 0)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">3</text></g>
+<g transform="translate(0, 78)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">4</text></g>
+<g transform="translate(128, 78)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">5</text></g>
+<g transform="translate(256, 78)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">6</text></g>
+<g transform="translate(0, 156)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">7</text></g>
+<g transform="translate(128, 156)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">8</text></g>
+<g transform="translate(256, 156)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">9</text></g>
+<g transform="translate(0, 234)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">00</text></g>
+<g transform="translate(128, 234)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#1A202C" stroke="#1E293B"/><text x="58" y="42" text-anchor="middle" class="font-sans tnum" font-size="24" font-weight="500" fill="#F1F5F9">0</text></g>
+<g transform="translate(256, 234)"><rect x="0" y="0" width="116" height="66" rx="20" fill="#222A38" stroke="#1E293B"/><g transform="translate(47,22) scale(0.917)" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 6H9l-6 6 6 6h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z"/><line x1="18" y1="10" x2="14" y2="14"/><line x1="14" y1="10" x2="18" y2="14"/></g></g>
+  </g>
+  <g id="timer-setup-start-cta" transform="translate(20, 766)">
+    <rect x="0" y="0" width="372" height="52" rx="26" fill="#93A8C7"/>
+    <g transform="translate(116,16) scale(0.833)" fill="none" stroke="#0B1320" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="7 5 19 12 7 19 7 5" fill="currentColor"/></g>
+    <text x="202" y="31" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Start timer</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      <rect x="178.0" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Bedtime</text>
+    </g>
+  </g>
+  </g>
+</svg>

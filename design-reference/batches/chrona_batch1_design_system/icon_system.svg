@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <title>CHRONA — Material Symbols Rounded Icon System</title>
+  <desc>24dp grid, 1.8dp rounded stroke weight, active/inactive variants.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <!-- Procedural City Skyline Gradients &amp; Silhouettes for Replaceable City Tiles -->
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/>
+      <stop offset="55%" stop-color="#8C7A7B"/>
+      <stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/>
+      <stop offset="60%" stop-color="#9EB1C7"/>
+      <stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/>
+      <stop offset="60%" stop-color="#7D6B7D"/>
+      <stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/>
+      <stop offset="55%" stop-color="#939BA8"/>
+      <stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <clipPath id="clip-city-tile">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-tile-sm">
+      <rect x="0" y="0" width="68" height="54" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+  <g id="layer-background">
+    <rect x="0" y="0" width="1440" height="920" fill="#000000"/>
+    <rect x="24" y="24" width="1392" height="872" rx="28" fill="#080B10" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="layer-header">
+    <rect x="48" y="48" width="168" height="28" rx="14" fill="#2A384D"/>
+    <text x="132" y="66" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" letter-spacing="1.2" fill="#DCE6F7">06 · ICONOGRAPHY</text>
+    <text x="48" y="112" class="font-sans" font-size="30" font-weight="600" fill="#F1F5F9">Material Symbols Rounded Icon System</text>
+    <text x="48" y="138" class="font-sans" font-size="14" fill="#94A3B8">24×24dp optical grid · 1.8dp stroke weight · Round caps &amp; joins · Standardized across all 5 destinations</text>
+    <text x="1392" y="72" text-anchor="end" class="font-mono" font-size="12" fill="#64748B">CHRONA DESIGN SYSTEM · v1.0</text>
+    <text x="1392" y="92" text-anchor="end" class="font-mono" font-size="11" fill="#93A8C7">360dp Component Grid · 412×915dp Screen Standard</text>
+    <line x1="48" y1="158" x2="1392" y2="158" stroke="#1E293B" stroke-width="1"/>
+  </g><g id="layer-icon-grid" transform="translate(48, 184)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">A. Core Application &amp; Navigation Iconography (20 Glyphs)</text>
+  <g transform="translate(0, 36)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-alarm" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-alarm" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.alarm</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(272, 36)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-public" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-public" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.public</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(544, 36)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-hourglass" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-hourglass" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.hourglass</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(816, 36)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-stopwatch" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-stopwatch" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.stopwatch</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(1088, 36)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-bedtime" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-bedtime" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.bedtime</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(0, 168)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-add" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-add" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.add</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(272, 168)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-search" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-search" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.search</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(544, 168)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-arrow_back" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-arrow_back" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.arrow_back</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(816, 168)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-more_vert" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-more_vert" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.more_vert</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(1088, 168)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-settings" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1.02 1.41 1.13H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-settings" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1.02 1.41 1.13H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.settings</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(0, 300)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-play" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="7 5 19 12 7 19 7 5"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-play" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="7 5 19 12 7 19 7 5"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.play</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(272, 300)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-pause" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-pause" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.pause</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(544, 300)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-refresh" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36L21 8M21 3v5h-5"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-refresh" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36L21 8M21 3v5h-5"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.refresh</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(816, 300)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-delete" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-delete" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.delete</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(1088, 300)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-wb_sunny" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-wb_sunny" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.wb_sunny</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(0, 432)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-check" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-check" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.check</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(272, 432)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-close" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-close" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.close</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(544, 432)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-notifications" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-notifications" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.notifications</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(816, 432)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-location_on" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/><circle cx="12" cy="11" r="2.5"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-location_on" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/><circle cx="12" cy="11" r="2.5"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.location_on</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+  <g transform="translate(1088, 432)">
+    <rect x="0" y="0" width="256" height="116" rx="16" fill="#1A202C" stroke="#1E293B"/>
+    <rect x="20" y="22" width="48" height="48" rx="14" fill="#222A38"/>
+    <g id="icon-info" transform="translate(32,34) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></g>
+    <rect x="80" y="22" width="48" height="48" rx="14" fill="#2A384D"/>
+    <g id="icon-info" transform="translate(92,34) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></g>
+    <text x="20" y="96" class="font-mono" font-size="12" font-weight="600" fill="#F1F5F9">sym.info</text>
+    <text x="236" y="96" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">24dp · 1.8px</text>
+  </g>
+</g>
+
+  <g id="layer-icon-specs" transform="translate(48, 760)">
+    <rect x="0" y="0" width="1344" height="112" rx="18" fill="#222A38" stroke="#334155"/>
+    <text x="24" y="34" class="font-sans" font-size="15" font-weight="600" fill="#F1F5F9">Icon Construction &amp; Accessibility Rules</text>
+    <text x="24" y="60" class="font-sans" font-size="13" fill="#94A3B8">• Stroke Weight: 1.8dp inactive / 2.0dp active state · Linecap: round · Linejoin: round · Optical live area: 20×20dp inside 24×24dp bounding box.</text>
+    <text x="24" y="84" class="font-sans" font-size="13" fill="#94A3B8">• Touch Target: Standalone icon buttons always sit inside a 48×48dp circular hit container with contentDescription for TalkBack accessibility.</text>
+  </g>
+</svg>

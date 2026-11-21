@@ -1,5 +1,6 @@
 package com.example.chrona.core.ui.components
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,6 +13,8 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.TransformOrigin
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -54,10 +57,19 @@ fun ChronaTopBar(
                 DropdownMenu(
                     expanded = menuExpanded,
                     onDismissRequest = { menuExpanded = false },
-                    modifier = Modifier.background(
-                        extendedColors.cardBackground,
-                        shape = RoundedCornerShape(16.dp)
-                    )
+                    modifier = Modifier
+                        .graphicsLayer {
+                            transformOrigin = TransformOrigin(1f, 0f)
+                        }
+                        .background(
+                            extendedColors.cardBackground,
+                            shape = RoundedCornerShape(18.dp)
+                        ),
+                    shape = RoundedCornerShape(18.dp),
+                    containerColor = extendedColors.cardBackground,
+                    tonalElevation = 4.dp,
+                    shadowElevation = 8.dp,
+                    border = BorderStroke(1.dp, extendedColors.divider)
                 ) {
                     DropdownMenuItem(
                         text = {

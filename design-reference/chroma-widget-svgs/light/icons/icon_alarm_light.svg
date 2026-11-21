@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <title>Chrona Light Icon — Alarm</title>
+  <desc>Minimal outline alarm clock icon.</desc>
+  <g id="icon-light-alarm" fill="none" stroke="#5966A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="13" r="7.5"/>
+    <polyline points="12 9.5 12 13 14.5 14.5"/>
+    <path d="M5.2 4.2 L2.8 6.6"/>
+    <path d="M18.8 4.2 L21.2 6.6"/>
+  </g>
+</svg>

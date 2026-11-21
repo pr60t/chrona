@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ChronaCityProjectionRecord",
+  "type": "object",
+  "required": [
+    "geonameId",
+    "cityName",
+    "asciiName",
+    "countryCode",
+    "latitude",
+    "longitude",
+    "zoneId",
+    "population",
+    "mapX",
+    "mapY"
+  ],
+  "properties": {
+    "geonameId": {
+      "type": "integer",
+      "description": "Unique GeoNames identifier"
+    },
+    "cityName": {
+      "type": "string",
+      "description": "UTF-8 canonical city name"
+    },
+    "asciiName": {
+      "type": "string",
+      "description": "ASCII normalized city name for search indexing"
+    },
+    "countryCode": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 2
+    },
+    "countryName": {
+      "type": "string"
+    },
+    "admin1Code": {
+      "type": "string"
+    },
+    "admin1Name": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number",
+      "minimum": -90.0,
+      "maximum": 90.0
+    },
+    "longitude": {
+      "type": "number",
+      "minimum": -180.0,
+      "maximum": 180.0
+    },
+    "zoneId": {
+      "type": "string",
+      "description": "IANA Time Zone Database identifier"
+    },
+    "population": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "alternativeNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mapX": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Normalized horizontal position in 1200x600 Natural Earth viewBox"
+    },
+    "mapY": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Normalized vertical position in 1200x600 Natural Earth viewBox"
+    }
+  }
+}

@@ -1,5 +1,8 @@
 package com.example.chrona.navigation
 
+import androidx.compose.animation.*
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.*
@@ -23,6 +26,13 @@ import com.example.chrona.feature.stopwatch.StopwatchScreen
 import com.example.chrona.feature.timer.TimerScreen
 import com.example.chrona.feature.worldclock.WorldClockScreen
 
+object NavigationDispatcher {
+    val destinationRequest = kotlinx.coroutines.flow.MutableStateFlow<NavDestination?>(null)
+    fun navigateTo(dest: NavDestination) {
+        destinationRequest.value = dest
+    }
+}
+
 @Composable
 fun ChronaNavHost(
     modifier: Modifier = Modifier
@@ -32,6 +42,13 @@ fun ChronaNavHost(
     val ringingAlarm by AlarmRepository.ringingAlarm.collectAsState()
 
     var currentDestination by rememberSaveable { mutableStateOf(NavDestination.WORLD_CLOCK) }
+    val requestedDest by NavigationDispatcher.destinationRequest.collectAsState()
+    LaunchedEffect(requestedDest) {
+        requestedDest?.let {
+            currentDestination = it
+            NavigationDispatcher.destinationRequest.value = null
+        }
+    }
     var initialWorldAlarmCity by remember { mutableStateOf<City?>(null) }
 
     var showSettings by rememberSaveable { mutableStateOf(false) }
@@ -62,12 +79,6 @@ fun ChronaNavHost(
     // Screensaver full-screen mode
     if (showScreensaver) {
         ScreensaverScreen(onDismiss = { showScreensaver = false })
-        return
-    }
-
-    // Settings full-screen mode
-    if (showSettings) {
-        SettingsScreen(onNavigateBack = { showSettings = false })
         return
     }
 
@@ -137,6 +148,25 @@ fun ChronaNavHost(
                 }
             }
         }
+    }
+
+    // Animated Settings Page (Fluid Left-to-Right Transition & Reverse Closing)
+    AnimatedVisibility(
+        visible = showSettings,
+        enter = slideInHorizontally(
+            initialOffsetX = { -it },
+            animationSpec = spring(stiffness = Spring.StiffnessMediumLow)
+        ) + fadeIn(),
+        exit = slideOutHorizontally(
+            targetOffsetX = { -it },
+            animationSpec = spring(stiffness = Spring.StiffnessMediumLow)
+        ) + fadeOut()
+    ) {
+        SettingsScreen(
+            onNavigateBack = {
+                showSettings = false
+            }
+        )
     }
 
     // Onboarding Dialog

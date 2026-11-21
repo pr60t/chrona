@@ -90,7 +90,7 @@ fun ChronaRadialTimePickerDialog(
                     text = if (is24Hour) "24-HOUR CLOCK · DUAL RING SELECTION" else "12-HOUR CLOCK · HOUR & MINUTE",
                     fontSize = 11.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = if (isDark) Color(0xFF93A8C7) else Color(0xFF5A7399),
+                    color = MaterialTheme.colorScheme.primary,
                     letterSpacing = 0.5.sp,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -117,7 +117,7 @@ fun ChronaRadialTimePickerDialog(
                             if (isDark) Color(0xFF1A202C) else Color(0xFFF0F3F8)
                         },
                         border = if (isHourSelected) {
-                            BorderStroke(1.6.dp, if (isDark) Color(0xFF93A8C7) else Color(0xFF5A7399))
+                            BorderStroke(1.6.dp, MaterialTheme.colorScheme.primary)
                         } else {
                             BorderStroke(1.dp, if (isDark) Color(0xFF1E293B) else Color(0xFFE2E8F0))
                         }
@@ -158,7 +158,7 @@ fun ChronaRadialTimePickerDialog(
                             if (isDark) Color(0xFF1A202C) else Color(0xFFF0F3F8)
                         },
                         border = if (isMinuteSelected) {
-                            BorderStroke(1.6.dp, if (isDark) Color(0xFF93A8C7) else Color(0xFF5A7399))
+                            BorderStroke(1.6.dp, MaterialTheme.colorScheme.primary)
                         } else {
                             BorderStroke(1.dp, if (isDark) Color(0xFF1E293B) else Color(0xFFE2E8F0))
                         }
@@ -195,7 +195,7 @@ fun ChronaRadialTimePickerDialog(
                                     },
                                 shape = RoundedCornerShape(12.dp),
                                 color = if (isAm) {
-                                    if (isDark) Color(0xFF93A8C7) else Color(0xFF5A7399)
+                                    MaterialTheme.colorScheme.primary
                                 } else {
                                     if (isDark) Color(0xFF1A202C) else Color(0xFFF0F3F8)
                                 },
@@ -226,7 +226,7 @@ fun ChronaRadialTimePickerDialog(
                                     },
                                 shape = RoundedCornerShape(12.dp),
                                 color = if (!isAm) {
-                                    if (isDark) Color(0xFF93A8C7) else Color(0xFF5A7399)
+                                    MaterialTheme.colorScheme.primary
                                 } else {
                                     if (isDark) Color(0xFF1A202C) else Color(0xFFF0F3F8)
                                 },
@@ -325,7 +325,7 @@ fun ChronaRadialTimePickerDialog(
                             }
                         }
                 ) {
-                    val activeColor = if (isDark) Color(0xFF93A8C7) else Color(0xFF5A7399)
+                    val activeColor = MaterialTheme.colorScheme.primary
 
                     Canvas(modifier = Modifier.fillMaxSize()) {
                         val center = Offset(size.width / 2f, size.height / 2f)
@@ -530,7 +530,7 @@ fun ChronaRadialTimePickerDialog(
                     Spacer(modifier = Modifier.width(12.dp))
 
                     // OK Button
-                    val confirmAccent = if (isDark) Color(0xFF93A8C7) else Color(0xFF5A7399)
+                    val confirmAccent = MaterialTheme.colorScheme.primary
                     Surface(
                         modifier = Modifier
                             .height(42.dp)

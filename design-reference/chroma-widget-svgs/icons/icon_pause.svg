@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <title>Chrona Icon — Pause</title>
+  <desc>Minimal dual vertical pill pause icon.</desc>
+  <g id="icon-pause" fill="#1B1B1D">
+    <rect x="6.5" y="5" width="4" height="14" rx="2"/>
+    <rect x="13.5" y="5" width="4" height="14" rx="2"/>
+  </g>
+</svg>

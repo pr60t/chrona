@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" width="1440" height="960">
+  <title>CHRONA — Shape System, Spacing &amp; Elevation</title>
+  <desc>Corner radii geometry, 4dp/8dp spacing scale, and tonal dark elevation architecture.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <!-- Procedural City Skyline Gradients &amp; Silhouettes for Replaceable City Tiles -->
+    <linearGradient id="sky-warsaw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/>
+      <stop offset="55%" stop-color="#8C7A7B"/>
+      <stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/>
+      <stop offset="60%" stop-color="#9EB1C7"/>
+      <stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/>
+      <stop offset="60%" stop-color="#7D6B7D"/>
+      <stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/>
+      <stop offset="55%" stop-color="#939BA8"/>
+      <stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <clipPath id="clip-city-tile">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-city-tile-sm">
+      <rect x="0" y="0" width="68" height="54" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+  <g id="layer-background">
+    <rect x="0" y="0" width="1440" height="960" fill="#000000"/>
+    <rect x="24" y="24" width="1392" height="912" rx="28" fill="#080B10" stroke="#1E293B" stroke-width="1"/>
+  </g>
+  <g id="layer-header">
+    <rect x="48" y="48" width="168" height="28" rx="14" fill="#2A384D"/>
+    <text x="132" y="66" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" letter-spacing="1.2" fill="#DCE6F7">04 · SHAPE, SPACING &amp; ELEVATION</text>
+    <text x="48" y="112" class="font-sans" font-size="30" font-weight="600" fill="#F1F5F9">Geometry, Spacing Scale &amp; Tonal Depth</text>
+    <text x="48" y="138" class="font-sans" font-size="14" fill="#94A3B8">Consistent rounded-rectangle DNA · 20dp cards · 12dp city tiles · 9999dp pill CTAs · Shadowless tonal elevation</text>
+    <text x="1392" y="72" text-anchor="end" class="font-mono" font-size="12" fill="#64748B">CHRONA DESIGN SYSTEM · v1.0</text>
+    <text x="1392" y="92" text-anchor="end" class="font-mono" font-size="11" fill="#93A8C7">360dp Component Grid · 412×915dp Screen Standard</text>
+    <line x1="48" y1="158" x2="1392" y2="158" stroke="#1E293B" stroke-width="1"/>
+  </g><g id="layer-shape-geometry" transform="translate(48, 184)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">A. Corner Radius &amp; Component Geometry</text>
+  <g transform="translate(0, 34)">
+    <rect x="0" y="0" width="324" height="180" rx="18" fill="#11161F" stroke="#1E293B"/>
+    <rect x="52" y="18" width="220" height="96" rx="20" fill="#1A202C" stroke="#93A8C7" stroke-width="1.2"/>
+    <text x="16" y="136" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Card Container</text>
+    <text x="16" y="154" class="font-mono" font-size="11" fill="#93A8C7">radius: 20dp</text>
+    <text x="16" y="170" class="font-sans" font-size="11" fill="#94A3B8">372 × 80dp (on 412dp screen)</text>
+  </g>
+  <g transform="translate(340, 34)">
+    <rect x="0" y="0" width="324" height="180" rx="18" fill="#11161F" stroke="#1E293B"/>
+    <rect x="102" y="18" width="120" height="96" rx="12" fill="#222A38" stroke="#93A8C7" stroke-width="1.2"/>
+    <text x="16" y="136" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">City Image Tile</text>
+    <text x="16" y="154" class="font-mono" font-size="11" fill="#93A8C7">radius: 12dp</text>
+    <text x="16" y="170" class="font-sans" font-size="11" fill="#94A3B8">80 × 64dp fixed photographic tile</text>
+  </g>
+  <g transform="translate(680, 34)">
+    <rect x="0" y="0" width="324" height="180" rx="18" fill="#11161F" stroke="#1E293B"/>
+    <rect x="154" y="18" width="16" height="96" rx="2" fill="#A7E8D8" stroke="#93A8C7" stroke-width="1.2"/>
+    <text x="16" y="136" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Timezone Strip</text>
+    <text x="16" y="154" class="font-mono" font-size="11" fill="#93A8C7">radius: 2dp</text>
+    <text x="16" y="170" class="font-sans" font-size="11" fill="#94A3B8">4 × 64dp vertical pastel bar</text>
+  </g>
+  <g transform="translate(1020, 34)">
+    <rect x="0" y="0" width="324" height="180" rx="18" fill="#11161F" stroke="#1E293B"/>
+    <rect x="52" y="40" width="220" height="52" rx="26" fill="#93A8C7" stroke="#93A8C7" stroke-width="1.2"/>
+    <text x="16" y="136" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Primary Pill CTA</text>
+    <text x="16" y="154" class="font-mono" font-size="11" fill="#93A8C7">radius: 9999dp</text>
+    <text x="16" y="170" class="font-sans" font-size="11" fill="#94A3B8">Full stadium pill · 52dp height</text>
+  </g>
+  <g transform="translate(0, 230)">
+    <rect x="0" y="0" width="324" height="180" rx="18" fill="#11161F" stroke="#1E293B"/>
+    <rect x="114" y="42" width="96" height="48" rx="16" fill="#2A384D" stroke="#93A8C7" stroke-width="1.2"/>
+    <text x="16" y="136" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Nav Active Pill</text>
+    <text x="16" y="154" class="font-mono" font-size="11" fill="#93A8C7">radius: 16dp</text>
+    <text x="16" y="170" class="font-sans" font-size="11" fill="#94A3B8">56 × 32dp Material 3 indicator</text>
+  </g>
+  <g transform="translate(340, 230)">
+    <rect x="0" y="0" width="324" height="180" rx="18" fill="#11161F" stroke="#1E293B"/>
+    <rect x="52" y="18" width="220" height="96" rx="28" fill="#2B3547" stroke="#93A8C7" stroke-width="1.2"/>
+    <text x="16" y="136" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Bottom Sheet / Dialog</text>
+    <text x="16" y="154" class="font-mono" font-size="11" fill="#93A8C7">radius: 28dp</text>
+    <text x="16" y="170" class="font-sans" font-size="11" fill="#94A3B8">28dp top corners / all corners</text>
+  </g>
+  <g transform="translate(680, 230)">
+    <rect x="0" y="0" width="324" height="180" rx="18" fill="#11161F" stroke="#1E293B"/>
+    <rect x="52" y="40" width="220" height="52" rx="26" fill="#222A38" stroke="#93A8C7" stroke-width="1.2"/>
+    <text x="16" y="136" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Search Field</text>
+    <text x="16" y="154" class="font-mono" font-size="11" fill="#93A8C7">radius: 28dp</text>
+    <text x="16" y="170" class="font-sans" font-size="11" fill="#94A3B8">Full-width capsule · 52dp height</text>
+  </g>
+  <g transform="translate(1020, 230)">
+    <rect x="0" y="0" width="324" height="180" rx="18" fill="#11161F" stroke="#1E293B"/>
+    <rect x="130" y="34" width="64" height="64" rx="32" fill="#222A38" stroke="#93A8C7" stroke-width="1.2"/>
+    <text x="16" y="136" class="font-sans" font-size="14" font-weight="600" fill="#F1F5F9">Icon Button</text>
+    <text x="16" y="154" class="font-mono" font-size="11" fill="#93A8C7">radius: 24dp</text>
+    <text x="16" y="170" class="font-sans" font-size="11" fill="#94A3B8">48 × 48dp touch target · 24dp icon</text>
+  </g>
+</g>
+<g id="layer-spacing-scale" transform="translate(48, 624)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">B. Reusable Spatial Rhythm &amp; Spacing Scale (4dp Base Grid)</text>
+  <rect x="0" y="32" width="660" height="260" rx="18" fill="#1A202C" stroke="#1E293B"/>
+  <g transform="translate(20, 52)">
+    <text x="0" y="14" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">space.xs</text>
+    <text x="115" y="14" class="font-mono tnum" font-size="12" fill="#F1F5F9">4dp</text>
+    <rect x="180" y="3" width="20" height="14" rx="4" fill="#93A8C7"/>
+    <text x="212" y="14" class="font-sans" font-size="11" fill="#94A3B8">Strip gap</text>
+  </g>
+  <g transform="translate(20, 81)">
+    <text x="0" y="14" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">space.sm</text>
+    <text x="115" y="14" class="font-mono tnum" font-size="12" fill="#F1F5F9">8dp</text>
+    <rect x="180" y="3" width="40" height="14" rx="4" fill="#93A8C7"/>
+    <text x="232" y="14" class="font-sans" font-size="11" fill="#94A3B8">Tile inset</text>
+  </g>
+  <g transform="translate(20, 110)">
+    <text x="0" y="14" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">space.md</text>
+    <text x="115" y="14" class="font-mono tnum" font-size="12" fill="#F1F5F9">12dp</text>
+    <rect x="180" y="3" width="60" height="14" rx="4" fill="#93A8C7"/>
+    <text x="252" y="14" class="font-sans" font-size="11" fill="#94A3B8">Card gap</text>
+  </g>
+  <g transform="translate(20, 139)">
+    <text x="0" y="14" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">space.lg</text>
+    <text x="115" y="14" class="font-mono tnum" font-size="12" fill="#F1F5F9">16dp</text>
+    <rect x="180" y="3" width="80" height="14" rx="4" fill="#93A8C7"/>
+    <text x="272" y="14" class="font-sans" font-size="11" fill="#94A3B8">Inner pad</text>
+  </g>
+  <g transform="translate(20, 168)">
+    <text x="0" y="14" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">space.margin</text>
+    <text x="115" y="14" class="font-mono tnum" font-size="12" fill="#F1F5F9">20dp</text>
+    <rect x="180" y="3" width="100" height="14" rx="4" fill="#93A8C7"/>
+    <text x="292" y="14" class="font-sans" font-size="11" fill="#94A3B8">Screen edge</text>
+  </g>
+  <g transform="translate(20, 197)">
+    <text x="0" y="14" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">space.xl</text>
+    <text x="115" y="14" class="font-mono tnum" font-size="12" fill="#F1F5F9">24dp</text>
+    <rect x="180" y="3" width="120" height="14" rx="4" fill="#93A8C7"/>
+    <text x="312" y="14" class="font-sans" font-size="11" fill="#94A3B8">Section gap</text>
+  </g>
+  <g transform="translate(20, 226)">
+    <text x="0" y="14" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">space.xxl</text>
+    <text x="115" y="14" class="font-mono tnum" font-size="12" fill="#F1F5F9">32dp</text>
+    <rect x="180" y="3" width="160" height="14" rx="4" fill="#93A8C7"/>
+    <text x="352" y="14" class="font-sans" font-size="11" fill="#94A3B8">Header gap</text>
+  </g>
+  <g transform="translate(20, 255)">
+    <text x="0" y="14" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">space.xxxl</text>
+    <text x="115" y="14" class="font-mono tnum" font-size="12" fill="#F1F5F9">48dp</text>
+    <rect x="180" y="3" width="240" height="14" rx="4" fill="#93A8C7"/>
+    <text x="432" y="14" class="font-sans" font-size="11" fill="#94A3B8">Touch target</text>
+  </g>
+</g>
+<g id="layer-elevation-depth" transform="translate(732, 624)">
+  <text x="0" y="18" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">C. Dark Tonal Elevation System (Zero Heavy Drop Shadows)</text>
+  <rect x="0" y="32" width="660" height="260" rx="18" fill="#1A202C" stroke="#1E293B"/>
+  <g transform="translate(18, 48)">
+    <rect x="0" y="0" width="624" height="38" rx="10" fill="#000000" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="24" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Level 0 · Canvas</text>
+    <text x="175" y="24" class="font-mono" font-size="11" fill="#93A8C7">#000000</text>
+    <text x="255" y="24" class="font-sans" font-size="11" fill="#94A3B8">Pitch-black AMOLED screen background</text>
+    <text x="610" y="24" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">No shadow</text>
+  </g>
+  <g transform="translate(18, 94)">
+    <rect x="0" y="0" width="624" height="38" rx="10" fill="#11161F" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="24" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Level 1 · Low Surface</text>
+    <text x="175" y="24" class="font-mono" font-size="11" fill="#93A8C7">#11161F</text>
+    <text x="255" y="24" class="font-sans" font-size="11" fill="#94A3B8">Bottom navigation bar &amp; recessed wells</text>
+    <text x="610" y="24" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">1dp hairline top border</text>
+  </g>
+  <g transform="translate(18, 140)">
+    <rect x="0" y="0" width="624" height="38" rx="10" fill="#1A202C" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="24" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Level 2 · Card Surface</text>
+    <text x="175" y="24" class="font-mono" font-size="11" fill="#93A8C7">#1A202C</text>
+    <text x="255" y="24" class="font-sans" font-size="11" fill="#94A3B8">World clock, alarm, timer &amp; weather cards</text>
+    <text x="610" y="24" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">Tonal step + 0.5dp #334155</text>
+  </g>
+  <g transform="translate(18, 186)">
+    <rect x="0" y="0" width="624" height="38" rx="10" fill="#222A38" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="24" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Level 3 · Elevated</text>
+    <text x="175" y="24" class="font-mono" font-size="11" fill="#93A8C7">#222A38</text>
+    <text x="255" y="24" class="font-sans" font-size="11" fill="#94A3B8">Overflow menus, active cards &amp; search bars</text>
+    <text x="610" y="24" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">Tonal step + 1dp #334155</text>
+  </g>
+  <g transform="translate(18, 232)">
+    <rect x="0" y="0" width="624" height="38" rx="10" fill="#2B3547" stroke="#334155" stroke-width="1"/>
+    <text x="14" y="24" class="font-sans" font-size="12" font-weight="600" fill="#F1F5F9">Level 4 · Modal / Sheet</text>
+    <text x="175" y="24" class="font-mono" font-size="11" fill="#93A8C7">#2B3547</text>
+    <text x="255" y="24" class="font-sans" font-size="11" fill="#94A3B8">Bottom sheets, dialogs &amp; time pickers</text>
+    <text x="610" y="24" text-anchor="end" class="font-mono" font-size="10" fill="#64748B">Scrim #000000 72% + 1dp border</text>
+  </g>
+</g>
+</svg>

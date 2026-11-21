@@ -10,6 +10,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
 
 @Immutable
 data class ChronaExtendedColors(
@@ -130,10 +131,26 @@ fun ChronaTheme(
 ) {
     val baseScheme = if (darkTheme) DarkColorScheme else LightColorScheme
     val colorScheme = if (customAccent != null) {
-        baseScheme.copy(
-            primary = customAccent,
-            secondary = customAccent
-        )
+        if (darkTheme) {
+            baseScheme.copy(
+                primary = customAccent,
+                onPrimary = if (customAccent.luminance() > 0.5f) Color(0xFF1B1B1D) else Color.White,
+                secondary = customAccent,
+                onSecondary = if (customAccent.luminance() > 0.5f) Color(0xFF1B1B1D) else Color.White,
+                primaryContainer = customAccent.copy(alpha = 0.25f),
+                onPrimaryContainer = customAccent
+            )
+        } else {
+            val lightPrimary = if (customAccent.luminance() > 0.6f) Color(0xFF4C618A) else customAccent
+            baseScheme.copy(
+                primary = lightPrimary,
+                onPrimary = Color.White,
+                secondary = lightPrimary,
+                onSecondary = Color.White,
+                primaryContainer = customAccent.copy(alpha = 0.45f),
+                onPrimaryContainer = Color(0xFF152238)
+            )
+        }
     } else {
         baseScheme
     }

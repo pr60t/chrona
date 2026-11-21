@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <title>Chrona Light Icon — Reset</title>
+  <desc>Minimal circular counter-clockwise reset arrow icon.</desc>
+  <g id="icon-light-reset" fill="none" stroke="#202127" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 12 A7.5 7.5 0 1 1 6.7 17.3"/>
+    <polyline points="4.5 7.5 4.5 12.2 9.2 12.2"/>
+  </g>
+</svg>

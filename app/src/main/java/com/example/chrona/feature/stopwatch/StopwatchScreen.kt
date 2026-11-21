@@ -190,7 +190,11 @@ fun StopwatchScreen(
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = if (elapsedMillis > 0) "Paused" else "Ready",
+                            text = when {
+                                isRunning -> ""
+                                elapsedMillis > 0 -> "Paused"
+                                else -> "Ready"
+                            },
                             color = extendedColors.textMuted,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Medium
@@ -261,79 +265,93 @@ fun StopwatchScreen(
             }
 
             // Region 3: Stable Anchored Bottom Controls (Reset | Start/Pause | Lap)
+            // Perfectly centered 3-slot layout where center Start/Pause is at mathematical screen center
             Surface(
-                modifier = Modifier
-                    .fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth(),
                 color = MaterialTheme.colorScheme.background,
                 tonalElevation = 0.dp
             ) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 32.dp, vertical = 20.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
+                        .padding(horizontal = 24.dp, vertical = 20.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Reset Button (Left)
-                    IconButton(
-                        onClick = {
-                            StopwatchManager.reset()
-                            elapsedMillis = 0L
-                        },
-                        enabled = elapsedMillis > 0 && !isRunning,
-                        modifier = Modifier.size(52.dp)
+                    // Slot 1: Reset Button (Left-aligned)
+                    Box(
+                        modifier = Modifier.weight(1f),
+                        contentAlignment = Alignment.CenterStart
                     ) {
-                        Icon(
-                            imageVector = Icons.Default.Replay,
-                            contentDescription = "Reset",
-                            tint = if (elapsedMillis > 0 && !isRunning) extendedColors.textPrimary else extendedColors.textMuted.copy(alpha = 0.4f),
-                            modifier = Modifier.size(28.dp)
-                        )
+                        IconButton(
+                            onClick = {
+                                StopwatchManager.reset()
+                                elapsedMillis = 0L
+                            },
+                            enabled = elapsedMillis > 0 && !isRunning,
+                            modifier = Modifier.size(52.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Replay,
+                                contentDescription = "Reset",
+                                tint = if (elapsedMillis > 0 && !isRunning) extendedColors.textPrimary else extendedColors.textMuted.copy(alpha = 0.4f),
+                                modifier = Modifier.size(28.dp)
+                            )
+                        }
                     }
 
-                    // Prominent Start / Pause Button (Center, 68dp)
-                    FilledIconButton(
-                        onClick = {
-                            if (isRunning) {
-                                StopwatchManager.pause()
-                            } else {
-                                StopwatchManager.start()
-                            }
-                        },
-                        shape = CircleShape,
-                        colors = IconButtonDefaults.filledIconButtonColors(
-                            containerColor = if (isRunning) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.primary,
-                            contentColor = if (isRunning) MaterialTheme.colorScheme.primary else Color(0xFF0B1320)
-                        ),
-                        modifier = Modifier.size(68.dp)
+                    // Slot 2: Prominent Start / Pause Button (Exact Center)
+                    Box(
+                        modifier = Modifier.weight(1f),
+                        contentAlignment = Alignment.Center
                     ) {
-                        Icon(
-                            imageVector = if (isRunning) Icons.Default.Pause else Icons.Default.PlayArrow,
-                            contentDescription = if (isRunning) "Pause" else "Start",
-                            modifier = Modifier.size(34.dp)
-                        )
+                        FilledIconButton(
+                            onClick = {
+                                if (isRunning) {
+                                    StopwatchManager.pause()
+                                } else {
+                                    StopwatchManager.start()
+                                }
+                            },
+                            shape = CircleShape,
+                            colors = IconButtonDefaults.filledIconButtonColors(
+                                containerColor = if (isRunning) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.primary,
+                                contentColor = if (isRunning) MaterialTheme.colorScheme.primary else Color(0xFF0B1320)
+                            ),
+                            modifier = Modifier.size(68.dp)
+                        ) {
+                            Icon(
+                                imageVector = if (isRunning) Icons.Default.Pause else Icons.Default.PlayArrow,
+                                contentDescription = if (isRunning) "Pause" else "Start",
+                                modifier = Modifier.size(34.dp)
+                            )
+                        }
                     }
 
-                    // Lap Button (Right)
-                    Button(
-                        onClick = {
-                            StopwatchManager.recordLap()
-                        },
-                        enabled = isRunning,
-                        shape = RoundedCornerShape(100.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = extendedColors.surfaceHigh,
-                            contentColor = extendedColors.textPrimary,
-                            disabledContainerColor = extendedColors.surfaceLow,
-                            disabledContentColor = extendedColors.textMuted.copy(alpha = 0.3f)
-                        ),
-                        modifier = Modifier.height(48.dp)
+                    // Slot 3: Lap Button (Right-aligned)
+                    Box(
+                        modifier = Modifier.weight(1f),
+                        contentAlignment = Alignment.CenterEnd
                     ) {
-                        Text(
-                            text = "Lap",
-                            fontSize = 15.sp,
-                            fontWeight = FontWeight.SemiBold
-                        )
+                        Button(
+                            onClick = {
+                                StopwatchManager.recordLap()
+                            },
+                            enabled = isRunning,
+                            shape = RoundedCornerShape(100.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = extendedColors.surfaceHigh,
+                                contentColor = extendedColors.textPrimary,
+                                disabledContainerColor = extendedColors.surfaceLow,
+                                disabledContentColor = extendedColors.textMuted.copy(alpha = 0.3f)
+                            ),
+                            modifier = Modifier.height(48.dp)
+                        ) {
+                            Text(
+                                text = "Lap",
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.SemiBold
+                            )
+                        }
                     }
                 }
             }

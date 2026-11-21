@@ -24,8 +24,14 @@ import androidx.compose.ui.unit.sp
 import com.example.chrona.core.data.BedtimeRepository
 import com.example.chrona.core.data.PreferencesRepository
 import com.example.chrona.core.ui.components.ChronaTopBar
+import com.example.chrona.feature.alarms.ChronaRadialTimePickerDialog
 import com.example.chrona.ui.theme.ChronaThemeTokens
 import com.example.chrona.ui.theme.TABULAR_NUMS
+
+enum class BedtimeEditTarget {
+    BEDTIME,
+    WAKEUP
+}
 
 @Composable
 fun BedtimeScreen(
@@ -37,6 +43,27 @@ fun BedtimeScreen(
     val extendedColors = ChronaThemeTokens.extended
     val schedule by BedtimeRepository.schedule.collectAsState()
     val preferences by PreferencesRepository.preferences.collectAsState()
+
+    var editingTarget by remember { mutableStateOf<BedtimeEditTarget?>(null) }
+
+    if (editingTarget != null) {
+        val isBedtime = editingTarget == BedtimeEditTarget.BEDTIME
+        ChronaRadialTimePickerDialog(
+            initialHour = if (isBedtime) schedule.bedtimeHour else schedule.wakeHour,
+            initialMinute = if (isBedtime) schedule.bedtimeMinute else schedule.wakeMinute,
+            is24Hour = preferences.is24HourFormat,
+            onTimeSelected = { hour, minute ->
+                val updated = if (isBedtime) {
+                    schedule.copy(bedtimeHour = hour, bedtimeMinute = minute)
+                } else {
+                    schedule.copy(wakeHour = hour, wakeMinute = minute)
+                }
+                BedtimeRepository.updateSchedule(updated)
+                editingTarget = null
+            },
+            onDismiss = { editingTarget = null }
+        )
+    }
 
     Scaffold(
         topBar = {
@@ -110,6 +137,8 @@ fun BedtimeScreen(
                             modifier = Modifier
                                 .weight(1f)
                                 .padding(end = 8.dp)
+                                .clip(RoundedCornerShape(16.dp))
+                                .clickable { editingTarget = BedtimeEditTarget.BEDTIME }
                         ) {
                             Column(modifier = Modifier.padding(16.dp)) {
                                 Row(
@@ -147,6 +176,8 @@ fun BedtimeScreen(
                             modifier = Modifier
                                 .weight(1f)
                                 .padding(start = 8.dp)
+                                .clip(RoundedCornerShape(16.dp))
+                                .clickable { editingTarget = BedtimeEditTarget.WAKEUP }
                         ) {
                             Column(modifier = Modifier.padding(16.dp)) {
                                 Row(

@@ -21,7 +21,7 @@ data class Alarm(
     val targetZoneIdString: String = "SYSTEM", // "SYSTEM" means device local, or IANA string like "Asia/Tokyo"
     val targetCityName: String = "Local Time",
     val targetCountryName: String = "",
-    val identityColorHex: String = "#93A8C7",
+    val identityColorHex: String = "#DCE2FA",
     val daysOfWeek: Set<Int> = emptySet(), // 1=Monday ... 7=Sunday. Empty = one-off alarm.
     val isEnabled: Boolean = true,
     val vibrate: Boolean = true,

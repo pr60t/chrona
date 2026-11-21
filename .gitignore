@@ -44,12 +44,19 @@ captures/
 google-services.json
 firebase-debug.log
 
-# Keystore files & signing keys
+# Secrets, Environment & Signing Keys
 *.jks
 *.keystore
 *.key
+*.p12
+*.pem
+*.pk8
 signing.properties
 release-keystore.properties
+.env
+.env.*
+*.env
+*.local
 
 # External native build folder
 .externalNativeBuild
@@ -64,8 +71,9 @@ release-keystore.properties
 ehthumbs.db
 Thumbs.db
 
-# Design mockups & reference batches (source code only for repository)
-design-reference/
-
 # Memory dumps & crash logs
 *.hprof
+
+# Tooling and analysis output caches
+graphify-out/
+

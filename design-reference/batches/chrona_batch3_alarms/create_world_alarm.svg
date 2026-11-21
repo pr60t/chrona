@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 915" width="412" height="915">
+  <title>CHRONA — Create World Alarm</title>
+  <desc>Dedicated world alarm creation flow distinguishing destination local time from device-local ring time.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <radialGradient id="ringing-glow" cx="50%" cy="34%" r="52%">
+      <stop offset="0%" stop-color="#A7E8D8" stop-opacity="0.18"/>
+      <stop offset="55%" stop-color="#93A8C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-screen-412x915">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g id="layer-amoled-canvas" clip-path="url(#clip-screen-412x915)">
+    <rect x="0" y="0" width="412" height="915" fill="#000000"/>
+  <g id="layer-status-bar">
+    <text x="24" y="26" class="font-sans tnum" font-size="13" font-weight="600" fill="#F1F5F9">13:17</text>
+    <text x="206" y="26" text-anchor="middle" class="font-mono" font-size="9" fill="#64748B">KATHMANDU · UTC +5:45</text>
+    <path d="M352 25 l4 -4 l4 4 M350 22 a8 8 0 0 1 12 0" fill="none" stroke="#F1F5F9" stroke-width="1.4" stroke-linecap="round"/>
+    <rect x="370" y="17" width="18" height="10" rx="2.5" fill="none" stroke="#F1F5F9" stroke-width="1.3"/>
+    <rect x="372" y="19" width="13" height="6" rx="1" fill="#F1F5F9"/>
+  </g>
+  <g id="layer-top-app-bar">
+    <g transform="translate(16,54) scale(1.000)" fill="none" stroke="#F1F5F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></g>
+    <text x="52" y="72" class="font-sans" font-size="22" font-weight="500" fill="#F1F5F9">World alarm</text>
+    <text x="392" y="71" text-anchor="end" class="font-sans" font-size="14" font-weight="600" fill="#93A8C7">Save</text>
+  </g>
+  <g id="world-alarm-city-header" transform="translate(20, 88)">
+    <rect x="0" y="0" width="372" height="66" rx="20" fill="#1A202C" stroke="#A7E8D8" stroke-width="1.2"/>
+    <rect x="14" y="11" width="4" height="44" rx="2" fill="#A7E8D8"/>
+    <text x="28" y="29" class="font-sans" font-size="16" font-weight="600" fill="#F1F5F9">Warsaw, Poland</text>
+    <text x="28" y="48" class="font-mono" font-size="11" fill="#A7E8D8">Europe/Warsaw · UTC +1</text>
+    <rect x="276" y="17" width="80" height="32" rx="16" fill="#222A38"/>
+    <text x="316" y="37" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#93A8C7">Change</text>
+  </g>
+  <g id="world-alarm-dual-comparison" transform="translate(20, 166)">
+    <!-- Destination Time Card -->
+    <rect x="0" y="0" width="372" height="118" rx="20" fill="#1A202C" stroke="#A7E8D8" stroke-width="1.4"/>
+    <text x="18" y="24" class="font-mono" font-size="10.5" font-weight="600" fill="#A7E8D8">DESTINATION TIME · WARSAW (CET)</text>
+    <g transform="translate(18, 36)">
+      <rect x="0" y="0" width="88" height="64" rx="14" fill="#2A384D" stroke="#93A8C7" stroke-width="1.4"/>
+      <text x="44" y="44" text-anchor="middle" class="font-sans tnum" font-size="36" font-weight="500" fill="#DCE6F7">09</text>
+      <text x="100" y="42" text-anchor="middle" class="font-sans" font-size="28" fill="#94A3B8">:</text>
+      <rect x="112" y="0" width="88" height="64" rx="14" fill="#222A38"/>
+      <text x="156" y="44" text-anchor="middle" class="font-sans tnum" font-size="36" font-weight="500" fill="#F1F5F9">00</text>
+      <text x="216" y="26" class="font-sans" font-size="12.5" font-weight="600" fill="#F1F5F9">Fri, Nov 20</text>
+      <text x="216" y="46" class="font-sans" font-size="11.5" fill="#94A3B8">Warsaw Standup</text>
+    </g>
+
+    <!-- Device-Local Ring Time Card -->
+    <g transform="translate(0, 128)">
+      <rect x="0" y="0" width="372" height="86" rx="20" fill="#11161F" stroke="#93A8C7" stroke-width="1.2"/>
+      <rect x="14" y="14" width="4" height="58" rx="2" fill="#F2DF9B"/>
+      <text x="28" y="26" class="font-mono" font-size="10" font-weight="600" fill="#93A8C7">YOUR PHONE WILL RING AT · KATHMANDU (UTC +5:45)</text>
+      <text x="28" y="64" class="font-sans tnum" font-size="34" font-weight="600" fill="#F1F5F9">13:45</text>
+      <text x="128" y="62" class="font-sans" font-size="12.5" fill="#6EE7B7">Fri, Nov 20 (+4h 45m)</text>
+    </g>
+  </g>
+  <g id="world-alarm-options" transform="translate(20, 392)">
+    <rect x="0" y="0" width="372" height="292" rx="20" fill="#1A202C" stroke="#1E293B"/>
+    <!-- Calendar Date -->
+    <g transform="translate(18,16) scale(0.833)" fill="none" stroke="#A7E8D8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></g>
+    <text x="50" y="31" class="font-sans" font-size="14" fill="#F1F5F9">Calendar date (Warsaw)</text>
+    <text x="354" y="31" text-anchor="end" class="font-sans" font-size="13" font-weight="600" fill="#93A8C7">Nov 20, 2026</text>
+    <line x1="18" y1="52" x2="354" y2="52" stroke="#1E293B"/>
+
+    <!-- Recurrence + Weekdays -->
+    <text x="18" y="76" class="font-sans" font-size="14" font-weight="500" fill="#F1F5F9">Recurrence</text>
+    <text x="354" y="76" text-anchor="end" class="font-sans" font-size="12.5" fill="#93A8C7">Mon–Fri (Warsaw)</text>
+    <g transform="translate(18,90)">
+  <circle cx="19.0" cy="19" r="18" fill="#222A38" stroke="#334155"/>
+  <text x="19.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text>
+  <circle cx="67.5" cy="19" r="18" fill="#A7E8D8" stroke="none"/>
+  <text x="67.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">M</text>
+  <circle cx="116.0" cy="19" r="18" fill="#A7E8D8" stroke="none"/>
+  <text x="116.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text>
+  <circle cx="164.5" cy="19" r="18" fill="#A7E8D8" stroke="none"/>
+  <text x="164.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">W</text>
+  <circle cx="213.0" cy="19" r="18" fill="#A7E8D8" stroke="none"/>
+  <text x="213.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">T</text>
+  <circle cx="261.5" cy="19" r="18" fill="#A7E8D8" stroke="none"/>
+  <text x="261.5" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#0B1320">F</text>
+  <circle cx="310.0" cy="19" r="18" fill="#222A38" stroke="#334155"/>
+  <text x="310.0" y="24" text-anchor="middle" class="font-sans" font-size="12" font-weight="600" fill="#94A3B8">S</text>
+</g>
+
+    <line x1="18" y1="142" x2="354" y2="142" stroke="#1E293B"/>
+
+    <!-- Sound -->
+    <g transform="translate(18,158) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></g>
+    <text x="50" y="173" class="font-sans" font-size="14" fill="#F1F5F9">Alarm sound</text>
+    <text x="354" y="173" text-anchor="end" class="font-sans" font-size="13" fill="#94A3B8">Nordic Bell</text>
+    <line x1="18" y1="194" x2="354" y2="194" stroke="#1E293B"/>
+
+    <!-- Vibration -->
+    <g transform="translate(18,210) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="8" height="16" rx="2"/><path d="M4 8v8M20 8v8M2 10v4M22 10v4"/></g>
+    <text x="50" y="225" class="font-sans" font-size="14" fill="#F1F5F9">Vibration</text>
+    <g transform="translate(302,204)"><rect x="0" y="0" width="52" height="32" rx="16" fill="#93A8C7" stroke="none" stroke-width="1.2"/><circle cx="36" cy="16" r="11" fill="#0B1320"/></g>
+    <line x1="18" y1="244" x2="354" y2="244" stroke="#1E293B"/>
+
+    <!-- Gradual Volume -->
+    <g transform="translate(18,260) scale(0.833)" fill="none" stroke="#93A8C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></g>
+    <text x="50" y="275" class="font-sans" font-size="14" fill="#F1F5F9">Gradual volume</text>
+    <text x="354" y="275" text-anchor="end" class="font-mono" font-size="12" font-weight="600" fill="#93A8C7">Enabled (30s)</text>
+  </g>
+  <g transform="translate(20, 766)">
+    <rect x="0" y="0" width="372" height="52" rx="26" fill="#93A8C7"/>
+    <g transform="translate(104,15) scale(0.917)" fill="none" stroke="#0B1320" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+    <text x="206" y="31" text-anchor="middle" class="font-sans" font-size="15" font-weight="600" fill="#0B1320">Save world alarm</text>
+  </g>
+  <g id="layer-bottom-navigation" transform="translate(0, 835)">
+    <rect x="0" y="0" width="412" height="80" fill="#11161F"/>
+    <line x1="0" y1="0" x2="412" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <g id="nav-dest-1-alarms">
+      <rect x="13.2" y="10" width="56" height="32" rx="16" fill="#2A384D"/>
+      <g transform="translate(29.200000000000003,14) scale(1.000)" fill="none" stroke="#DCE6F7" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M5 3L2 6M22 6l-3-3M6.5 19.5L5 21M17.5 19.5L19 21"/></g>
+      <text x="41.2" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="600" fill="#F1F5F9">Alarms</text>
+    </g>
+    <g id="nav-dest-2-world-clock">
+      
+      <g transform="translate(111.60000000000001,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></g>
+      <text x="123.6" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">World Clock</text>
+    </g>
+    <g id="nav-dest-3-timer">
+      
+      <g transform="translate(194.0,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3v3.5a5 5 0 0 0 2.2 4.1L12 12.5l2.8-1.9A5 5 0 0 0 17 6.5V3M7 21v-3.5a5 5 0 0 1 2.2-4.1L12 11.5l2.8 1.9a5 5 0 0 1 2.2 4.1V21"/></g>
+      <text x="206.0" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Timer</text>
+    </g>
+    <g id="nav-dest-4-stopwatch">
+      
+      <g transform="translate(276.40000000000003,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M10 2h4M12 9v4M18 6l1.5-1.5"/></g>
+      <text x="288.4" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Stopwatch</text>
+    </g>
+    <g id="nav-dest-5-bedtime">
+      
+      <g transform="translate(358.8,14) scale(1.000)" fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></g>
+      <text x="370.8" y="59" text-anchor="middle" class="font-sans" font-size="11" font-weight="500" fill="#94A3B8">Bedtime</text>
+    </g>
+  </g>
+  </g>
+</svg>

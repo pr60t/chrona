@@ -1,24 +1,34 @@
 package com.example.chrona.feature.onboarding
 
+import android.Manifest
+import android.os.Build
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Alarm
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.chrona.R
+import com.example.chrona.core.data.PreferencesRepository
 import com.example.chrona.ui.theme.ChronaThemeTokens
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -27,10 +37,36 @@ fun OnboardingDialog(
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
     val extendedColors = ChronaThemeTokens.extended
+    val isDark = ChronaThemeTokens.isDark
+
+    var isProcessing by remember { mutableStateOf(false) }
+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission()
+    ) { _ ->
+        PreferencesRepository.completeOnboarding(context)
+        onDismiss()
+    }
+
+    fun handleGetStarted() {
+        if (isProcessing) return
+        isProcessing = true
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        } else {
+            PreferencesRepository.completeOnboarding(context)
+            onDismiss()
+        }
+    }
 
     BasicAlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = {
+            // Dismissing via outside tap also completes onboarding
+            PreferencesRepository.completeOnboarding(context)
+            onDismiss()
+        },
         modifier = modifier.clip(RoundedCornerShape(28.dp))
     ) {
         Surface(
@@ -43,55 +79,67 @@ fun OnboardingDialog(
                     .padding(24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // App Logo / Title
-                Text(
-                    text = "CHRONA",
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.Bold,
-                    letterSpacing = 4.sp,
-                    color = MaterialTheme.colorScheme.primary
+                // Centered Chrona brand symbol
+                Image(
+                    painter = painterResource(
+                        if (isDark) R.drawable.ic_chrona_symbol else R.drawable.ic_chrona_symbol_light
+                    ),
+                    contentDescription = "Chrona",
+                    modifier = Modifier.size(56.dp)
                 )
 
-                Spacer(modifier = Modifier.height(6.dp))
+                Spacer(modifier = Modifier.height(14.dp))
+
+                // App Title
+                Text(
+                    text = "Welcome to Chrona",
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = extendedColors.textPrimary
+                )
+
+                Spacer(modifier = Modifier.height(4.dp))
 
                 Text(
-                    text = "Precision Time & World Intelligence",
+                    text = "Precision World Clock & Cross-Timezone Alarms",
                     fontSize = 13.sp,
-                    color = extendedColors.textSecondary
+                    color = extendedColors.textSecondary,
+                    textAlign = TextAlign.Center
                 )
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Feature items
-                FeatureRow(
-                    icon = Icons.Default.Public,
-                    iconTint = Color(0xFFA7E8D8),
-                    title = "Natural Earth World Map",
-                    description = "Geographically accurate projection with responsive marker collapse."
-                )
-
-                Spacer(modifier = Modifier.height(16.dp))
-
+                // Feature items explaining purpose & notification alerts
                 FeatureRow(
                     icon = Icons.Default.Schedule,
-                    iconTint = Color(0xFFF2DF9B),
+                    iconTint = Color(0xFFA7E8D8),
                     title = "Cross-Timezone Alarms",
-                    description = "Set alarms in Tokyo or Warsaw time; Chrona automatically calculates your local trigger."
+                    description = "Schedule alarms by target city local time; Chrona automatically calculates your local wake time."
                 )
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(14.dp))
 
                 FeatureRow(
-                    icon = Icons.Default.Alarm,
-                    iconTint = Color(0xFFE7A19A),
-                    title = "Daylight Saving Resilience",
-                    description = "Calculates exact transition instances, resolving gaps and overlaps automatically."
+                    icon = Icons.Default.Public,
+                    iconTint = Color(0xFFF2DF9B),
+                    title = "Natural Earth World Map",
+                    description = "Geographically accurate projection with theme-adaptive continents and interactive time pins."
                 )
 
-                Spacer(modifier = Modifier.height(28.dp))
+                Spacer(modifier = Modifier.height(14.dp))
+
+                FeatureRow(
+                    icon = Icons.Default.Notifications,
+                    iconTint = Color(0xFFE7A19A),
+                    title = "Alerts & Notifications",
+                    description = "Ensure alarms, snoozed intervals, and background timers notify you promptly."
+                )
+
+                Spacer(modifier = Modifier.height(26.dp))
 
                 Button(
-                    onClick = onDismiss,
+                    onClick = { handleGetStarted() },
+                    enabled = !isProcessing,
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(52.dp),
@@ -102,7 +150,7 @@ fun OnboardingDialog(
                     )
                 ) {
                     Text(
-                        text = "Get started",
+                        text = "Get Started",
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -119,6 +167,7 @@ fun AboutDialog(
     modifier: Modifier = Modifier
 ) {
     val extendedColors = ChronaThemeTokens.extended
+    val isDark = ChronaThemeTokens.isDark
 
     BasicAlertDialog(
         onDismissRequest = onDismiss,
@@ -134,6 +183,16 @@ fun AboutDialog(
                     .padding(24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                Image(
+                    painter = painterResource(
+                        if (isDark) R.drawable.ic_chrona_symbol else R.drawable.ic_chrona_symbol_light
+                    ),
+                    contentDescription = "Chrona",
+                    modifier = Modifier.size(48.dp)
+                )
+
+                Spacer(modifier = Modifier.height(12.dp))
+
                 Text(
                     text = "About Chrona",
                     fontSize = 20.sp,
@@ -141,10 +200,10 @@ fun AboutDialog(
                     color = extendedColors.textPrimary
                 )
 
-                Spacer(modifier = Modifier.height(12.dp))
+                Spacer(modifier = Modifier.height(4.dp))
 
                 Text(
-                    text = "Version 1.0.0\nAudited Material 3 Design",
+                    text = "Version 1.0.0 · Pixel Material 3",
                     fontSize = 13.sp,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Medium,
@@ -197,9 +256,9 @@ private fun FeatureRow(
     ) {
         Box(
             modifier = Modifier
-                .size(40.dp)
+                .size(38.dp)
                 .clip(CircleShape)
-                .background(iconTint.copy(alpha = 0.15f)),
+                .background(iconTint.copy(alpha = 0.18f)),
             contentAlignment = Alignment.Center
         ) {
             Icon(
@@ -210,11 +269,11 @@ private fun FeatureRow(
             )
         }
 
-        Column {
+        Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = title,
                 color = extendedColors.textPrimary,
-                fontSize = 14.sp,
+                fontSize = 15.sp,
                 fontWeight = FontWeight.SemiBold
             )
             Spacer(modifier = Modifier.height(2.dp))

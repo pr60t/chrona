@@ -21,10 +21,13 @@ val ChronaDarkTextMuted = Color(0xFF64748B)
 val ChronaDarkOutline = Color(0xFF334155)
 val ChronaDarkDivider = Color(0xFF1E293B)
 
-val ChronaDarkAccent = Color(0xFF93A8C7)
-val ChronaDarkOnAccent = Color(0xFF0B1320)
-val ChronaDarkAccentCont = Color(0xFF2A384D)
-val ChronaDarkOnAccentCont = Color(0xFFDCE6F7)
+// Authoritative Google Pixel-inspired Accent Token from widget SVG design references
+val ChronaPixelAccent = Color(0xFFDCE2FA)
+
+val ChronaDarkAccent = Color(0xFFDCE2FA)
+val ChronaDarkOnAccent = Color(0xFF1B1B1D)
+val ChronaDarkAccentCont = Color(0xFF2E3A52)
+val ChronaDarkOnAccentCont = Color(0xFFDCE2FA)
 
 val ChronaDarkSuccess = Color(0xFF6EE7B7)
 val ChronaDarkWarning = Color(0xFFFCD34D)
@@ -48,10 +51,10 @@ val ChronaLightTextMuted = Color(0xFF94A3B8)
 val ChronaLightOutline = Color(0xFFCBD5E1)
 val ChronaLightDivider = Color(0xFFE2E8F0)
 
-val ChronaLightAccent = Color(0xFF5A7399)
+val ChronaLightAccent = Color(0xFF4C618A)
 val ChronaLightOnAccent = Color(0xFFFFFFFF)
-val ChronaLightAccentCont = Color(0xFFDCE6F5)
-val ChronaLightOnAccentCont = Color(0xFF1E3352)
+val ChronaLightAccentCont = Color(0xFFDCE2FA)
+val ChronaLightOnAccentCont = Color(0xFF152238)
 
 val ChronaLightSuccess = Color(0xFF1E8E68)
 val ChronaLightWarning = Color(0xFFB7791F)

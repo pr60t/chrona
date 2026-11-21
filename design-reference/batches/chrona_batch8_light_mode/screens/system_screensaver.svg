@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 915" width="412" height="915">
+  <title>Chrona Light — Screensaver</title>
+  <desc>Light mode calm ambient clock view.</desc>
+  <defs>
+    <style>
+      .font-sans { font-family: Google Sans, Roboto, -apple-system, BlinkMacSystemFont, sans-serif; }
+      .font-mono { font-family: Roboto Mono, monospace; }
+      .tnum { font-variant-numeric: tabular-nums; }
+    </style>
+    <linearGradient id="sky-warsaw-sy3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E4C63"/><stop offset="55%" stop-color="#8C7A7B"/><stop offset="100%" stop-color="#D4A68A"/>
+    </linearGradient>
+    <linearGradient id="sky-london-sy3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D7491"/><stop offset="60%" stop-color="#9EB1C7"/><stop offset="100%" stop-color="#C9D4E0"/>
+    </linearGradient>
+    <linearGradient id="sky-boston-sy3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A4961"/><stop offset="60%" stop-color="#7D6B7D"/><stop offset="100%" stop-color="#C98A7A"/>
+    </linearGradient>
+    <linearGradient id="sky-perth-sy3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5D75"/><stop offset="55%" stop-color="#939BA8"/><stop offset="100%" stop-color="#D8C2B0"/>
+    </linearGradient>
+    <linearGradient id="sky-kathmandu-sy3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D4363"/><stop offset="55%" stop-color="#758BA8"/><stop offset="100%" stop-color="#E5C896"/>
+    </linearGradient>
+    <clipPath id="clip-city-80x64-sy3">
+      <rect x="0" y="0" width="80" height="64" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="clip-screen-412x915-sy3">
+      <rect x="0" y="0" width="412" height="915" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-screen-412x915-sy3)">
+    <rect x="0" y="0" width="412" height="915" fill="#F7F8FA"/>
+<text x="206" y="430" text-anchor="middle" class="font-sans tnum" font-size="84" font-weight="300" fill="#0F172A">13:50</text><text x="206" y="472" text-anchor="middle" class="font-sans" font-size="15" fill="#475569">Thursday, November 19 · Kathmandu</text>  </g>
+</svg>

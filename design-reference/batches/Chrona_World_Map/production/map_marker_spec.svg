@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="600" height="260">
+  <title>CHRONA Map Marker Design Specification</title>
+  <rect width="600" height="260" fill="#000000"/>
+  <rect x="20" y="20" width="265" height="220" rx="20" fill="#11161F" stroke="#1E293B"/>
+  <text x="152" y="52" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11" font-weight="600">NORMAL STATE</text>
+  <circle cx="152" cy="128" r="18" fill="#85A8E5" fill-opacity="0.20"/>
+  <circle cx="152" cy="128" r="9.5" fill="#000000"/>
+  <circle cx="152" cy="128" r="7" fill="#85A8E5"/>
+  <text x="152" y="182" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="12">Core: 3.75dp · Halo: 8.5dp (20%)</text>
+  <text x="152" y="202" text-anchor="middle" fill="#64748B" font-family="sans-serif" font-size="11">1.25dp #000000 isolation ring</text>
+
+  <rect x="315" y="20" width="265" height="220" rx="20" fill="#11161F" stroke="#1E293B"/>
+  <text x="447" y="52" text-anchor="middle" fill="#8FD8B9" font-family="sans-serif" font-size="11" font-weight="600">SELECTED STATE</text>
+  <rect x="387" y="76" width="120" height="26" rx="13" fill="#1A202C" stroke="#8FD8B9" stroke-width="1.4"/>
+  <text x="447" y="93" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="11" font-weight="600">Warsaw · 08:32</text>
+  <circle cx="447" cy="134" r="26" fill="#8FD8B9" fill-opacity="0.28"/>
+  <circle cx="447" cy="134" r="12" fill="#000000"/>
+  <circle cx="447" cy="134" r="9" fill="#8FD8B9"/>
+  <text x="447" y="186" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="12">Core: 5.0dp · Halo: 13dp (28%)</text>
+  <text x="447" y="206" text-anchor="middle" fill="#64748B" font-family="sans-serif" font-size="11">Subtle 1.0x–1.45x pulse + pill label</text>
+</svg>
