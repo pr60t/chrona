@@ -10,3 +10,12 @@
 
 # Keep AppWidget receivers and services declared in AndroidManifest
 -keep class com.example.chrona.widget.** { *; }
+
+# Kotlin Coroutines and Sequences
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory { *; }
+-keepnames class kotlinx.coroutines.CoroutineExceptionHandler { *; }
+-keepclassmembernames class kotlinx.coroutines.** {
+    volatile <fields>;
+}
+-dontwarn kotlinx.coroutines.**
+
